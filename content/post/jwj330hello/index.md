@@ -1,13 +1,15 @@
 ---
 title: ？
 description: ？
-slug: hello-world
+slug: ????
 date: 2025-03-06 00:00:00+0000
 categories:
-    - Example Category
+    - Example C
+    - b
 tags:
-    - Example Tag
+    - Example T
+    - h
 weight: 1       # You can add weight to some posts to override the default sorting (date descending)
 ---
 
-我去不早说我去不早说我去不早说我去不早说我去不早说我去不早说
+this is jwj330hello/index.md
