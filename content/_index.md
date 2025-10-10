@@ -1,7 +1,7 @@
 ---
 menu:
     main:
-        name: Home家
+        name: 主页
         weight: 1
         params:
             icon: home
