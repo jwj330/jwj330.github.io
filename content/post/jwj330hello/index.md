@@ -2,8 +2,7 @@
 title: ？
 description: ？
 slug: hello-world
-date: 2022-03-06 00:00:00+0000
-image: cover.jpg
+date: 2025-03-06 00:00:00+0000
 categories:
     - Example Category
 tags:
