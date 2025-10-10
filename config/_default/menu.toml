@@ -15,10 +15,10 @@ url = "https://github.com/jwj330"
 [social.params]
 icon = "brand-github"
 
-[[social]]
-identifier = "twitter"
-name = "Twitter"
-url = ""
+#[[social]]
+#identifier = "twitter"
+#name = "Twitter"
+#url = ""
 
-[social.params]
-icon = "brand-twitter"
+#[social.params]
+#icon = "brand-twitter"
