@@ -1,0 +1,43 @@
+name: Clear Repository
+
+on:
+  workflow_dispatch:  # 手动触发
+
+jobs:
+  clear-repo:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+        fetch-depth: 0
+
+    - name: Debug - Show current files
+      run: |
+        echo "=== Current directory structure ==="
+        find . -type f -name "*" | head -20
+        echo "=== Total files count ==="
+        find . -type f | wc -l
+
+    - name: Remove all files except .git
+      run: |
+        # 删除除.git目录外的所有文件和目录
+        find . -maxdepth 1 ! -name '.git' ! -name '.' -exec rm -rf {} + 2>/dev/null || true
+        echo "DEBUG: Files after removal:"
+        ls -la
+
+    - name: Create empty README
+      run: |
+        echo "# jwj330.github.io" > README.md
+        echo "Personal site built with Hugo" >> README.md
+        echo "DEBUG: Created README.md"
+
+    - name: Commit and push changes
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add .
+        git commit -m "Clear repository for Hugo deployment" || echo "DEBUG: No changes to commit"
+        git push origin main
+        echo "DEBUG: Repository cleared successfully"
