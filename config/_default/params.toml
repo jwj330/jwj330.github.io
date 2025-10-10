@@ -28,7 +28,8 @@ readingTime = true
 
 [article.license]
 enabled = true
-default = "Licensed under CC BY-NC-SA 4.0"
+#default = "Licensed under CC BY-NC-SA 4.0"
+default = "本站版权默认放弃 文章允许随意转载 (站长主页)[https://github.com/jwj330]"
 
 ## Widgets
 [[widgets.homepage]]
