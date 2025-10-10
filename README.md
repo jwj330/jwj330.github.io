@@ -1,2 +1,2 @@
-# jwj330.github.io
-Personal site built with Hugo
+# this is my readme md  
+readme readme readme
