@@ -2,7 +2,7 @@
 title: report20250524ai
 description: 今日趋势
 slug: report
-date: 2022-03-06 00:00:00+0000
+date: 2025-03-16 00:00:00+0000
 categories:
     - 每日Github趋势
 tags:
