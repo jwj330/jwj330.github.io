@@ -4,6 +4,7 @@ from datetime import datetime
 def main():
     # 获取当前时间
     current_time = datetime.now()
+    current_time2 = datetime.datetime.now().strftime("%Y-%m-%d")
 
     # 格式化日期字符串（用于date字段）
     formatted_date = current_time.strftime('%Y-%m-%d %H:%M:%S+0000')
@@ -12,7 +13,7 @@ def main():
     title_date = current_time.strftime('%Y%m%d')
     
     # 构建目标目录路径
-    post_dir = os.path.join("content", "post", f"post_{current_time}")
+    post_dir = os.path.join("content", "post", f"post_{current_time2}")
     
     # 创建目录（如果不存在）
     os.makedirs(post_dir, exist_ok=True)
