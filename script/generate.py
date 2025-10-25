@@ -4,7 +4,7 @@ from datetime import datetime
 def main():
     # 获取当前时间
     current_time = datetime.now()
-    current_time2 = datetime.datetime.now().strftime("%Y-%m-%d")
+    current_time2 = datetime.now().strftime("%Y-%m-%d")
 
     # 格式化日期字符串（用于date字段）
     formatted_date = current_time.strftime('%Y-%m-%d %H:%M:%S+0000')
