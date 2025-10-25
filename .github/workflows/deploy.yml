@@ -1,6 +1,9 @@
 name: Deploy to Github Pages
 
 on:
+    schedule:  # 每天UTC时间00:00运行（北京时间08:00）
+      - cron: '0 0 * * *'
+    
     push:
         branches: [main]
     pull_request:
