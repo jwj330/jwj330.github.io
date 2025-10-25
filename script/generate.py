@@ -1,5 +1,5 @@
 import os
-import datetime
+from datetime import datetime
 
 def main():
     # 获取当前时间
