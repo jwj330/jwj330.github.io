@@ -1,7 +1,7 @@
 ---
 title: "GitHub各编程语言Stars Top 10仓库20251203"
 description: "GitHub各主流编程语言Stars数排名前10的开源仓库汇总"
-date: 2025-12-03 12:00:11+0000
+date: 2025-12-02 12:00:11+0000
 categories:
   - GitHub Top10
 ---
