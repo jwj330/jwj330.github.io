@@ -122,17 +122,10 @@ title: "GitHub各编程语言Stars Top 10仓库{nowday}"
 description: "GitHub各主流编程语言Stars数排名前10的开源仓库汇总"
 date: {formatted_time}
 categories:
-  - GitHub
-  - 编程语言
-  - 开源项目
-tags:
-  - GitHub
-  - 编程语言
-  - 开源
-  - 排行榜
+  - GitHub Top10
 ---
 
-# GitHub各编程语言Stars Top 10仓库排名
+# GitHub各编程语言Stars Top 10仓库排名{nowday}
 
 > 统计时间：{current_time.strftime('%Y年%m月%d日 %H:%M')} UTC+0
 > 
