@@ -35,13 +35,13 @@ jobs:
       
     - name: Commit changes
       run: |
-        git config --local user.email "action330@github.com"
-        git config --local user.name "jwj330auto"
+        git config --local user.email "action@github.com"
+        git config --local user.name "actions-user"
         git add content/
         git commit -m "jwj330 auto post for $(date +'%Y-%m-%d')" || echo "No changes to commit"
         
     - name: Push changes
       uses: ad-m/github-push-action@master
       with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
+        github_token: ${{ secrets.GITHUBTOKEN }}
         branch: main
