@@ -55,7 +55,7 @@ def get_top_repos_by_language(language, token=None, per_page=10):
                 reset_time = int(response.headers['X-RateLimit-Reset'])
                 sleep_duration = reset_time - int(time.time()) + 1
                 print(f"API速率限制已超出，等待 {sleep_duration} 秒后重试...")
-                time.sleep(sleep_duration )
+                time.sleep(sleep_duration)
                 # 重试一次
                 return get_top_repos_by_language(language, token, per_page)
             else:
@@ -98,16 +98,15 @@ def get_all_languages_top_repos(languages=None):
         
         # 添加延迟避免API限制（即使有Token也要礼貌使用）
         if i < len(languages) - 1:  # 最后一个请求后不需要等待
-            delay = 1 if token else 1  # 有Token时可以稍快一些
-            print(f"等待{delay }秒后继续...")
-            time.sleep(delay )
+            delay = 1 if token else 2  # 有Token时可以稍快一些
+            print(f"等待{delay}秒后继续...")
+            time.sleep(delay)
     
     if failed_languages:
         print(f"以下语言获取失败: {', '.join(failed_languages)}")
     
     return all_repos
 
-# 以下函数保持不变（generate_markdown_content, create_directory, save_to_markdown_file, main）
 def generate_markdown_content(all_repos_data):
     """
     生成Markdown格式的内容
@@ -282,7 +281,7 @@ def main():
     
     # 构建保存路径
     current_time = datetime.now() - timedelta(hours=6)
-    save_dir = f"../content/post/github{nowday}"
+    save_dir = f"content/post/github{nowday}"
     save_path = os.path.join(save_dir, "index.md")
     
     # 保存到文件
