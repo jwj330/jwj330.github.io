@@ -1,47 +1,42 @@
-name: Generate Daily Post
+name: Daily GitHub Top Repos Update
 
 on:
   schedule:
-    # 每天UTC时间00:00运行（北京时间08:00）
-    - cron: '0 0 * * *'
-  workflow_dispatch: # 允许手动触发
+    # 每天UTC时间20:00运行（中国时间次日早晨4点，UTC+8）
+    - cron: '0 20 * * *'
+  workflow_dispatch:  # 允许手动触发
 
 jobs:
-  generate:
+  update-top-repos:
     runs-on: ubuntu-latest
     
     steps:
     - name: Checkout repository
       uses: actions/checkout@v4
-      
-    - name: Set up Python
-      uses: actions/setup-python@v5
       with:
-        python-version: '3.x'
+        # 使用个人访问令牌来允许后续提交更改
+        token: ${{ secrets.GITHUBTOKEN }}
 
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.9'
 
-        
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
         pip install requests
-    - name: Run GitHub stats script
-      env:
-        GITHUBTOKEN: ${{ secrets.GITHUBTOKEN }}
-      run: |
-        python script/generate.py
 
-        
-      
-    - name: Commit changes
+    - name: Run GitHub Top Repos Script
+      env:
+        GitHubToken: ${{ secrets.GITHUBTOKEN }}  # 使用您设置的Repository secret
+      run: |
+        python generate.py
+
+    - name: Commit and push changes
       run: |
         git config --local user.email "action@github.com"
-        git config --local user.name "actions-user"
-        git add content/
-        git commit -m "jwj330 auto post for $(date +'%Y-%m-%d')" || echo "No changes to commit"
-        
-    - name: Push changes
-      uses: ad-m/github-push-action@master
-      with:
-        github_token: ${{ secrets.GITHUBTOKEN }}
-        branch: main
+        git config --local user.name "GitHub Action"
+        git add .
+        git diff --quiet && git diff --staged --quiet || git commit -m "Auto-update: GitHub top repos $(date -u +'%Y%m%d')"
+        git push
