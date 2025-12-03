@@ -118,7 +118,7 @@ def generate_markdown_content(all_repos_data):
     
     # 生成前置内容
     front_matter = f"""---
-title: "GitHub各编程语言Stars Top 10仓库"
+title: "GitHub各编程语言Stars Top 10仓库{nowday}"
 description: "GitHub各主流编程语言Stars数排名前10的开源仓库汇总"
 date: {formatted_time}
 categories:
