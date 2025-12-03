@@ -31,7 +31,7 @@ jobs:
       env:
         GitHubToken: ${{ secrets.GITHUBTOKEN }}  # 使用您设置的Repository secret
       run: |
-        python generate.py
+        python script/generate.py
 
     - name: Commit and push changes
       run: |
