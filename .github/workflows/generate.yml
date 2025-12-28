@@ -31,8 +31,9 @@ jobs:
       env:
         GitHubToken: ${{ secrets.GITHUBTOKEN }}  # 使用您设置的Repository secret
       run: |
-        python script/generate.py
+        # python script/generate.py
         python script/StoreData4RestAPI_GraphQL.py
+        python script/AnalyzeData2.py
 
     - name: Commit and push changes
       run: |
