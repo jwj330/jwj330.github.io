@@ -132,7 +132,7 @@ def get_github_top_repos(count=1000, token=None):
     all_repos = all_repos[:count]
     
     # 创建数据目录
-    data_dir = "../scriptData"
+    data_dir = "scriptData"
     os.makedirs(data_dir, exist_ok=True)
     
     # 保存数据
@@ -236,7 +236,7 @@ def get_github_top_repos_rest(count=1000, token=None):
     all_repos = all_repos[:count]
     
     # 创建数据目录
-    data_dir = "../scriptData"
+    data_dir = "scriptData"
     os.makedirs(data_dir, exist_ok=True)
     
     # 保存数据
