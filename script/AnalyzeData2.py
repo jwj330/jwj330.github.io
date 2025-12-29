@@ -178,7 +178,7 @@ def generate_markdown_file(data: List[Dict], date_str: str):
         f.write("---\n\n")
         
         # 写入标题
-        f.write(f"# GitHub Stars增长榜Top500 {formatted_date}\n\n")
+        f.write(f"# GitHub Top500增长榜{date_str}\n\n")
         f.write(f"**生成时间**: {current_datetime}\n\n")
         f.write("以下是GitHub增长最快的500个仓库，按24小时内star增长数排序。\n\n")
         
