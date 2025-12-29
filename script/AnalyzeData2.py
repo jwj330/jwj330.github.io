@@ -98,7 +98,7 @@ def get_yesterday_date(today_date: str) -> str:
         return ""
 
 
-def find_latest_data_file(data_dir: str = "..") -> str:
+def find_latest_data_file(data_dir: str = "") -> str:
     """查找最新的数据文件"""
     # 在上一级的 scriptData 目录中查找
     script_data_dir = os.path.join(data_dir, "scriptData")
@@ -106,7 +106,7 @@ def find_latest_data_file(data_dir: str = "..") -> str:
     if not os.path.exists(script_data_dir):
         print(f"警告: scriptData目录不存在: {script_data_dir}")
         # 尝试在当前目录的上一级查找
-        script_data_dir = os.path.join("..", "scriptData")
+        script_data_dir = os.path.join("", "scriptData")
         if not os.path.exists(script_data_dir):
             print(f"错误: scriptData目录不存在: {script_data_dir}")
             return ""
@@ -136,11 +136,11 @@ def find_latest_data_file(data_dir: str = "..") -> str:
 def get_data_file_path(date_str: str) -> str:
     """根据日期获取数据文件路径"""
     # 在上一级的 scriptData 目录中查找
-    script_data_dir = os.path.join("..", "scriptData")
+    script_data_dir = os.path.join("", "scriptData")
     
     if not os.path.exists(script_data_dir):
         # 如果上一级没有，尝试在当前目录的上一级
-        script_data_dir = os.path.join("..", "scriptData")
+        script_data_dir = os.path.join("", "scriptData")
         if not os.path.exists(script_data_dir):
             # 最后尝试直接使用相对路径
             script_data_dir = "scriptData"
@@ -155,7 +155,7 @@ def generate_markdown_file(data: List[Dict], date_str: str):
     """生成Markdown文件，按照要求创建目录和文件"""
     
     # 生成目录名
-    dir_name = f"../content/post/anagithub{date_str}"
+    dir_name = f"content/post/anagithub{date_str}"
     
     # 创建目录
     os.makedirs(dir_name, exist_ok=True)
@@ -205,7 +205,7 @@ def generate_markdown_file(data: List[Dict], date_str: str):
 def save_growth_json(data: List[Dict], date_str: str):
     """保存增长榜JSON文件到指定目录"""
     # 确保输出目录存在
-    output_dir = "../scriptDataGrowth"
+    output_dir = "scriptDataGrowth"
     os.makedirs(output_dir, exist_ok=True)
     
     # 构建输出文件路径
