@@ -32,7 +32,9 @@ jobs:
         GitHubToken: ${{ secrets.GITHUBTOKEN }}  # 使用您设置的Repository secret
       run: |
         # python script/generate.py
+        echo "Running StoreData4RestAPI_GraphQL.py..."
         python script/StoreData4RestAPI_GraphQL.py
+        echo "Running AnalyzeData2.py.."
         python script/AnalyzeData2.py
 
     - name: Commit and push changes
