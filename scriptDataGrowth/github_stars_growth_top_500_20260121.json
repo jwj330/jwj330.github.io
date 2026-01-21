@@ -1,0 +1,5002 @@
+[
+  {
+    "rank": 1,
+    "id": 683892956,
+    "full_name": "OpenBMB/ChatDev",
+    "stars": 28940,
+    "growth": 28940,
+    "created_at": "2023-08-28",
+    "pushed_at": "2026-01-20",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 2,
+    "id": 975734319,
+    "full_name": "anomalyco/opencode",
+    "stars": 82086,
+    "growth": 1780,
+    "created_at": "2025-04-30",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 3,
+    "id": 1073224795,
+    "full_name": "obra/superpowers",
+    "stars": 32163,
+    "growth": 1320,
+    "created_at": "2025-10-09",
+    "pushed_at": "2026-01-20",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 4,
+    "id": 1061953414,
+    "full_name": "anthropics/skills",
+    "stars": 47875,
+    "growth": 1200,
+    "created_at": "2025-09-22",
+    "pushed_at": "2025-12-20",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 5,
+    "id": 753490180,
+    "full_name": "daytonaio/daytona",
+    "stars": 49259,
+    "growth": 647,
+    "created_at": "2024-02-06",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 6,
+    "id": 937253475,
+    "full_name": "anthropics/claude-code",
+    "stars": 59037,
+    "growth": 411,
+    "created_at": "2025-02-22",
+    "pushed_at": "2026-01-20",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 7,
+    "id": 28699471,
+    "full_name": "lukasz-madon/awesome-remote-job",
+    "stars": 42887,
+    "growth": 411,
+    "created_at": "2015-01-02",
+    "pushed_at": "2026-01-12",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 8,
+    "id": 619859161,
+    "full_name": "twitter/the-algorithm",
+    "stars": 71296,
+    "growth": 378,
+    "created_at": "2023-03-27",
+    "pushed_at": "2025-09-08",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 9,
+    "id": 1062356571,
+    "full_name": "tw93/Mole",
+    "stars": 30937,
+    "growth": 364,
+    "created_at": "2025-09-23",
+    "pushed_at": "2026-01-20",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 10,
+    "id": 132750724,
+    "full_name": "codecrafters-io/build-your-own-x",
+    "stars": 459079,
+    "growth": 316,
+    "created_at": "2018-05-09",
+    "pushed_at": "2025-12-26",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 11,
+    "id": 943398999,
+    "full_name": "x1xhlol/system-prompts-and-models-of-ai-tools",
+    "stars": 110063,
+    "growth": 313,
+    "created_at": "2025-03-05",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 12,
+    "id": 307260205,
+    "full_name": "yt-dlp/yt-dlp",
+    "stars": 143192,
+    "growth": 305,
+    "created_at": "2020-10-26",
+    "pushed_at": "2026-01-19",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 13,
+    "id": 54346799,
+    "full_name": "public-apis/public-apis",
+    "stars": 392667,
+    "growth": 302,
+    "created_at": "2016-03-20",
+    "pushed_at": "2025-11-04",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 14,
+    "id": 1042367133,
+    "full_name": "github/spec-kit",
+    "stars": 64147,
+    "growth": 285,
+    "created_at": "2025-08-21",
+    "pushed_at": "2025-12-04",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 15,
+    "id": 808144141,
+    "full_name": "DigitalPlatDev/FreeDomain",
+    "stars": 142363,
+    "growth": 274,
+    "created_at": "2024-05-30",
+    "pushed_at": "2026-01-09",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 16,
+    "id": 344191198,
+    "full_name": "microsoft/Data-Science-For-Beginners",
+    "stars": 32155,
+    "growth": 261,
+    "created_at": "2021-03-03",
+    "pushed_at": "2026-01-19",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 17,
+    "id": 21737465,
+    "full_name": "sindresorhus/awesome",
+    "stars": 431080,
+    "growth": 232,
+    "created_at": "2014-07-11",
+    "pushed_at": "2026-01-15",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 18,
+    "id": 965615190,
+    "full_name": "bmad-code-org/BMAD-METHOD",
+    "stars": 31135,
+    "growth": 215,
+    "created_at": "2025-04-13",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 19,
+    "id": 193215554,
+    "full_name": "n8n-io/n8n",
+    "stars": 170476,
+    "growth": 214,
+    "created_at": "2019-06-22",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 20,
+    "id": 721767116,
+    "full_name": "clash-verge-rev/clash-verge-rev",
+    "stars": 93406,
+    "growth": 198,
+    "created_at": "2023-11-21",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 21,
+    "id": 787076358,
+    "full_name": "firecrawl/firecrawl",
+    "stars": 76470,
+    "growth": 190,
+    "created_at": "2024-04-15",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 22,
+    "id": 773286980,
+    "full_name": "xai-org/grok-1",
+    "stars": 50903,
+    "growth": 188,
+    "created_at": "2024-03-17",
+    "pushed_at": "2024-08-30",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 23,
+    "id": 36633370,
+    "full_name": "awesome-selfhosted/awesome-selfhosted",
+    "stars": 269326,
+    "growth": 164,
+    "created_at": "2015-06-01",
+    "pushed_at": "2026-01-20",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 24,
+    "id": 968197216,
+    "full_name": "google-gemini/gemini-cli",
+    "stars": 91980,
+    "growth": 164,
+    "created_at": "2025-04-17",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 25,
+    "id": 695864515,
+    "full_name": "hacksider/Deep-Live-Cam",
+    "stars": 78792,
+    "growth": 160,
+    "created_at": "2023-09-24",
+    "pushed_at": "2025-12-15",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 26,
+    "id": 793375104,
+    "full_name": "Shubhamsaboo/awesome-llm-apps",
+    "stars": 88515,
+    "growth": 142,
+    "created_at": "2024-04-29",
+    "pushed_at": "2026-01-20",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 27,
+    "id": 436297812,
+    "full_name": "usememos/memos",
+    "stars": 55162,
+    "growth": 140,
+    "created_at": "2021-12-08",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 28,
+    "id": 974186260,
+    "full_name": "sansan0/TrendRadar",
+    "stars": 44099,
+    "growth": 139,
+    "created_at": "2025-04-28",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 29,
+    "id": 21289110,
+    "full_name": "vinta/awesome-python",
+    "stars": 279280,
+    "growth": 137,
+    "created_at": "2014-06-27",
+    "pushed_at": "2026-01-19",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 30,
+    "id": 955620917,
+    "full_name": "upstash/context7",
+    "stars": 42862,
+    "growth": 136,
+    "created_at": "2025-03-26",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 31,
+    "id": 233472199,
+    "full_name": "massgravel/Microsoft-Activation-Scripts",
+    "stars": 163319,
+    "growth": 130,
+    "created_at": "2020-01-12",
+    "pushed_at": "2026-01-16",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 32,
+    "id": 626805178,
+    "full_name": "langgenius/dify",
+    "stars": 126780,
+    "growth": 129,
+    "created_at": "2023-04-12",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 33,
+    "id": 53809090,
+    "full_name": "juliangarnier/anime",
+    "stars": 66073,
+    "growth": 122,
+    "created_at": "2016-03-13",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 34,
+    "id": 574523116,
+    "full_name": "f/awesome-chatgpt-prompts",
+    "stars": 143151,
+    "growth": 121,
+    "created_at": "2022-12-05",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 35,
+    "id": 701547123,
+    "full_name": "open-webui/open-webui",
+    "stars": 121413,
+    "growth": 121,
+    "created_at": "2023-10-06",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 36,
+    "id": 589831718,
+    "full_name": "Comfy-Org/ComfyUI",
+    "stars": 100985,
+    "growth": 118,
+    "created_at": "2023-01-17",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 37,
+    "id": 83222441,
+    "full_name": "donnemartin/system-design-primer",
+    "stars": 332879,
+    "growth": 112,
+    "created_at": "2017-02-26",
+    "pushed_at": "2025-11-03",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 38,
+    "id": 262296122,
+    "full_name": "PaddlePaddle/PaddleOCR",
+    "stars": 68549,
+    "growth": 107,
+    "created_at": "2020-05-08",
+    "pushed_at": "2026-01-20",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 39,
+    "id": 138393139,
+    "full_name": "trimstray/the-book-of-secret-knowledge",
+    "stars": 203181,
+    "growth": 106,
+    "created_at": "2018-06-23",
+    "pushed_at": "2024-11-19",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 40,
+    "id": 552661142,
+    "full_name": "langchain-ai/langchain",
+    "stars": 124775,
+    "growth": 106,
+    "created_at": "2022-10-17",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 41,
+    "id": 535360445,
+    "full_name": "ultralytics/ultralytics",
+    "stars": 52195,
+    "growth": 104,
+    "created_at": "2022-09-11",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 42,
+    "id": 2325298,
+    "full_name": "torvalds/linux",
+    "stars": 214869,
+    "growth": 101,
+    "created_at": "2011-09-04",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 43,
+    "id": 658928958,
+    "full_name": "ollama/ollama",
+    "stars": 160129,
+    "growth": 101,
+    "created_at": "2023-06-26",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 44,
+    "id": 699532645,
+    "full_name": "astral-sh/uv",
+    "stars": 77471,
+    "growth": 100,
+    "created_at": "2023-10-02",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 45,
+    "id": 88011908,
+    "full_name": "practical-tutorials/project-based-learning",
+    "stars": 256252,
+    "growth": 99,
+    "created_at": "2017-04-12",
+    "pushed_at": "2024-08-15",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 46,
+    "id": 58028038,
+    "full_name": "521xueweihan/HelloGitHub",
+    "stars": 140752,
+    "growth": 97,
+    "created_at": "2016-05-04",
+    "pushed_at": "2025-12-26",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 47,
+    "id": 890668799,
+    "full_name": "modelcontextprotocol/servers",
+    "stars": 76809,
+    "growth": 96,
+    "created_at": "2024-11-19",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 48,
+    "id": 655099582,
+    "full_name": "mlabonne/llm-course",
+    "stars": 73627,
+    "growth": 95,
+    "created_at": "2023-06-17",
+    "pushed_at": "2025-12-22",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 49,
+    "id": 965415649,
+    "full_name": "openai/codex",
+    "stars": 56750,
+    "growth": 94,
+    "created_at": "2025-04-13",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 50,
+    "id": 826168160,
+    "full_name": "docling-project/docling",
+    "stars": 50734,
+    "growth": 93,
+    "created_at": "2024-07-09",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 51,
+    "id": 222751131,
+    "full_name": "Asabeneh/30-Days-Of-Python",
+    "stars": 56060,
+    "growth": 91,
+    "created_at": "2019-11-19",
+    "pushed_at": "2026-01-15",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 52,
+    "id": 881458615,
+    "full_name": "browser-use/browser-use",
+    "stars": 75904,
+    "growth": 89,
+    "created_at": "2024-10-31",
+    "pushed_at": "2026-01-19",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 53,
+    "id": 669879380,
+    "full_name": "rasbt/LLMs-from-scratch",
+    "stars": 83566,
+    "growth": 88,
+    "created_at": "2023-07-23",
+    "pushed_at": "2026-01-19",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 54,
+    "id": 599547518,
+    "full_name": "vllm-project/vllm",
+    "stars": 68041,
+    "growth": 88,
+    "created_at": "2023-02-09",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 55,
+    "id": 13491895,
+    "full_name": "EbookFoundation/free-programming-books",
+    "stars": 380874,
+    "growth": 87,
+    "created_at": "2013-10-11",
+    "pushed_at": "2026-01-05",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 56,
+    "id": 551376520,
+    "full_name": "tw93/Pake",
+    "stars": 45028,
+    "growth": 85,
+    "created_at": "2022-10-14",
+    "pushed_at": "2026-01-20",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 57,
+    "id": 658364446,
+    "full_name": "Lissy93/web-check",
+    "stars": 30620,
+    "growth": 83,
+    "created_at": "2023-06-25",
+    "pushed_at": "2026-01-13",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 58,
+    "id": 612354784,
+    "full_name": "ggml-org/llama.cpp",
+    "stars": 93459,
+    "growth": 80,
+    "created_at": "2023-03-10",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 59,
+    "id": 896335270,
+    "full_name": "punkpeye/awesome-mcp-servers",
+    "stars": 79412,
+    "growth": 80,
+    "created_at": "2024-11-30",
+    "pushed_at": "2026-01-20",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 60,
+    "id": 834369920,
+    "full_name": "jingyaogong/minimind",
+    "stars": 37769,
+    "growth": 79,
+    "created_at": "2024-07-27",
+    "pushed_at": "2026-01-18",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 61,
+    "id": 231283452,
+    "full_name": "excalidraw/excalidraw",
+    "stars": 114906,
+    "growth": 78,
+    "created_at": "2020-01-02",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 62,
+    "id": 184456251,
+    "full_name": "microsoft/PowerToys",
+    "stars": 128196,
+    "growth": 77,
+    "created_at": "2019-05-01",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 63,
+    "id": 455229168,
+    "full_name": "immich-app/immich",
+    "stars": 89616,
+    "growth": 74,
+    "created_at": "2022-02-03",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 64,
+    "id": 646410686,
+    "full_name": "hiyouga/LlamaFactory",
+    "stars": 66249,
+    "growth": 74,
+    "created_at": "2023-05-28",
+    "pushed_at": "2026-01-20",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 65,
+    "id": 765083837,
+    "full_name": "opendatalab/MinerU",
+    "stars": 52561,
+    "growth": 73,
+    "created_at": "2024-02-29",
+    "pushed_at": "2026-01-19",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 66,
+    "id": 585146387,
+    "full_name": "shadcn-ui/ui",
+    "stars": 105260,
+    "growth": 72,
+    "created_at": "2023-01-04",
+    "pushed_at": "2026-01-20",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 67,
+    "id": 55076063,
+    "full_name": "Hack-with-Github/Awesome-Hacking",
+    "stars": 105098,
+    "growth": 71,
+    "created_at": "2016-03-30",
+    "pushed_at": "2025-01-18",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 68,
+    "id": 199570071,
+    "full_name": "2dust/v2rayN",
+    "stars": 95099,
+    "growth": 71,
+    "created_at": "2019-07-30",
+    "pushed_at": "2026-01-18",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 69,
+    "id": 895508656,
+    "full_name": "microsoft/ai-agents-for-beginners",
+    "stars": 49200,
+    "growth": 71,
+    "created_at": "2024-11-28",
+    "pushed_at": "2026-01-18",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 70,
+    "id": 85077558,
+    "full_name": "kamranahmedse/developer-roadmap",
+    "stars": 347669,
+    "growth": 70,
+    "created_at": "2017-03-15",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 71,
+    "id": 340547520,
+    "full_name": "zed-industries/zed",
+    "stars": 73768,
+    "growth": 70,
+    "created_at": "2021-02-20",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 72,
+    "id": 60493101,
+    "full_name": "jwasham/coding-interview-university",
+    "stars": 336055,
+    "growth": 67,
+    "created_at": "2016-06-06",
+    "pushed_at": "2025-08-28",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 73,
+    "id": 419661684,
+    "full_name": "DataTalksClub/data-engineering-zoomcamp",
+    "stars": 36776,
+    "growth": 67,
+    "created_at": "2021-10-21",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 74,
+    "id": 730534580,
+    "full_name": "infiniflow/ragflow",
+    "stars": 71873,
+    "growth": 66,
+    "created_at": "2023-12-12",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 75,
+    "id": 348060227,
+    "full_name": "withastro/astro",
+    "stars": 56089,
+    "growth": 66,
+    "created_at": "2021-03-15",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 76,
+    "id": 819554665,
+    "full_name": "exo-explore/exo",
+    "stars": 40364,
+    "growth": 65,
+    "created_at": "2024-06-24",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 77,
+    "id": 21540759,
+    "full_name": "avelino/awesome-go",
+    "stars": 163089,
+    "growth": 64,
+    "created_at": "2014-07-06",
+    "pushed_at": "2026-01-19",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 78,
+    "id": 299354207,
+    "full_name": "rustdesk/rustdesk",
+    "stars": 106106,
+    "growth": 63,
+    "created_at": "2020-09-28",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 79,
+    "id": 243950408,
+    "full_name": "Anduin2017/HowToCook",
+    "stars": 97205,
+    "growth": 63,
+    "created_at": "2020-02-29",
+    "pushed_at": "2026-01-19",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 80,
+    "id": 896144595,
+    "full_name": "virattt/ai-hedge-fund",
+    "stars": 45413,
+    "growth": 63,
+    "created_at": "2024-11-29",
+    "pushed_at": "2025-12-01",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 81,
+    "id": 157616880,
+    "full_name": "iptv-org/iptv",
+    "stars": 109965,
+    "growth": 62,
+    "created_at": "2018-11-14",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 82,
+    "id": 1614410,
+    "full_name": "FFmpeg/FFmpeg",
+    "stars": 56470,
+    "growth": 62,
+    "created_at": "2011-04-14",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 83,
+    "id": 568098118,
+    "full_name": "makeplane/plane",
+    "stars": 44684,
+    "growth": 62,
+    "created_at": "2022-11-19",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 84,
+    "id": 838695230,
+    "full_name": "DavidHDev/react-bits",
+    "stars": 34425,
+    "growth": 62,
+    "created_at": "2024-08-06",
+    "pushed_at": "2026-01-20",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 85,
+    "id": 111583593,
+    "full_name": "Genymobile/scrcpy",
+    "stars": 134488,
+    "growth": 61,
+    "created_at": "2017-11-21",
+    "pushed_at": "2026-01-17",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 86,
+    "id": 671269505,
+    "full_name": "BerriAI/litellm",
+    "stars": 34243,
+    "growth": 61,
+    "created_at": "2023-07-27",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 87,
+    "id": 678973052,
+    "full_name": "anthropics/claude-cookbooks",
+    "stars": 31428,
+    "growth": 60,
+    "created_at": "2023-08-15",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 88,
+    "id": 678716433,
+    "full_name": "chen08209/FlClash",
+    "stars": 29737,
+    "growth": 60,
+    "created_at": "2023-08-15",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 89,
+    "id": 123458551,
+    "full_name": "jackfrued/Python-100-Days",
+    "stars": 177824,
+    "growth": 59,
+    "created_at": "2018-03-01",
+    "pushed_at": "2026-01-15",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 90,
+    "id": 475553026,
+    "full_name": "ghostty-org/ghostty",
+    "stars": 41770,
+    "growth": 58,
+    "created_at": "2022-03-29",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 91,
+    "id": 196701619,
+    "full_name": "tauri-apps/tauri",
+    "stars": 101663,
+    "growth": 56,
+    "created_at": "2019-07-13",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 92,
+    "id": 710601088,
+    "full_name": "crewAIInc/crewAI",
+    "stars": 42991,
+    "growth": 56,
+    "created_at": "2023-10-27",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 93,
+    "id": 307843105,
+    "full_name": "Raphire/Win11Debloat",
+    "stars": 38167,
+    "growth": 56,
+    "created_at": "2020-10-27",
+    "pushed_at": "2026-01-18",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 94,
+    "id": 382496361,
+    "full_name": "louislam/uptime-kuma",
+    "stars": 81739,
+    "growth": 55,
+    "created_at": "2021-07-03",
+    "pushed_at": "2026-01-20",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 95,
+    "id": 771302083,
+    "full_name": "OpenHands/OpenHands",
+    "stars": 66874,
+    "growth": 55,
+    "created_at": "2024-03-13",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 96,
+    "id": 651517185,
+    "full_name": "NanmiCoder/MediaCrawler",
+    "stars": 43028,
+    "growth": 55,
+    "created_at": "2023-06-09",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 97,
+    "id": 323048702,
+    "full_name": "OpenBB-finance/OpenBB",
+    "stars": 59174,
+    "growth": 54,
+    "created_at": "2020-12-20",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 98,
+    "id": 743230067,
+    "full_name": "RVC-Boss/GPT-SoVITS",
+    "stars": 54305,
+    "growth": 54,
+    "created_at": "2024-01-14",
+    "pushed_at": "2025-12-30",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 99,
+    "id": 19415064,
+    "full_name": "ossu/computer-science",
+    "stars": 200562,
+    "growth": 53,
+    "created_at": "2014-05-04",
+    "pushed_at": "2026-01-15",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 100,
+    "id": 656099147,
+    "full_name": "mem0ai/mem0",
+    "stars": 45791,
+    "growth": 53,
+    "created_at": "2023-06-20",
+    "pushed_at": "2026-01-13",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 101,
+    "id": 594155488,
+    "full_name": "Stirling-Tools/Stirling-PDF",
+    "stars": 73404,
+    "growth": 52,
+    "created_at": "2023-01-27",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 102,
+    "id": 188700274,
+    "full_name": "9001/copyparty",
+    "stars": 41258,
+    "growth": 52,
+    "created_at": "2019-05-26",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 103,
+    "id": 805155266,
+    "full_name": "CherryHQ/cherry-studio",
+    "stars": 38153,
+    "growth": 52,
+    "created_at": "2024-05-24",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 104,
+    "id": 31522041,
+    "full_name": "vnpy/vnpy",
+    "stars": 35711,
+    "growth": 52,
+    "created_at": "2015-03-02",
+    "pushed_at": "2026-01-14",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 105,
+    "id": 798201435,
+    "full_name": "unclecode/crawl4ai",
+    "stars": 58841,
+    "growth": 51,
+    "created_at": "2024-05-09",
+    "pushed_at": "2026-01-20",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 106,
+    "id": 578822531,
+    "full_name": "localsend/localsend",
+    "stars": 73623,
+    "growth": 50,
+    "created_at": "2022-12-16",
+    "pushed_at": "2026-01-12",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 107,
+    "id": 121898717,
+    "full_name": "dani-garcia/vaultwarden",
+    "stars": 53817,
+    "growth": 49,
+    "created_at": "2018-02-17",
+    "pushed_at": "2026-01-18",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 108,
+    "id": 983345476,
+    "full_name": "Zie619/n8n-workflows",
+    "stars": 50221,
+    "growth": 49,
+    "created_at": "2025-05-14",
+    "pushed_at": "2026-01-16",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 109,
+    "id": 655806940,
+    "full_name": "microsoft/generative-ai-for-beginners",
+    "stars": 105445,
+    "growth": 48,
+    "created_at": "2023-06-19",
+    "pushed_at": "2026-01-19",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 110,
+    "id": 214587193,
+    "full_name": "supabase/supabase",
+    "stars": 96534,
+    "growth": 48,
+    "created_at": "2019-10-12",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 111,
+    "id": 206462776,
+    "full_name": "GrowingGit/GitHub-Chinese-Top-Charts",
+    "stars": 105652,
+    "growth": 47,
+    "created_at": "2019-09-05",
+    "pushed_at": "2024-10-12",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 112,
+    "id": 152870372,
+    "full_name": "ruanyf/weekly",
+    "stars": 82787,
+    "growth": 47,
+    "created_at": "2018-10-13",
+    "pushed_at": "2026-01-16",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 113,
+    "id": 725205304,
+    "full_name": "unslothai/unsloth",
+    "stars": 50989,
+    "growth": 47,
+    "created_at": "2023-11-29",
+    "pushed_at": "2026-01-20",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 114,
+    "id": 120425779,
+    "full_name": "lapce/lapce",
+    "stars": 37919,
+    "growth": 47,
+    "created_at": "2018-02-06",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 115,
+    "id": 160919119,
+    "full_name": "fastapi/fastapi",
+    "stars": 94328,
+    "growth": 46,
+    "created_at": "2018-12-08",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 116,
+    "id": 537603333,
+    "full_name": "openai/whisper",
+    "stars": 93509,
+    "growth": 46,
+    "created_at": "2022-09-16",
+    "pushed_at": "2025-12-15",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 117,
+    "id": 221981891,
+    "full_name": "microsoft/playwright",
+    "stars": 81511,
+    "growth": 45,
+    "created_at": "2019-11-15",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 118,
+    "id": 155220641,
+    "full_name": "huggingface/transformers",
+    "stars": 155496,
+    "growth": 44,
+    "created_at": "2018-10-29",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 119,
+    "id": 680120071,
+    "full_name": "microsoft/autogen",
+    "stars": 53755,
+    "growth": 43,
+    "created_at": "2023-08-18",
+    "pushed_at": "2026-01-20",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 120,
+    "id": 649170660,
+    "full_name": "Mintplex-Labs/anything-llm",
+    "stars": 53627,
+    "growth": 43,
+    "created_at": "2023-06-04",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 121,
+    "id": 621803253,
+    "full_name": "FlowiseAI/Flowise",
+    "stars": 48436,
+    "growth": 43,
+    "created_at": "2023-03-31",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 122,
+    "id": 72343657,
+    "full_name": "mifi/lossless-cut",
+    "stars": 37386,
+    "growth": 43,
+    "created_at": "2016-10-30",
+    "pushed_at": "2026-01-20",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 123,
+    "id": 599320067,
+    "full_name": "langflow-ai/langflow",
+    "stars": 144105,
+    "growth": 42,
+    "created_at": "2023-02-08",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 124,
+    "id": 134017286,
+    "full_name": "jesseduffield/lazygit",
+    "stars": 70950,
+    "growth": 42,
+    "created_at": "2018-05-19",
+    "pushed_at": "2026-01-17",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 125,
+    "id": 643445235,
+    "full_name": "lobehub/lobe-chat",
+    "stars": 70387,
+    "growth": 42,
+    "created_at": "2023-05-21",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 126,
+    "id": 486418532,
+    "full_name": "ChrisTitusTech/winutil",
+    "stars": 45917,
+    "growth": 42,
+    "created_at": "2022-04-28",
+    "pushed_at": "2026-01-15",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 127,
+    "id": 233130089,
+    "full_name": "charmbracelet/bubbletea",
+    "stars": 38491,
+    "growth": 42,
+    "created_at": "2020-01-10",
+    "pushed_at": "2026-01-13",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 128,
+    "id": 15634981,
+    "full_name": "godotengine/godot",
+    "stars": 105695,
+    "growth": 41,
+    "created_at": "2014-01-04",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 129,
+    "id": 571186647,
+    "full_name": "pathwaycom/pathway",
+    "stars": 57816,
+    "growth": 41,
+    "created_at": "2022-11-27",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 130,
+    "id": 822604462,
+    "full_name": "666ghj/BettaFish",
+    "stars": 34784,
+    "growth": 41,
+    "created_at": "2024-07-01",
+    "pushed_at": "2026-01-20",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 131,
+    "id": 63476337,
+    "full_name": "TheAlgorithms/Python",
+    "stars": 217044,
+    "growth": 40,
+    "created_at": "2016-07-16",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 132,
+    "id": 63539055,
+    "full_name": "jaywcjlove/awesome-mac",
+    "stars": 97944,
+    "growth": 40,
+    "created_at": "2016-07-17",
+    "pushed_at": "2026-01-17",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 133,
+    "id": 943934999,
+    "full_name": "FoundationAgents/OpenManus",
+    "stars": 53397,
+    "growth": 40,
+    "created_at": "2025-03-06",
+    "pushed_at": "2026-01-05",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 134,
+    "id": 291438522,
+    "full_name": "siyuan-note/siyuan",
+    "stars": 40772,
+    "growth": 40,
+    "created_at": "2020-08-30",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 135,
+    "id": 115478820,
+    "full_name": "binhnguyennus/awesome-scalability",
+    "stars": 68011,
+    "growth": 39,
+    "created_at": "2017-12-27",
+    "pushed_at": "2026-01-04",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 136,
+    "id": 519859998,
+    "full_name": "toeverything/AFFiNE",
+    "stars": 62051,
+    "growth": 39,
+    "created_at": "2022-07-31",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 137,
+    "id": 1075431749,
+    "full_name": "karpathy/nanochat",
+    "stars": 40598,
+    "growth": 39,
+    "created_at": "2025-10-13",
+    "pushed_at": "2026-01-20",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 138,
+    "id": 287463830,
+    "full_name": "microsoft/qlib",
+    "stars": 35865,
+    "growth": 39,
+    "created_at": "2020-08-14",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 139,
+    "id": 788847937,
+    "full_name": "Dokploy/dokploy",
+    "stars": 29324,
+    "growth": 39,
+    "created_at": "2024-04-19",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 140,
+    "id": 579082810,
+    "full_name": "dair-ai/Prompt-Engineering-Guide",
+    "stars": 69379,
+    "growth": 38,
+    "created_at": "2022-12-16",
+    "pushed_at": "2026-01-16",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 141,
+    "id": 186733095,
+    "full_name": "2dust/v2rayNG",
+    "stars": 49840,
+    "growth": 38,
+    "created_at": "2019-05-15",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 142,
+    "id": 542284380,
+    "full_name": "usebruno/bruno",
+    "stars": 40143,
+    "growth": 38,
+    "created_at": "2022-09-27",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 143,
+    "id": 48378947,
+    "full_name": "fatedier/frp",
+    "stars": 103694,
+    "growth": 37,
+    "created_at": "2015-12-21",
+    "pushed_at": "2026-01-14",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 144,
+    "id": 888092115,
+    "full_name": "microsoft/markitdown",
+    "stars": 85501,
+    "growth": 37,
+    "created_at": "2024-11-13",
+    "pushed_at": "2026-01-08",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 145,
+    "id": 53631945,
+    "full_name": "BurntSushi/ripgrep",
+    "stars": 59121,
+    "growth": 37,
+    "created_at": "2016-03-11",
+    "pushed_at": "2025-12-17",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 146,
+    "id": 187961907,
+    "full_name": "gedoor/legado",
+    "stars": 43448,
+    "growth": 37,
+    "created_at": "2019-05-22",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 147,
+    "id": 28457823,
+    "full_name": "freeCodeCamp/freeCodeCamp",
+    "stars": 436139,
+    "growth": 36,
+    "created_at": "2014-12-24",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 148,
+    "id": 32689863,
+    "full_name": "3b1b/manim",
+    "stars": 83855,
+    "growth": 36,
+    "created_at": "2015-03-22",
+    "pushed_at": "2025-10-20",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 149,
+    "id": 668195240,
+    "full_name": "pathwaycom/llm-app",
+    "stars": 54502,
+    "growth": 36,
+    "created_at": "2023-07-19",
+    "pushed_at": "2026-01-07",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 150,
+    "id": 163591278,
+    "full_name": "GitHubDaily/GitHubDaily",
+    "stars": 44675,
+    "growth": 36,
+    "created_at": "2018-12-30",
+    "pushed_at": "2025-12-31",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 151,
+    "id": 62607227,
+    "full_name": "yangshun/tech-interview-handbook",
+    "stars": 136901,
+    "growth": 35,
+    "created_at": "2016-07-05",
+    "pushed_at": "2026-01-16",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 152,
+    "id": 44804216,
+    "full_name": "termux/termux-app",
+    "stars": 49069,
+    "growth": 35,
+    "created_at": "2015-10-23",
+    "pushed_at": "2026-01-12",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 153,
+    "id": 858262444,
+    "full_name": "PatrickJS/awesome-cursorrules",
+    "stars": 37243,
+    "growth": 35,
+    "created_at": "2024-09-16",
+    "pushed_at": "2025-10-24",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 154,
+    "id": 317836248,
+    "full_name": "GorvGoyl/Clone-Wars",
+    "stars": 33564,
+    "growth": 35,
+    "created_at": "2020-12-02",
+    "pushed_at": "2024-08-06",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 155,
+    "id": 1006414368,
+    "full_name": "OpenCut-app/OpenCut",
+    "stars": 45183,
+    "growth": 34,
+    "created_at": "2025-06-22",
+    "pushed_at": "2025-12-07",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 156,
+    "id": 357728969,
+    "full_name": "oven-sh/bun",
+    "stars": 86536,
+    "growth": 33,
+    "created_at": "2021-04-14",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 157,
+    "id": 44882201,
+    "full_name": "MunGell/awesome-for-beginners",
+    "stars": 81866,
+    "growth": 33,
+    "created_at": "2015-10-24",
+    "pushed_at": "2025-12-05",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 158,
+    "id": 3482588,
+    "full_name": "danielmiessler/SecLists",
+    "stars": 68309,
+    "growth": 33,
+    "created_at": "2012-02-19",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 159,
+    "id": 582822129,
+    "full_name": "karpathy/nanoGPT",
+    "stars": 52211,
+    "growth": 33,
+    "created_at": "2022-12-28",
+    "pushed_at": "2025-11-12",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 160,
+    "id": 210702427,
+    "full_name": "typst/typst",
+    "stars": 50711,
+    "growth": 33,
+    "created_at": "2019-09-24",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 161,
+    "id": 527591471,
+    "full_name": "AUTOMATIC1111/stable-diffusion-webui",
+    "stars": 160118,
+    "growth": 32,
+    "created_at": "2022-08-22",
+    "pushed_at": "2025-12-18",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 162,
+    "id": 39464018,
+    "full_name": "apache/superset",
+    "stars": 70195,
+    "growth": 32,
+    "created_at": "2015-07-21",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 163,
+    "id": 577116112,
+    "full_name": "PlexPt/awesome-chatgpt-prompts-zh",
+    "stars": 57998,
+    "growth": 32,
+    "created_at": "2022-12-12",
+    "pushed_at": "2025-01-01",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 164,
+    "id": 65750241,
+    "full_name": "expo/expo",
+    "stars": 46636,
+    "growth": 32,
+    "created_at": "2016-08-15",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 165,
+    "id": 663900193,
+    "full_name": "sxyazi/yazi",
+    "stars": 31741,
+    "growth": 32,
+    "created_at": "2023-07-08",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 166,
+    "id": 15204860,
+    "full_name": "papers-we-love/papers-we-love",
+    "stars": 102530,
+    "growth": 31,
+    "created_at": "2013-12-15",
+    "pushed_at": "2025-10-10",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 167,
+    "id": 231865705,
+    "full_name": "TapXWorld/ChinaTextbook",
+    "stars": 64355,
+    "growth": 31,
+    "created_at": "2020-01-05",
+    "pushed_at": "2025-10-18",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 168,
+    "id": 510607652,
+    "full_name": "pocketbase/pocketbase",
+    "stars": 55468,
+    "growth": 31,
+    "created_at": "2022-07-05",
+    "pushed_at": "2026-01-18",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 169,
+    "id": 541269386,
+    "full_name": "ggml-org/whisper.cpp",
+    "stars": 46008,
+    "growth": 31,
+    "created_at": "2022-09-25",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 170,
+    "id": 474839179,
+    "full_name": "hiroi-sora/Umi-OCR",
+    "stars": 41598,
+    "growth": 31,
+    "created_at": "2022-03-28",
+    "pushed_at": "2025-11-20",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 171,
+    "id": 249995750,
+    "full_name": "amruthpillai/reactive-resume",
+    "stars": 34544,
+    "growth": 31,
+    "created_at": "2020-03-25",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 172,
+    "id": 587050620,
+    "full_name": "stanfordnlp/dspy",
+    "stars": 31700,
+    "growth": 31,
+    "created_at": "2023-01-09",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 173,
+    "id": 509091576,
+    "full_name": "SagerNet/sing-box",
+    "stars": 29876,
+    "growth": 31,
+    "created_at": "2022-06-30",
+    "pushed_at": "2026-01-17",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 174,
+    "id": 241576270,
+    "full_name": "labuladong/fucking-algorithm",
+    "stars": 132281,
+    "growth": 30,
+    "created_at": "2020-02-19",
+    "pushed_at": "2026-01-19",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 175,
+    "id": 47018239,
+    "full_name": "DopplerHQ/awesome-interview-questions",
+    "stars": 80287,
+    "growth": 30,
+    "created_at": "2015-11-28",
+    "pushed_at": "2024-07-29",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 176,
+    "id": 101138315,
+    "full_name": "d2l-ai/d2l-zh",
+    "stars": 75089,
+    "growth": 30,
+    "created_at": "2017-08-23",
+    "pushed_at": "2024-07-30",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 177,
+    "id": 173228436,
+    "full_name": "NationalSecurityAgency/ghidra",
+    "stars": 63713,
+    "growth": 30,
+    "created_at": "2019-03-01",
+    "pushed_at": "2026-01-20",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 178,
+    "id": 284008087,
+    "full_name": "cloudcommunity/Free-Certifications",
+    "stars": 49868,
+    "growth": 30,
+    "created_at": "2020-07-31",
+    "pushed_at": "2025-07-22",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 179,
+    "id": 127769231,
+    "full_name": "DIYgod/RSSHub",
+    "stars": 41289,
+    "growth": 30,
+    "created_at": "2018-04-02",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 180,
+    "id": 327089870,
+    "full_name": "payloadcms/payload",
+    "stars": 40061,
+    "growth": 30,
+    "created_at": "2021-01-05",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 181,
+    "id": 438803890,
+    "full_name": "LizardByte/Sunshine",
+    "stars": 33764,
+    "growth": 30,
+    "created_at": "2021-12-15",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 182,
+    "id": 20159867,
+    "full_name": "nothings/stb",
+    "stars": 32142,
+    "growth": 30,
+    "created_at": "2014-05-25",
+    "pushed_at": "2025-10-25",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 183,
+    "id": 712111618,
+    "full_name": "datalab-to/marker",
+    "stars": 31096,
+    "growth": 30,
+    "created_at": "2023-10-30",
+    "pushed_at": "2026-01-20",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 184,
+    "id": 724712,
+    "full_name": "rust-lang/rust",
+    "stars": 109589,
+    "growth": 29,
+    "created_at": "2010-06-16",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 185,
+    "id": 22067521,
+    "full_name": "ocornut/imgui",
+    "stars": 70871,
+    "growth": 29,
+    "created_at": "2014-07-21",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 186,
+    "id": 419347358,
+    "full_name": "PKUFlyingPig/cs-self-learning",
+    "stars": 70823,
+    "growth": 29,
+    "created_at": "2021-10-20",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 187,
+    "id": 660551251,
+    "full_name": "FoundationAgents/MetaGPT",
+    "stars": 63268,
+    "growth": 29,
+    "created_at": "2023-06-30",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 188,
+    "id": 615869301,
+    "full_name": "mudler/LocalAI",
+    "stars": 42232,
+    "growth": 29,
+    "created_at": "2023-03-18",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 189,
+    "id": 266231149,
+    "full_name": "logseq/logseq",
+    "stars": 40455,
+    "growth": 29,
+    "created_at": "2020-05-23",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 190,
+    "id": 488641606,
+    "full_name": "agno-agi/agno",
+    "stars": 37080,
+    "growth": 29,
+    "created_at": "2022-05-04",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 191,
+    "id": 167694194,
+    "full_name": "blakeblackshear/frigate",
+    "stars": 29651,
+    "growth": 29,
+    "created_at": "2019-01-26",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 192,
+    "id": 614765452,
+    "full_name": "Significant-Gravitas/AutoGPT",
+    "stars": 181336,
+    "growth": 28,
+    "created_at": "2023-03-16",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 193,
+    "id": 41881900,
+    "full_name": "microsoft/vscode",
+    "stars": 180888,
+    "growth": 28,
+    "created_at": "2015-09-03",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 194,
+    "id": 1062897,
+    "full_name": "github/gitignore",
+    "stars": 171974,
+    "growth": 28,
+    "created_at": "2010-11-08",
+    "pushed_at": "2026-01-13",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 195,
+    "id": 178991158,
+    "full_name": "starship/starship",
+    "stars": 53631,
+    "growth": 28,
+    "created_at": "2019-04-02",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 196,
+    "id": 560704231,
+    "full_name": "run-llama/llama_index",
+    "stars": 46517,
+    "growth": 28,
+    "created_at": "2022-11-02",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 197,
+    "id": 571770,
+    "full_name": "jgm/pandoc",
+    "stars": 41572,
+    "growth": 28,
+    "created_at": "2010-03-20",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 198,
+    "id": 1864233,
+    "full_name": "frappe/erpnext",
+    "stars": 31190,
+    "growth": 28,
+    "created_at": "2011-06-08",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 199,
+    "id": 22887094,
+    "full_name": "tesseract-ocr/tesseract",
+    "stars": 72021,
+    "growth": 27,
+    "created_at": "2014-08-12",
+    "pushed_at": "2026-01-08",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 200,
+    "id": 29207621,
+    "full_name": "caddyserver/caddy",
+    "stars": 69327,
+    "growth": 27,
+    "created_at": "2015-01-13",
+    "pushed_at": "2026-01-16",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 201,
+    "id": 77213120,
+    "full_name": "Eugeny/tabby",
+    "stars": 68338,
+    "growth": 27,
+    "created_at": "2016-12-23",
+    "pushed_at": "2026-01-17",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 202,
+    "id": 71948498,
+    "full_name": "localstack/localstack",
+    "stars": 64142,
+    "growth": 27,
+    "created_at": "2016-10-25",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 203,
+    "id": 44662669,
+    "full_name": "dbeaver/dbeaver",
+    "stars": 48329,
+    "growth": 27,
+    "created_at": "2015-10-21",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 204,
+    "id": 361044034,
+    "full_name": "slidevjs/slidev",
+    "stars": 43833,
+    "growth": 27,
+    "created_at": "2021-04-24",
+    "pushed_at": "2026-01-13",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 205,
+    "id": 253222599,
+    "full_name": "CorentinTh/it-tools",
+    "stars": 36607,
+    "growth": 27,
+    "created_at": "2020-04-05",
+    "pushed_at": "2026-01-19",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 206,
+    "id": 458648791,
+    "full_name": "paperless-ngx/paperless-ngx",
+    "stars": 35827,
+    "growth": 27,
+    "created_at": "2022-02-12",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 207,
+    "id": 191820100,
+    "full_name": "google-ai-edge/mediapipe",
+    "stars": 33413,
+    "growth": 27,
+    "created_at": "2019-06-13",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 208,
+    "id": 576201,
+    "full_name": "mrdoob/three.js",
+    "stars": 110462,
+    "growth": 26,
+    "created_at": "2010-03-23",
+    "pushed_at": "2026-01-20",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 209,
+    "id": 65600975,
+    "full_name": "pytorch/pytorch",
+    "stars": 96789,
+    "growth": 26,
+    "created_at": "2016-08-13",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 210,
+    "id": 106017343,
+    "full_name": "tailwindlabs/tailwindcss",
+    "stars": 93093,
+    "growth": 26,
+    "created_at": "2017-10-06",
+    "pushed_at": "2026-01-18",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 211,
+    "id": 172562475,
+    "full_name": "florinpop17/app-ideas",
+    "stars": 89779,
+    "growth": 26,
+    "created_at": "2019-02-25",
+    "pushed_at": "2025-10-11",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 212,
+    "id": 14712850,
+    "full_name": "syncthing/syncthing",
+    "stars": 79258,
+    "growth": 26,
+    "created_at": "2013-11-26",
+    "pushed_at": "2026-01-20",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 213,
+    "id": 162998479,
+    "full_name": "sherlock-project/sherlock",
+    "stars": 72060,
+    "growth": 26,
+    "created_at": "2018-12-24",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 214,
+    "id": 26689598,
+    "full_name": "prakhar1989/awesome-courses",
+    "stars": 65918,
+    "growth": 26,
+    "created_at": "2014-11-15",
+    "pushed_at": "2023-05-04",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 215,
+    "id": 824874689,
+    "full_name": "cline/cline",
+    "stars": 57055,
+    "growth": 26,
+    "created_at": "2024-07-06",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 216,
+    "id": 19745004,
+    "full_name": "odoo/odoo",
+    "stars": 48580,
+    "growth": 26,
+    "created_at": "2014-05-13",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 217,
+    "id": 519577891,
+    "full_name": "upscayl/upscayl",
+    "stars": 42656,
+    "growth": 26,
+    "created_at": "2022-07-30",
+    "pushed_at": "2026-01-16",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 218,
+    "id": 738733003,
+    "full_name": "danielmiessler/Fabric",
+    "stars": 38402,
+    "growth": 26,
+    "created_at": "2024-01-03",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 219,
+    "id": 332357698,
+    "full_name": "YunaiV/ruoyi-vue-pro",
+    "stars": 35151,
+    "growth": 26,
+    "created_at": "2021-01-24",
+    "pushed_at": "2026-01-18",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 220,
+    "id": 114938943,
+    "full_name": "NginxProxyManager/nginx-proxy-manager",
+    "stars": 31204,
+    "growth": 26,
+    "created_at": "2017-12-20",
+    "pushed_at": "2026-01-18",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 221,
+    "id": 709589487,
+    "full_name": "ashishps1/awesome-system-design-resources",
+    "stars": 29163,
+    "growth": 26,
+    "created_at": "2023-10-25",
+    "pushed_at": "2026-01-11",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 222,
+    "id": 70107786,
+    "full_name": "vercel/next.js",
+    "stars": 137264,
+    "growth": 25,
+    "created_at": "2016-10-05",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 223,
+    "id": 343965132,
+    "full_name": "microsoft/ML-For-Beginners",
+    "stars": 83220,
+    "growth": 25,
+    "created_at": "2021-03-03",
+    "pushed_at": "2026-01-19",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 224,
+    "id": 15111821,
+    "full_name": "grafana/grafana",
+    "stars": 71817,
+    "growth": 25,
+    "created_at": "2013-12-11",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 225,
+    "id": 163883279,
+    "full_name": "nektos/act",
+    "stars": 68287,
+    "growth": 25,
+    "created_at": "2019-01-02",
+    "pushed_at": "2026-01-01",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 226,
+    "id": 21938243,
+    "full_name": "rust-unofficial/awesome-rust",
+    "stars": 55144,
+    "growth": 25,
+    "created_at": "2014-07-17",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 227,
+    "id": 72495579,
+    "full_name": "go-gitea/gitea",
+    "stars": 53303,
+    "growth": 25,
+    "created_at": "2016-11-01",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 228,
+    "id": 770153867,
+    "full_name": "harry0703/MoneyPrinterTurbo",
+    "stars": 49076,
+    "growth": 25,
+    "created_at": "2024-03-11",
+    "pushed_at": "2025-12-14",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 229,
+    "id": 36836475,
+    "full_name": "tmux/tmux",
+    "stars": 40974,
+    "growth": 25,
+    "created_at": "2015-06-03",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 230,
+    "id": 778556932,
+    "full_name": "zen-browser/desktop",
+    "stars": 39652,
+    "growth": 25,
+    "created_at": "2024-03-28",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 231,
+    "id": 379865325,
+    "full_name": "drizzle-team/drizzle-orm",
+    "stars": 32415,
+    "growth": 25,
+    "created_at": "2021-06-24",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 232,
+    "id": 235901813,
+    "full_name": "PostHog/posthog",
+    "stars": 30920,
+    "growth": 25,
+    "created_at": "2020-01-23",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 233,
+    "id": 11180687,
+    "full_name": "gohugoio/hugo",
+    "stars": 86177,
+    "growth": 24,
+    "created_at": "2013-07-04",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 234,
+    "id": 5108051,
+    "full_name": "opencv/opencv",
+    "stars": 85834,
+    "growth": 24,
+    "created_at": "2012-07-19",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 235,
+    "id": 693342566,
+    "full_name": "ByteByteGoHq/system-design-101",
+    "stars": 79088,
+    "growth": 24,
+    "created_at": "2023-09-18",
+    "pushed_at": "2025-04-04",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 236,
+    "id": 145553672,
+    "full_name": "fighting41love/funNLP",
+    "stars": 78573,
+    "growth": 24,
+    "created_at": "2018-08-21",
+    "pushed_at": "2024-05-10",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 237,
+    "id": 71220757,
+    "full_name": "swisskyrepo/PayloadsAllTheThings",
+    "stars": 74546,
+    "growth": 24,
+    "created_at": "2016-10-18",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 238,
+    "id": 332880689,
+    "full_name": "coollabsio/coolify",
+    "stars": 49728,
+    "growth": 24,
+    "created_at": "2021-01-25",
+    "pushed_at": "2026-01-20",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 239,
+    "id": 33884891,
+    "full_name": "apache/airflow",
+    "stars": 43943,
+    "growth": 24,
+    "created_at": "2015-04-13",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 240,
+    "id": 853189791,
+    "full_name": "PDFMathTranslate/PDFMathTranslate",
+    "stars": 31415,
+    "growth": 24,
+    "created_at": "2024-09-06",
+    "pushed_at": "2025-11-25",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 241,
+    "id": 326174741,
+    "full_name": "ashishpatel26/500-AI-Machine-learning-Deep-learning-Computer-vision-NLP-Projects-with-code",
+    "stars": 31046,
+    "growth": 24,
+    "created_at": "2021-01-02",
+    "pushed_at": "2025-08-01",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 242,
+    "id": 21827146,
+    "full_name": "seaweedfs/seaweedfs",
+    "stars": 29686,
+    "growth": 24,
+    "created_at": "2014-07-14",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 243,
+    "id": 112507086,
+    "full_name": "Chalarangelo/30-seconds-of-code",
+    "stars": 126425,
+    "growth": 23,
+    "created_at": "2017-11-29",
+    "pushed_at": "2026-01-15",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 244,
+    "id": 257485422,
+    "full_name": "vitejs/vite",
+    "stars": 77684,
+    "growth": 23,
+    "created_at": "2020-04-21",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 245,
+    "id": 33263118,
+    "full_name": "gorhill/uBlock",
+    "stars": 61061,
+    "growth": 23,
+    "created_at": "2015-04-01",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 246,
+    "id": 268424739,
+    "full_name": "helix-editor/helix",
+    "stars": 42520,
+    "growth": 23,
+    "created_at": "2020-06-01",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 247,
+    "id": 265122478,
+    "full_name": "ManimCommunity/manim",
+    "stars": 36327,
+    "growth": 23,
+    "created_at": "2020-05-19",
+    "pushed_at": "2026-01-20",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 248,
+    "id": 13428264,
+    "full_name": "ShareX/ShareX",
+    "stars": 35298,
+    "growth": 23,
+    "created_at": "2013-10-08",
+    "pushed_at": "2026-01-20",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 249,
+    "id": 661957079,
+    "full_name": "gkd-kit/gkd",
+    "stars": 35282,
+    "growth": 23,
+    "created_at": "2023-07-04",
+    "pushed_at": "2025-12-15",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 250,
+    "id": 311315731,
+    "full_name": "XTLS/Xray-core",
+    "stars": 34311,
+    "growth": 23,
+    "created_at": "2020-11-09",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 251,
+    "id": 329782568,
+    "full_name": "DioxusLabs/dioxus",
+    "stars": 34309,
+    "growth": 23,
+    "created_at": "2021-01-15",
+    "pushed_at": "2026-01-20",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 252,
+    "id": 631254164,
+    "full_name": "songquanpeng/one-api",
+    "stars": 29185,
+    "growth": 23,
+    "created_at": "2023-04-22",
+    "pushed_at": "2026-01-09",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 253,
+    "id": 781022269,
+    "full_name": "anthropics/prompt-eng-interactive-tutorial",
+    "stars": 29043,
+    "growth": 23,
+    "created_at": "2024-04-02",
+    "pushed_at": "2024-07-11",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 254,
+    "id": 32484381,
+    "full_name": "ripienaar/free-for-dev",
+    "stars": 117443,
+    "growth": 22,
+    "created_at": "2015-03-18",
+    "pushed_at": "2026-01-20",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 255,
+    "id": 27193779,
+    "full_name": "nodejs/node",
+    "stars": 115317,
+    "growth": 22,
+    "created_at": "2014-11-26",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 256,
+    "id": 16408992,
+    "full_name": "neovim/neovim",
+    "stars": 95861,
+    "growth": 22,
+    "created_at": "2014-01-31",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 257,
+    "id": 26066727,
+    "full_name": "mermaid-js/mermaid",
+    "stars": 85478,
+    "growth": 22,
+    "created_at": "2014-11-01",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 258,
+    "id": 10744183,
+    "full_name": "netdata/netdata",
+    "stars": 77447,
+    "growth": 22,
+    "created_at": "2013-06-17",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 259,
+    "id": 377496562,
+    "full_name": "AppFlowy-IO/AppFlowy",
+    "stars": 67651,
+    "growth": 22,
+    "created_at": "2021-06-16",
+    "pushed_at": "2026-01-12",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 260,
+    "id": 108761645,
+    "full_name": "nocodb/nocodb",
+    "stars": 61615,
+    "growth": 22,
+    "created_at": "2017-10-29",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 261,
+    "id": 180328715,
+    "full_name": "pmndrs/zustand",
+    "stars": 56659,
+    "growth": 22,
+    "created_at": "2019-04-09",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 262,
+    "id": 60246359,
+    "full_name": "ClickHouse/ClickHouse",
+    "stars": 45340,
+    "growth": 22,
+    "created_at": "2016-06-02",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 263,
+    "id": 24268127,
+    "full_name": "coreybutler/nvm-windows",
+    "stars": 44551,
+    "growth": 22,
+    "created_at": "2014-09-20",
+    "pushed_at": "2025-10-06",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 264,
+    "id": 453717720,
+    "full_name": "AykutSarac/jsoncrack.com",
+    "stars": 43051,
+    "growth": 22,
+    "created_at": "2022-01-30",
+    "pushed_at": "2026-01-10",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 265,
+    "id": 71932349,
+    "full_name": "ray-project/ray",
+    "stars": 40918,
+    "growth": 22,
+    "created_at": "2016-10-25",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 266,
+    "id": 172227885,
+    "full_name": "fastapi/full-stack-fastapi-template",
+    "stars": 40856,
+    "growth": 22,
+    "created_at": "2019-02-23",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 267,
+    "id": 522158088,
+    "full_name": "zhayujie/chatgpt-on-wechat",
+    "stars": 40725,
+    "growth": 22,
+    "created_at": "2022-08-07",
+    "pushed_at": "2025-10-22",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 268,
+    "id": 525105056,
+    "full_name": "karanpratapsingh/system-design",
+    "stars": 40049,
+    "growth": 22,
+    "created_at": "2022-08-15",
+    "pushed_at": "2025-12-15",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 269,
+    "id": 189285554,
+    "full_name": "exelban/stats",
+    "stars": 35932,
+    "growth": 22,
+    "created_at": "2019-05-29",
+    "pushed_at": "2026-01-11",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 270,
+    "id": 600596928,
+    "full_name": "danny-avila/LibreChat",
+    "stars": 33250,
+    "growth": 22,
+    "created_at": "2023-02-12",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 271,
+    "id": 10270250,
+    "full_name": "facebook/react",
+    "stars": 242423,
+    "growth": 21,
+    "created_at": "2013-05-24",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 272,
+    "id": 561730219,
+    "full_name": "krahets/hello-algo",
+    "stars": 121735,
+    "growth": 21,
+    "created_at": "2022-11-04",
+    "pushed_at": "2026-01-04",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 273,
+    "id": 100060912,
+    "full_name": "microsoft/terminal",
+    "stars": 101452,
+    "growth": 21,
+    "created_at": "2017-08-11",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 274,
+    "id": 908531752,
+    "full_name": "deepseek-ai/DeepSeek-V3",
+    "stars": 101236,
+    "growth": 21,
+    "created_at": "2024-12-26",
+    "pushed_at": "2025-08-28",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 275,
+    "id": 90796663,
+    "full_name": "puppeteer/puppeteer",
+    "stars": 93376,
+    "growth": 21,
+    "created_at": "2017-05-09",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 276,
+    "id": 13807606,
+    "full_name": "junegunn/fzf",
+    "stars": 77164,
+    "growth": 21,
+    "created_at": "2013-10-23",
+    "pushed_at": "2026-01-18",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 277,
+    "id": 13233158,
+    "full_name": "obsproject/obs-studio",
+    "stars": 69870,
+    "growth": 21,
+    "created_at": "2013-10-01",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 278,
+    "id": 36502,
+    "full_name": "git/git",
+    "stars": 58677,
+    "growth": 21,
+    "created_at": "2008-07-23",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 279,
+    "id": 365739812,
+    "full_name": "tldraw/tldraw",
+    "stars": 44723,
+    "growth": 21,
+    "created_at": "2021-05-09",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 280,
+    "id": 145464445,
+    "full_name": "ueberdosis/tiptap",
+    "stars": 34672,
+    "growth": 21,
+    "created_at": "2018-08-20",
+    "pushed_at": "2026-01-20",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 281,
+    "id": 107505869,
+    "full_name": "firecracker-microvm/firecracker",
+    "stars": 31970,
+    "growth": 21,
+    "created_at": "2017-10-19",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 282,
+    "id": 278772719,
+    "full_name": "vbenjs/vue-vben-admin",
+    "stars": 31323,
+    "growth": 21,
+    "created_at": "2020-07-11",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 283,
+    "id": 212639071,
+    "full_name": "bregman-arie/devops-exercises",
+    "stars": 80726,
+    "growth": 20,
+    "created_at": "2019-10-03",
+    "pushed_at": "2025-12-27",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 284,
+    "id": 290091948,
+    "full_name": "labmlai/annotated_deep_learning_paper_implementations",
+    "stars": 65463,
+    "growth": 20,
+    "created_at": "2020-08-25",
+    "pushed_at": "2025-11-11",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 285,
+    "id": 67702184,
+    "full_name": "topjohnwu/Magisk",
+    "stars": 58261,
+    "growth": 20,
+    "created_at": "2016-09-08",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 286,
+    "id": 130688011,
+    "full_name": "meilisearch/meilisearch",
+    "stars": 55493,
+    "growth": 20,
+    "created_at": "2018-04-23",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 287,
+    "id": 311683390,
+    "full_name": "WerWolv/ImHex",
+    "stars": 52357,
+    "growth": 20,
+    "created_at": "2020-11-10",
+    "pushed_at": "2026-01-20",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 288,
+    "id": 156157055,
+    "full_name": "GokuMohandas/Made-With-ML",
+    "stars": 45937,
+    "growth": 20,
+    "created_at": "2018-11-05",
+    "pushed_at": "2024-08-18",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 289,
+    "id": 245704608,
+    "full_name": "colinhacks/zod",
+    "stars": 41549,
+    "growth": 20,
+    "created_at": "2020-03-07",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 290,
+    "id": 638629097,
+    "full_name": "Aider-AI/aider",
+    "stars": 39948,
+    "growth": 20,
+    "created_at": "2023-05-09",
+    "pushed_at": "2026-01-19",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 291,
+    "id": 193292061,
+    "full_name": "zbezj/HEU_KMS_Activator",
+    "stars": 39568,
+    "growth": 20,
+    "created_at": "2019-06-23",
+    "pushed_at": "2025-11-11",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 292,
+    "id": 75821432,
+    "full_name": "llvm/llvm-project",
+    "stars": 36572,
+    "growth": 20,
+    "created_at": "2016-12-07",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 293,
+    "id": 631567741,
+    "full_name": "chatanywhere/GPT_API_free",
+    "stars": 35662,
+    "growth": 20,
+    "created_at": "2023-04-23",
+    "pushed_at": "2026-01-10",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 294,
+    "id": 138754790,
+    "full_name": "duckdb/duckdb",
+    "stars": 35559,
+    "growth": 20,
+    "created_at": "2018-06-26",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 295,
+    "id": 197018189,
+    "full_name": "xyflow/xyflow",
+    "stars": 34868,
+    "growth": 20,
+    "created_at": "2019-07-15",
+    "pushed_at": "2026-01-15",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 296,
+    "id": 273871859,
+    "full_name": "juanfont/headscale",
+    "stars": 34427,
+    "growth": 20,
+    "created_at": "2020-06-21",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 297,
+    "id": 92111509,
+    "full_name": "TriliumNext/Trilium",
+    "stars": 34254,
+    "growth": 20,
+    "created_at": "2017-05-23",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 298,
+    "id": 62712899,
+    "full_name": "AdguardTeam/AdGuardHome",
+    "stars": 32184,
+    "growth": 20,
+    "created_at": "2016-07-06",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 299,
+    "id": 234739976,
+    "full_name": "medusajs/medusa",
+    "stars": 31799,
+    "growth": 20,
+    "created_at": "2020-01-18",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 300,
+    "id": 9384267,
+    "full_name": "electron/electron",
+    "stars": 119853,
+    "growth": 19,
+    "created_at": "2013-04-12",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 301,
+    "id": 843222,
+    "full_name": "scikit-learn/scikit-learn",
+    "stars": 64727,
+    "growth": 19,
+    "created_at": "2010-08-17",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 302,
+    "id": 666299222,
+    "full_name": "openinterpreter/open-interpreter",
+    "stars": 61759,
+    "growth": 19,
+    "created_at": "2023-07-14",
+    "pushed_at": "2025-12-05",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 303,
+    "id": 110446844,
+    "full_name": "marktext/marktext",
+    "stars": 53356,
+    "growth": 19,
+    "created_at": "2017-11-12",
+    "pushed_at": "2025-11-19",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 304,
+    "id": 172378503,
+    "full_name": "romkatv/powerlevel10k",
+    "stars": 52486,
+    "growth": 19,
+    "created_at": "2019-02-24",
+    "pushed_at": "2026-01-07",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 305,
+    "id": 266417772,
+    "full_name": "SimplifyJobs/Summer2026-Internships",
+    "stars": 43164,
+    "growth": 19,
+    "created_at": "2020-05-23",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 306,
+    "id": 3351871,
+    "full_name": "qbittorrent/qBittorrent",
+    "stars": 35130,
+    "growth": 19,
+    "created_at": "2012-02-04",
+    "pushed_at": "2026-01-19",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 307,
+    "id": 94061307,
+    "full_name": "vadimdemedes/ink",
+    "stars": 34150,
+    "growth": 19,
+    "created_at": "2017-06-12",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 308,
+    "id": 619521008,
+    "full_name": "RVC-Project/Retrieval-based-Voice-Conversion-WebUI",
+    "stars": 34060,
+    "growth": 19,
+    "created_at": "2023-03-27",
+    "pushed_at": "2024-11-24",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 309,
+    "id": 42332863,
+    "full_name": "filebrowser/filebrowser",
+    "stars": 33068,
+    "growth": 19,
+    "created_at": "2015-09-11",
+    "pushed_at": "2026-01-18",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 310,
+    "id": 212619489,
+    "full_name": "XIU2/TrackersListCollection",
+    "stars": 30349,
+    "growth": 19,
+    "created_at": "2019-10-03",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 311,
+    "id": 291137,
+    "full_name": "ohmyzsh/ohmyzsh",
+    "stars": 184121,
+    "growth": 18,
+    "created_at": "2009-08-28",
+    "pushed_at": "2026-01-20",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 312,
+    "id": 133442384,
+    "full_name": "denoland/deno",
+    "stars": 105918,
+    "growth": 18,
+    "created_at": "2018-05-15",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 313,
+    "id": 26898879,
+    "full_name": "awesomedata/awesome-public-datasets",
+    "stars": 72315,
+    "growth": 18,
+    "created_at": "2014-11-20",
+    "pushed_at": "2026-01-14",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 314,
+    "id": 718741813,
+    "full_name": "abi/screenshot-to-code",
+    "stars": 71472,
+    "growth": 18,
+    "created_at": "2023-11-14",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 315,
+    "id": 43441403,
+    "full_name": "strapi/strapi",
+    "stars": 71040,
+    "growth": 18,
+    "created_at": "2015-09-30",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 316,
+    "id": 29261473,
+    "full_name": "minio/minio",
+    "stars": 59853,
+    "growth": 18,
+    "created_at": "2015-01-14",
+    "pushed_at": "2026-01-06",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 317,
+    "id": 92443980,
+    "full_name": "jgraph/drawio-desktop",
+    "stars": 59081,
+    "growth": 18,
+    "created_at": "2017-05-25",
+    "pushed_at": "2026-01-16",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 318,
+    "id": 8859474,
+    "full_name": "skylot/jadx",
+    "stars": 46971,
+    "growth": 18,
+    "created_at": "2013-03-18",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 319,
+    "id": 523043277,
+    "full_name": "astral-sh/ruff",
+    "stars": 45273,
+    "growth": 18,
+    "created_at": "2022-08-09",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 320,
+    "id": 204086862,
+    "full_name": "streamlit/streamlit",
+    "stars": 43151,
+    "growth": 18,
+    "created_at": "2019-08-24",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 321,
+    "id": 29219243,
+    "full_name": "bannedbook/fanqiang",
+    "stars": 41942,
+    "growth": 18,
+    "created_at": "2015-01-14",
+    "pushed_at": "2026-01-18",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 322,
+    "id": 410749029,
+    "full_name": "spacedriveapp/spacedrive",
+    "stars": 36735,
+    "growth": 18,
+    "created_at": "2021-09-27",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 323,
+    "id": 198071756,
+    "full_name": "huiyadanli/RevokeMsgPatcher",
+    "stars": 36318,
+    "growth": 18,
+    "created_at": "2019-07-21",
+    "pushed_at": "2026-01-12",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 324,
+    "id": 167596393,
+    "full_name": "derailed/k9s",
+    "stars": 32557,
+    "growth": 18,
+    "created_at": "2019-01-25",
+    "pushed_at": "2026-01-13",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 325,
+    "id": 15333471,
+    "full_name": "ocrmypdf/OCRmyPDF",
+    "stars": 32354,
+    "growth": 18,
+    "created_at": "2013-12-20",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 326,
+    "id": 13836499,
+    "full_name": "raysan5/raylib",
+    "stars": 30457,
+    "growth": 18,
+    "created_at": "2013-10-24",
+    "pushed_at": "2026-01-20",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 327,
+    "id": 61349723,
+    "full_name": "casey/just",
+    "stars": 29878,
+    "growth": 18,
+    "created_at": "2016-06-17",
+    "pushed_at": "2026-01-20",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 328,
+    "id": 125098880,
+    "full_name": "ValveSoftware/Proton",
+    "stars": 29789,
+    "growth": 18,
+    "created_at": "2018-03-13",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 329,
+    "id": 420628737,
+    "full_name": "waydabber/BetterDisplay",
+    "stars": 29272,
+    "growth": 18,
+    "created_at": "2021-10-24",
+    "pushed_at": "2026-01-13",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 330,
+    "id": 24195339,
+    "full_name": "angular/angular",
+    "stars": 99728,
+    "growth": 17,
+    "created_at": "2014-09-18",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 331,
+    "id": 612230,
+    "full_name": "nvm-sh/nvm",
+    "stars": 90963,
+    "growth": 17,
+    "created_at": "2010-04-15",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 332,
+    "id": 12888993,
+    "full_name": "home-assistant/core",
+    "stars": 84313,
+    "growth": 17,
+    "created_at": "2013-09-17",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 333,
+    "id": 468576060,
+    "full_name": "openai/openai-cookbook",
+    "stars": 71042,
+    "growth": 17,
+    "created_at": "2022-03-11",
+    "pushed_at": "2026-01-15",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 334,
+    "id": 51980455,
+    "full_name": "alacritty/alacritty",
+    "stars": 62048,
+    "growth": 17,
+    "created_at": "2016-02-18",
+    "pushed_at": "2026-01-14",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 335,
+    "id": 42408804,
+    "full_name": "traefik/traefik",
+    "stars": 61182,
+    "growth": 17,
+    "created_at": "2015-09-13",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 336,
+    "id": 161012019,
+    "full_name": "jellyfin/jellyfin",
+    "stars": 47889,
+    "growth": 17,
+    "created_at": "2018-12-09",
+    "pushed_at": "2026-01-20",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 337,
+    "id": 280567579,
+    "full_name": "NaiboWang/EasySpider",
+    "stars": 43925,
+    "growth": 17,
+    "created_at": "2020-07-18",
+    "pushed_at": "2026-01-20",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 338,
+    "id": 338719962,
+    "full_name": "KRTirtho/spotube",
+    "stars": 43775,
+    "growth": 17,
+    "created_at": "2021-02-14",
+    "pushed_at": "2026-01-09",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 339,
+    "id": 208728772,
+    "full_name": "milvus-io/milvus",
+    "stars": 42342,
+    "growth": 17,
+    "created_at": "2019-09-16",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 340,
+    "id": 164140756,
+    "full_name": "files-community/Files",
+    "stars": 41302,
+    "growth": 17,
+    "created_at": "2019-01-04",
+    "pushed_at": "2026-01-20",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 341,
+    "id": 572984571,
+    "full_name": "twentyhq/twenty",
+    "stars": 38998,
+    "growth": 17,
+    "created_at": "2022-12-01",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 342,
+    "id": 610260322,
+    "full_name": "chatboxai/chatbox",
+    "stars": 38219,
+    "growth": 17,
+    "created_at": "2023-03-06",
+    "pushed_at": "2026-01-16",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 343,
+    "id": 3544424,
+    "full_name": "httpie/cli",
+    "stars": 37397,
+    "growth": 17,
+    "created_at": "2012-02-25",
+    "pushed_at": "2024-12-17",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 344,
+    "id": 151619717,
+    "full_name": "google-research/google-research",
+    "stars": 37118,
+    "growth": 17,
+    "created_at": "2018-10-04",
+    "pushed_at": "2026-01-20",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 345,
+    "id": 263727855,
+    "full_name": "pola-rs/polars",
+    "stars": 37085,
+    "growth": 17,
+    "created_at": "2020-05-13",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 346,
+    "id": 59435364,
+    "full_name": "outline/outline",
+    "stars": 36801,
+    "growth": 17,
+    "created_at": "2016-05-22",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 347,
+    "id": 23129458,
+    "full_name": "aseprite/aseprite",
+    "stars": 35375,
+    "growth": 17,
+    "created_at": "2014-08-19",
+    "pushed_at": "2025-12-30",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 348,
+    "id": 520969009,
+    "full_name": "mouredev/Hello-Python",
+    "stars": 34065,
+    "growth": 17,
+    "created_at": "2022-08-03",
+    "pushed_at": "2025-08-11",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 349,
+    "id": 515647260,
+    "full_name": "1Panel-dev/1Panel",
+    "stars": 32954,
+    "growth": 17,
+    "created_at": "2022-07-19",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 350,
+    "id": 245166720,
+    "full_name": "ajeetdsouza/zoxide",
+    "stars": 32748,
+    "growth": 17,
+    "created_at": "2020-03-05",
+    "pushed_at": "2025-12-15",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 351,
+    "id": 181042062,
+    "full_name": "utmapp/UTM",
+    "stars": 32342,
+    "growth": 17,
+    "created_at": "2019-04-12",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 352,
+    "id": 644686905,
+    "full_name": "continuedev/continue",
+    "stars": 31013,
+    "growth": 17,
+    "created_at": "2023-05-24",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 353,
+    "id": 778431525,
+    "full_name": "microsoft/graphrag",
+    "stars": 30444,
+    "growth": 17,
+    "created_at": "2024-03-27",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 354,
+    "id": 214011414,
+    "full_name": "kingToolbox/WindTerm",
+    "stars": 29480,
+    "growth": 17,
+    "created_at": "2019-10-09",
+    "pushed_at": "2025-03-11",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 355,
+    "id": 45717250,
+    "full_name": "tensorflow/tensorflow",
+    "stars": 193430,
+    "growth": 16,
+    "created_at": "2015-11-07",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 356,
+    "id": 132464395,
+    "full_name": "Snailclimb/JavaGuide",
+    "stars": 153550,
+    "growth": 16,
+    "created_at": "2018-05-07",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 357,
+    "id": 20580498,
+    "full_name": "kubernetes/kubernetes",
+    "stars": 119973,
+    "growth": 16,
+    "created_at": "2014-06-06",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 358,
+    "id": 6296790,
+    "full_name": "spring-projects/spring-boot",
+    "stars": 79738,
+    "growth": 16,
+    "created_at": "2012-10-19",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 359,
+    "id": 507775,
+    "full_name": "elastic/elasticsearch",
+    "stars": 75933,
+    "growth": 16,
+    "created_at": "2010-02-08",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 360,
+    "id": 21935031,
+    "full_name": "fffaraz/awesome-cpp",
+    "stars": 69257,
+    "growth": 16,
+    "created_at": "2014-07-17",
+    "pushed_at": "2026-01-16",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 361,
+    "id": 9185792,
+    "full_name": "apache/echarts",
+    "stars": 65497,
+    "growth": 16,
+    "created_at": "2013-04-03",
+    "pushed_at": "2026-01-15",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 362,
+    "id": 94911145,
+    "full_name": "facebook/docusaurus",
+    "stars": 63474,
+    "growth": 16,
+    "created_at": "2017-06-20",
+    "pushed_at": "2026-01-19",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 363,
+    "id": 27574418,
+    "full_name": "ryanoasis/nerd-fonts",
+    "stars": 61335,
+    "growth": 16,
+    "created_at": "2014-12-05",
+    "pushed_at": "2026-01-15",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 364,
+    "id": 15019962,
+    "full_name": "tldr-pages/tldr",
+    "stars": 60910,
+    "growth": 16,
+    "created_at": "2013-12-08",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 365,
+    "id": 130464961,
+    "full_name": "sharkdp/bat",
+    "stars": 56746,
+    "growth": 16,
+    "created_at": "2018-04-21",
+    "pushed_at": "2026-01-15",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 366,
+    "id": 18708860,
+    "full_name": "tiimgreen/github-cheat-sheet",
+    "stars": 54712,
+    "growth": 16,
+    "created_at": "2014-04-12",
+    "pushed_at": "2024-04-15",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 367,
+    "id": 162279822,
+    "full_name": "agalwood/Motrix",
+    "stars": 50577,
+    "growth": 16,
+    "created_at": "2018-12-18",
+    "pushed_at": "2024-07-11",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 368,
+    "id": 68957920,
+    "full_name": "justjavac/awesome-wechat-weapp",
+    "stars": 50340,
+    "growth": 16,
+    "created_at": "2016-09-22",
+    "pushed_at": "2025-11-19",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 369,
+    "id": 187335810,
+    "full_name": "jesseduffield/lazydocker",
+    "stars": 49295,
+    "growth": 16,
+    "created_at": "2019-05-18",
+    "pushed_at": "2026-01-17",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 370,
+    "id": 202367615,
+    "full_name": "lyswhut/lx-music-desktop",
+    "stars": 48395,
+    "growth": 16,
+    "created_at": "2019-08-14",
+    "pushed_at": "2026-01-01",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 371,
+    "id": 91629816,
+    "full_name": "freqtrade/freqtrade",
+    "stars": 46080,
+    "growth": 16,
+    "created_at": "2017-05-17",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 372,
+    "id": 344190478,
+    "full_name": "microsoft/AI-For-Beginners",
+    "stars": 45000,
+    "growth": 16,
+    "created_at": "2021-03-03",
+    "pushed_at": "2026-01-19",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 373,
+    "id": 234798675,
+    "full_name": "bevyengine/bevy",
+    "stars": 44217,
+    "growth": 16,
+    "created_at": "2020-01-18",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 374,
+    "id": 98771110,
+    "full_name": "zhongyang219/TrafficMonitor",
+    "stars": 42835,
+    "growth": 16,
+    "created_at": "2017-07-30",
+    "pushed_at": "2025-10-05",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 375,
+    "id": 679506386,
+    "full_name": "janhq/jan",
+    "stars": 40137,
+    "growth": 16,
+    "created_at": "2023-08-17",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 376,
+    "id": 350360184,
+    "full_name": "calcom/cal.com",
+    "stars": 39797,
+    "growth": 16,
+    "created_at": "2021-03-22",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 377,
+    "id": 3390243,
+    "full_name": "servo/servo",
+    "stars": 35097,
+    "growth": 16,
+    "created_at": "2012-02-08",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 378,
+    "id": 6201092,
+    "full_name": "mpv-player/mpv",
+    "stars": 33691,
+    "growth": 16,
+    "created_at": "2012-10-13",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 379,
+    "id": 792861139,
+    "full_name": "glanceapp/glance",
+    "stars": 31333,
+    "growth": 16,
+    "created_at": "2024-04-27",
+    "pushed_at": "2025-12-10",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 380,
+    "id": 80990461,
+    "full_name": "eriklindernoren/ML-From-Scratch",
+    "stars": 30399,
+    "growth": 16,
+    "created_at": "2017-02-05",
+    "pushed_at": "2023-10-15",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 381,
+    "id": 197081291,
+    "full_name": "iced-rs/iced",
+    "stars": 29175,
+    "growth": 16,
+    "created_at": "2019-07-15",
+    "pushed_at": "2026-01-20",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 382,
+    "id": 31792824,
+    "full_name": "flutter/flutter",
+    "stars": 174758,
+    "growth": 15,
+    "created_at": "2015-03-06",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 383,
+    "id": 203587744,
+    "full_name": "hoppscotch/hoppscotch",
+    "stars": 77621,
+    "growth": 15,
+    "created_at": "2019-08-21",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 384,
+    "id": 83999700,
+    "full_name": "sdmg15/Best-websites-a-programmer-should-visit",
+    "stars": 75374,
+    "growth": 15,
+    "created_at": "2017-03-05",
+    "pushed_at": "2025-09-16",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 385,
+    "id": 17803236,
+    "full_name": "rclone/rclone",
+    "stars": 55089,
+    "growth": 15,
+    "created_at": "2014-03-16",
+    "pushed_at": "2026-01-18",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 386,
+    "id": 743140652,
+    "full_name": "dockur/windows",
+    "stars": 49592,
+    "growth": 15,
+    "created_at": "2024-01-14",
+    "pushed_at": "2026-01-13",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 387,
+    "id": 235860204,
+    "full_name": "deepspeedai/DeepSpeed",
+    "stars": 41328,
+    "growth": 15,
+    "created_at": "2020-01-23",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 388,
+    "id": 720853375,
+    "full_name": "DataExpert-io/data-engineer-handbook",
+    "stars": 39434,
+    "growth": 15,
+    "created_at": "2023-11-19",
+    "pushed_at": "2025-12-15",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 389,
+    "id": 270171567,
+    "full_name": "freefq/free",
+    "stars": 39232,
+    "growth": 15,
+    "created_at": "2020-06-07",
+    "pushed_at": "2024-08-20",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 390,
+    "id": 766341786,
+    "full_name": "HeyPuter/puter",
+    "stars": 38856,
+    "growth": 15,
+    "created_at": "2024-03-03",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 391,
+    "id": 81227005,
+    "full_name": "facebookresearch/faiss",
+    "stars": 38826,
+    "growth": 15,
+    "created_at": "2017-02-07",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 392,
+    "id": 741744308,
+    "full_name": "deepseek-ai/awesome-deepseek-integration",
+    "stars": 35165,
+    "growth": 15,
+    "created_at": "2024-01-11",
+    "pushed_at": "2025-09-25",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 393,
+    "id": 154739597,
+    "full_name": "jax-ml/jax",
+    "stars": 34653,
+    "growth": 15,
+    "created_at": "2018-10-25",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 394,
+    "id": 2810292,
+    "full_name": "pbatard/rufus",
+    "stars": 34419,
+    "growth": 15,
+    "created_at": "2011-11-19",
+    "pushed_at": "2026-01-17",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 395,
+    "id": 355959597,
+    "full_name": "Textualize/textual",
+    "stars": 33774,
+    "growth": 15,
+    "created_at": "2021-04-08",
+    "pushed_at": "2026-01-15",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 396,
+    "id": 470730648,
+    "full_name": "hyprwm/Hyprland",
+    "stars": 33410,
+    "growth": 15,
+    "created_at": "2022-03-16",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 397,
+    "id": 498011141,
+    "full_name": "huggingface/diffusers",
+    "stars": 32546,
+    "growth": 15,
+    "created_at": "2022-05-30",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 398,
+    "id": 307489284,
+    "full_name": "remix-run/remix",
+    "stars": 32131,
+    "growth": 15,
+    "created_at": "2020-10-26",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 399,
+    "id": 71056775,
+    "full_name": "kovidgoyal/kitty",
+    "stars": 30831,
+    "growth": 15,
+    "created_at": "2016-10-16",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 400,
+    "id": 365005377,
+    "full_name": "aristocratos/btop",
+    "stars": 29825,
+    "growth": 15,
+    "created_at": "2021-05-06",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 401,
+    "id": 20929025,
+    "full_name": "microsoft/TypeScript",
+    "stars": 107514,
+    "growth": 14,
+    "created_at": "2014-06-17",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 402,
+    "id": 34526884,
+    "full_name": "ant-design/ant-design",
+    "stars": 97324,
+    "growth": 14,
+    "created_at": "2015-04-24",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 403,
+    "id": 246335987,
+    "full_name": "ventoy/Ventoy",
+    "stars": 73979,
+    "growth": 14,
+    "created_at": "2020-03-10",
+    "pushed_at": "2026-01-08",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 404,
+    "id": 167174,
+    "full_name": "jquery/jquery",
+    "stars": 59777,
+    "growth": 14,
+    "created_at": "2009-04-03",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 405,
+    "id": 808045485,
+    "full_name": "LadybirdBrowser/ladybird",
+    "stars": 57768,
+    "growth": 14,
+    "created_at": "2024-05-30",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 406,
+    "id": 20619036,
+    "full_name": "pi-hole/pi-hole",
+    "stars": 55359,
+    "growth": 14,
+    "created_at": "2014-06-08",
+    "pushed_at": "2026-01-17",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 407,
+    "id": 220809393,
+    "full_name": "Textualize/rich",
+    "stars": 55195,
+    "growth": 14,
+    "created_at": "2019-11-10",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 408,
+    "id": 76838017,
+    "full_name": "iina/iina",
+    "stars": 43458,
+    "growth": 14,
+    "created_at": "2016-12-19",
+    "pushed_at": "2026-01-18",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 409,
+    "id": 90793418,
+    "full_name": "sharkdp/fd",
+    "stars": 41254,
+    "growth": 14,
+    "created_at": "2017-05-09",
+    "pushed_at": "2026-01-20",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 410,
+    "id": 569041,
+    "full_name": "curl/curl",
+    "stars": 40460,
+    "growth": 14,
+    "created_at": "2010-03-18",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 411,
+    "id": 4793392,
+    "full_name": "sqlmapproject/sqlmap",
+    "stars": 36357,
+    "growth": 14,
+    "created_at": "2012-06-26",
+    "pushed_at": "2026-01-18",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 412,
+    "id": 372240402,
+    "full_name": "alan2207/bulletproof-react",
+    "stars": 34159,
+    "growth": 14,
+    "created_at": "2021-05-30",
+    "pushed_at": "2025-09-14",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 413,
+    "id": 11125589,
+    "full_name": "keycloak/keycloak",
+    "stars": 32357,
+    "growth": 14,
+    "created_at": "2013-07-02",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 414,
+    "id": 161951219,
+    "full_name": "wailsapp/wails",
+    "stars": 32331,
+    "growth": 14,
+    "created_at": "2018-12-15",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 415,
+    "id": 67836789,
+    "full_name": "tokio-rs/tokio",
+    "stars": 30822,
+    "growth": 14,
+    "created_at": "2016-09-09",
+    "pushed_at": "2026-01-20",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 416,
+    "id": 37912398,
+    "full_name": "nginx/nginx",
+    "stars": 29149,
+    "growth": 14,
+    "created_at": "2015-06-23",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 417,
+    "id": 919443098,
+    "full_name": "deepseek-ai/DeepSeek-R1",
+    "stars": 91752,
+    "growth": 13,
+    "created_at": "2025-01-20",
+    "pushed_at": "2025-06-27",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 418,
+    "id": 42489829,
+    "full_name": "rust-lang/rustlings",
+    "stars": 61520,
+    "growth": 13,
+    "created_at": "2015-09-15",
+    "pushed_at": "2025-12-22",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 419,
+    "id": 74627617,
+    "full_name": "commaai/openpilot",
+    "stars": 59773,
+    "growth": 13,
+    "created_at": "2016-11-24",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 420,
+    "id": 180190854,
+    "full_name": "appwrite/appwrite",
+    "stars": 54493,
+    "growth": 13,
+    "created_at": "2019-04-08",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 421,
+    "id": 858127,
+    "full_name": "pandas-dev/pandas",
+    "stars": 47653,
+    "growth": 13,
+    "created_at": "2010-08-24",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 422,
+    "id": 33791743,
+    "full_name": "x64dbg/x64dbg",
+    "stars": 47604,
+    "growth": 13,
+    "created_at": "2015-04-11",
+    "pushed_at": "2026-01-20",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 423,
+    "id": 62812261,
+    "full_name": "kelseyhightower/kubernetes-the-hard-way",
+    "stars": 47110,
+    "growth": 13,
+    "created_at": "2016-07-07",
+    "pushed_at": "2025-04-10",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 424,
+    "id": 104337773,
+    "full_name": "1c7/chinese-independent-developer",
+    "stars": 46263,
+    "growth": 13,
+    "created_at": "2017-09-21",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 425,
+    "id": 60630844,
+    "full_name": "microsoft/monaco-editor",
+    "stars": 45369,
+    "growth": 13,
+    "created_at": "2016-06-07",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 426,
+    "id": 240215314,
+    "full_name": "docker/awesome-compose",
+    "stars": 43515,
+    "growth": 13,
+    "created_at": "2020-02-13",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 427,
+    "id": 519832,
+    "full_name": "mitmproxy/mitmproxy",
+    "stars": 42001,
+    "growth": 13,
+    "created_at": "2010-02-16",
+    "pushed_at": "2026-01-12",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 428,
+    "id": 92807616,
+    "full_name": "byoungd/English-level-up-tips",
+    "stars": 41271,
+    "growth": 13,
+    "created_at": "2017-05-30",
+    "pushed_at": "2025-12-26",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 429,
+    "id": 552877440,
+    "full_name": "juspay/hyperswitch",
+    "stars": 40016,
+    "growth": 13,
+    "created_at": "2022-10-17",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 430,
+    "id": 41986369,
+    "full_name": "pingcap/tidb",
+    "stars": 39624,
+    "growth": 13,
+    "created_at": "2015-09-06",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 431,
+    "id": 37382858,
+    "full_name": "kilimchoi/engineering-blogs",
+    "stars": 36883,
+    "growth": 13,
+    "created_at": "2015-06-13",
+    "pushed_at": "2024-08-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 432,
+    "id": 109484365,
+    "full_name": "fengdu78/Coursera-ML-AndrewNg-Notes",
+    "stars": 36142,
+    "growth": 13,
+    "created_at": "2017-11-04",
+    "pushed_at": "2025-08-25",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 433,
+    "id": 37448451,
+    "full_name": "mattermost/mattermost",
+    "stars": 34984,
+    "growth": 13,
+    "created_at": "2015-06-15",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 434,
+    "id": 280363952,
+    "full_name": "umami-software/umami",
+    "stars": 34821,
+    "growth": 13,
+    "created_at": "2020-07-17",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 435,
+    "id": 387326890,
+    "full_name": "xinntao/Real-ESRGAN",
+    "stars": 33984,
+    "growth": 13,
+    "created_at": "2021-07-19",
+    "pushed_at": "2024-08-06",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 436,
+    "id": 162723104,
+    "full_name": "OWASP/CheatSheetSeries",
+    "stars": 31179,
+    "growth": 13,
+    "created_at": "2018-12-21",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 437,
+    "id": 178626720,
+    "full_name": "Lightning-AI/pytorch-lightning",
+    "stars": 30757,
+    "growth": 13,
+    "created_at": "2019-03-31",
+    "pushed_at": "2026-01-20",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 438,
+    "id": 437245741,
+    "full_name": "dragonflydb/dragonfly",
+    "stars": 29796,
+    "growth": 13,
+    "created_at": "2021-12-11",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 439,
+    "id": 143822069,
+    "full_name": "sunface/rust-course",
+    "stars": 29779,
+    "growth": 13,
+    "created_at": "2018-08-07",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 440,
+    "id": 21872392,
+    "full_name": "josephmisiti/awesome-machine-learning",
+    "stars": 71408,
+    "growth": 12,
+    "created_at": "2014-07-15",
+    "pushed_at": "2026-01-02",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 441,
+    "id": 228016443,
+    "full_name": "youngyangyang04/leetcode-master",
+    "stars": 60071,
+    "growth": 12,
+    "created_at": "2019-12-14",
+    "pushed_at": "2025-11-07",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 442,
+    "id": 188660663,
+    "full_name": "CorentinJ/Real-Time-Voice-Cloning",
+    "stars": 59244,
+    "growth": 12,
+    "created_at": "2019-05-26",
+    "pushed_at": "2025-12-15",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 443,
+    "id": 90528830,
+    "full_name": "Solido/awesome-flutter",
+    "stars": 58690,
+    "growth": 12,
+    "created_at": "2017-05-07",
+    "pushed_at": "2025-11-19",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 444,
+    "id": 75104123,
+    "full_name": "prettier/prettier",
+    "stars": 51458,
+    "growth": 12,
+    "created_at": "2016-11-29",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 445,
+    "id": 207645083,
+    "full_name": "TanStack/query",
+    "stars": 48226,
+    "growth": 12,
+    "created_at": "2019-09-10",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 446,
+    "id": 109343098,
+    "full_name": "serhii-londar/open-source-mac-os-apps",
+    "stars": 47073,
+    "growth": 12,
+    "created_at": "2017-11-03",
+    "pushed_at": "2025-12-07",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 447,
+    "id": 1116542,
+    "full_name": "aria2/aria2",
+    "stars": 39794,
+    "growth": 12,
+    "created_at": "2010-11-27",
+    "pushed_at": "2025-11-24",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 448,
+    "id": 186024298,
+    "full_name": "nushell/nushell",
+    "stars": 37951,
+    "growth": 12,
+    "created_at": "2019-05-10",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 449,
+    "id": 419991646,
+    "full_name": "mli/paper-reading",
+    "stars": 32426,
+    "growth": 12,
+    "created_at": "2021-10-22",
+    "pushed_at": "2025-03-22",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 450,
+    "id": 411493648,
+    "full_name": "DevToys-app/DevToys",
+    "stars": 30809,
+    "growth": 12,
+    "created_at": "2021-09-29",
+    "pushed_at": "2026-01-09",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 451,
+    "id": 157846876,
+    "full_name": "motiondivision/motion",
+    "stars": 30803,
+    "growth": 12,
+    "created_at": "2018-11-16",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 452,
+    "id": 109145553,
+    "full_name": "containers/podman",
+    "stars": 30414,
+    "growth": 12,
+    "created_at": "2017-11-01",
+    "pushed_at": "2026-01-20",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 453,
+    "id": 54400687,
+    "full_name": "grafana/k6",
+    "stars": 29730,
+    "growth": 12,
+    "created_at": "2016-03-21",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 454,
+    "id": 21484781,
+    "full_name": "jumpserver/jumpserver",
+    "stars": 29709,
+    "growth": 12,
+    "created_at": "2014-07-04",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 455,
+    "id": 4008931,
+    "full_name": "StevenBlack/hosts",
+    "stars": 29680,
+    "growth": 12,
+    "created_at": "2012-04-12",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 456,
+    "id": 35955666,
+    "full_name": "jlevy/the-art-of-command-line",
+    "stars": 159576,
+    "growth": 11,
+    "created_at": "2015-05-20",
+    "pushed_at": "2024-06-25",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 457,
+    "id": 101296881,
+    "full_name": "mtdvio/every-programmer-should-know",
+    "stars": 97595,
+    "growth": 11,
+    "created_at": "2017-08-24",
+    "pushed_at": "2025-12-29",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 458,
+    "id": 278335273,
+    "full_name": "anuraghazra/github-readme-stats",
+    "stars": 78032,
+    "growth": 11,
+    "created_at": "2020-07-09",
+    "pushed_at": "2026-01-19",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 459,
+    "id": 81975372,
+    "full_name": "kdn251/interviews",
+    "stars": 64776,
+    "growth": 11,
+    "created_at": "2017-02-14",
+    "pushed_at": "2025-05-12",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 460,
+    "id": 6838921,
+    "full_name": "prometheus/prometheus",
+    "stars": 62313,
+    "growth": 11,
+    "created_at": "2012-11-24",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 461,
+    "id": 138547797,
+    "full_name": "FiloSottile/mkcert",
+    "stars": 57802,
+    "growth": 11,
+    "created_at": "2018-06-25",
+    "pushed_at": "2024-08-13",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 462,
+    "id": 138839979,
+    "full_name": "scutan90/DeepLearning-500-questions",
+    "stars": 57084,
+    "growth": 11,
+    "created_at": "2018-06-27",
+    "pushed_at": "2024-06-26",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 463,
+    "id": 79162682,
+    "full_name": "laurent22/joplin",
+    "stars": 53065,
+    "growth": 11,
+    "created_at": "2017-01-16",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 464,
+    "id": 137078487,
+    "full_name": "vuejs/core",
+    "stars": 52775,
+    "growth": 11,
+    "created_at": "2018-06-12",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 465,
+    "id": 1663468,
+    "full_name": "mozilla/pdf.js",
+    "stars": 52693,
+    "growth": 11,
+    "created_at": "2011-04-26",
+    "pushed_at": "2026-01-19",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 466,
+    "id": 56969116,
+    "full_name": "ngosang/trackerslist",
+    "stars": 52657,
+    "growth": 11,
+    "created_at": "2016-04-24",
+    "pushed_at": "2026-01-20",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 467,
+    "id": 265612440,
+    "full_name": "coqui-ai/TTS",
+    "stars": 44313,
+    "growth": 11,
+    "created_at": "2020-05-20",
+    "pushed_at": "2024-08-16",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 468,
+    "id": 135614069,
+    "full_name": "sudheerj/reactjs-interview-questions",
+    "stars": 44118,
+    "growth": 11,
+    "created_at": "2018-05-31",
+    "pushed_at": "2025-12-23",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 469,
+    "id": 137147386,
+    "full_name": "dylanaraps/pure-bash-bible",
+    "stars": 41114,
+    "growth": 11,
+    "created_at": "2018-06-13",
+    "pushed_at": "2023-11-28",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 470,
+    "id": 27442967,
+    "full_name": "fastlane/fastlane",
+    "stars": 40924,
+    "growth": 11,
+    "created_at": "2014-12-02",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 471,
+    "id": 91253698,
+    "full_name": "ccxt/ccxt",
+    "stars": 40635,
+    "growth": 11,
+    "created_at": "2017-05-14",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 472,
+    "id": 6731432,
+    "full_name": "koalaman/shellcheck",
+    "stars": 38870,
+    "growth": 11,
+    "created_at": "2012-11-17",
+    "pushed_at": "2026-01-06",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 473,
+    "id": 179613976,
+    "full_name": "PKUanonym/REKCARC-TSC-UHT",
+    "stars": 36507,
+    "growth": 11,
+    "created_at": "2019-04-05",
+    "pushed_at": "2026-01-19",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 474,
+    "id": 168799526,
+    "full_name": "huggingface/pytorch-image-models",
+    "stars": 36228,
+    "growth": 11,
+    "created_at": "2019-02-02",
+    "pushed_at": "2026-01-20",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 475,
+    "id": 24297122,
+    "full_name": "veggiemonk/awesome-docker",
+    "stars": 35232,
+    "growth": 11,
+    "created_at": "2014-09-21",
+    "pushed_at": "2026-01-20",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 476,
+    "id": 396569538,
+    "full_name": "khoj-ai/khoj",
+    "stars": 32240,
+    "growth": 11,
+    "created_at": "2021-08-16",
+    "pushed_at": "2026-01-06",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 477,
+    "id": 103784142,
+    "full_name": "MonitorControl/MonitorControl",
+    "stars": 32185,
+    "growth": 11,
+    "created_at": "2017-09-16",
+    "pushed_at": "2026-01-15",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 478,
+    "id": 19205896,
+    "full_name": "restic/restic",
+    "stars": 31847,
+    "growth": 11,
+    "created_at": "2014-04-27",
+    "pushed_at": "2026-01-01",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 479,
+    "id": 413918947,
+    "full_name": "vercel/turborepo",
+    "stars": 29590,
+    "growth": 11,
+    "created_at": "2021-10-05",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 480,
+    "id": 506861932,
+    "full_name": "nvim-lua/kickstart.nvim",
+    "stars": 29111,
+    "growth": 11,
+    "created_at": "2022-06-24",
+    "pushed_at": "2025-05-22",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 481,
+    "id": 1039520,
+    "full_name": "ytdl-org/youtube-dl",
+    "stars": 139520,
+    "growth": 10,
+    "created_at": "2010-10-31",
+    "pushed_at": "2025-11-26",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 482,
+    "id": 14098069,
+    "full_name": "justjavac/free-programming-books-zh_CN",
+    "stars": 116193,
+    "growth": 10,
+    "created_at": "2013-11-04",
+    "pushed_at": "2024-07-15",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 483,
+    "id": 311525798,
+    "full_name": "microsoft/Web-Dev-For-Beginners",
+    "stars": 95095,
+    "growth": 10,
+    "created_at": "2020-11-10",
+    "pushed_at": "2026-01-19",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 484,
+    "id": 4164482,
+    "full_name": "django/django",
+    "stars": 86531,
+    "growth": 10,
+    "created_at": "2012-04-28",
+    "pushed_at": "2026-01-20",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 485,
+    "id": 74293321,
+    "full_name": "sveltejs/svelte",
+    "stars": 85518,
+    "growth": 10,
+    "created_at": "2016-11-20",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 486,
+    "id": 127988011,
+    "full_name": "macrozheng/mall",
+    "stars": 82738,
+    "growth": 10,
+    "created_at": "2018-04-04",
+    "pushed_at": "2026-01-20",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 487,
+    "id": 14747598,
+    "full_name": "typicode/json-server",
+    "stars": 75584,
+    "growth": 10,
+    "created_at": "2013-11-27",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 488,
+    "id": 71583602,
+    "full_name": "Developer-Y/cs-video-courses",
+    "stars": 70601,
+    "growth": 10,
+    "created_at": "2016-10-21",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 489,
+    "id": 8843683,
+    "full_name": "chartjs/Chart.js",
+    "stars": 67039,
+    "growth": 10,
+    "created_at": "2013-03-17",
+    "pushed_at": "2025-12-08",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 490,
+    "id": 33015583,
+    "full_name": "keras-team/keras",
+    "stars": 63734,
+    "growth": 10,
+    "created_at": "2015-03-28",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 491,
+    "id": 529502,
+    "full_name": "scrapy/scrapy",
+    "stars": 59515,
+    "growth": 10,
+    "created_at": "2010-02-22",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 492,
+    "id": 264818686,
+    "full_name": "ultralytics/yolov5",
+    "stars": 56700,
+    "growth": 10,
+    "created_at": "2020-05-18",
+    "pushed_at": "2026-01-16",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 493,
+    "id": 255378816,
+    "full_name": "bigskysoftware/htmx",
+    "stars": 47230,
+    "growth": 10,
+    "created_at": "2020-04-13",
+    "pushed_at": "2026-01-20",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 494,
+    "id": 7569578,
+    "full_name": "discourse/discourse",
+    "stars": 46095,
+    "growth": 10,
+    "created_at": "2013-01-12",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 495,
+    "id": 5625464,
+    "full_name": "pyenv/pyenv",
+    "stars": 44106,
+    "growth": 10,
+    "created_at": "2012-08-31",
+    "pushed_at": "2026-01-20",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 496,
+    "id": 275993885,
+    "full_name": "appsmithorg/appsmith",
+    "stars": 38949,
+    "growth": 10,
+    "created_at": "2020-06-30",
+    "pushed_at": "2026-01-20",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 497,
+    "id": 15045751,
+    "full_name": "docker/compose",
+    "stars": 36874,
+    "growth": 10,
+    "created_at": "2013-12-09",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 498,
+    "id": 41889031,
+    "full_name": "TeamNewPipe/NewPipe",
+    "stars": 36381,
+    "growth": 10,
+    "created_at": "2015-09-03",
+    "pushed_at": "2026-01-21",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 499,
+    "id": 137451403,
+    "full_name": "alibaba/nacos",
+    "stars": 32561,
+    "growth": 10,
+    "created_at": "2018-06-15",
+    "pushed_at": "2026-01-20",
+    "offertime": "2026-01-21"
+  },
+  {
+    "rank": 500,
+    "id": 28387406,
+    "full_name": "awesome-foss/awesome-sysadmin",
+    "stars": 32503,
+    "growth": 10,
+    "created_at": "2014-12-23",
+    "pushed_at": "2026-01-11",
+    "offertime": "2026-01-21"
+  }
+]
