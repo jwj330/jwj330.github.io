@@ -1,23 +1,14 @@
-"""
-GitHub Stars增长榜分析脚本
-每天分析前1000个仓库的stars增长情况
-生成前500名增长榜的Markdown文件
-"""
 
 import json
 import os
 import sys
 import datetime
-from collections import defaultdict
 from typing import List, Dict, Any
-
 
 def parse_date_from_filename(filename: str) -> str:
     """从文件名解析日期"""
-    # 从类似 github_top_1000_20251221.json 提取日期
     date_str = filename.replace("github_top_1000_", "").replace(".json", "")
     return date_str
-
 
 def format_offertime(date_str: str) -> str:
     """将YYYYMMDD格式转换为YYYY-MM-DD格式"""
@@ -25,351 +16,280 @@ def format_offertime(date_str: str) -> str:
         return f"{date_str[:4]}-{date_str[4:6]}-{date_str[6:8]}"
     return date_str
 
-
 def load_json_file(filepath: str) -> Dict[str, Dict[str, Any]]:
     """加载JSON文件并转换为以id为key的字典"""
+    if not filepath or not os.path.exists(filepath):
+        return {}
     try:
         with open(filepath, 'r', encoding='utf-8') as f:
             data = json.load(f)
-        
-        # 将列表转换为以id为key的字典
         repo_dict = {}
         for repo in data:
             repo_dict[str(repo['id'])] = repo
         return repo_dict
-    except FileNotFoundError:
-        print(f"文件不存在: {filepath}")
-        return {}
-    except json.JSONDecodeError as e:
-        print(f"JSON解析错误: {e}")
-        return {}
     except Exception as e:
         print(f"加载文件时出错 {filepath}: {e}")
         return {}
 
-
-def calculate_growth(today_data: Dict[str, Dict], yesterday_data: Dict[str, Dict]) -> List[Dict]:
-    """
-    计算stars增长
-    返回按增长量降序排列的仓库列表
-    """
+def calculate_growth(today_data: Dict[str, Dict], past_data: Dict[str, Dict]) -> List[Dict]:
+    """计算stars增长"""
     growth_data = []
-    
+    if not past_data:
+        return []
+
     for repo_id, today_repo in today_data.items():
-        growth_info = {
-            'id': today_repo['id'],
-            'full_name': today_repo['full_name'],
-            'stars': today_repo['stars'],
-            'created_at': today_repo.get('created_at', ''),
-            'pushed_at': today_repo.get('pushed_at', ''),
-            'offertime': today_repo.get('offertime', ''),
-        }
-        
-        # 查找昨天的数据
-        if repo_id in yesterday_data:
-            yesterday_stars = yesterday_data[repo_id]['stars']
-            growth = today_repo['stars'] - yesterday_stars
+        growth = 0
+        if repo_id in past_data:
+            growth = today_repo['stars'] - past_data[repo_id]['stars']
         else:
-            # 如果昨天不在榜，增长量就是今天的stars数
+            # 新上榜或者之前不在数据中，可视情况处理，这里简单处理为0或者今天的stars
+            # 为了增长榜的准确性，如果不在历史数据中，通常意味着无法计算确切增长
+            # 但既然是"每日采集"，如果昨天没采到，其实增长就是未知的。
+            # 这里保守策略：如果不在历史数据中，增长设为0 (或者忽略)
+            # 也可以设为 today_repo['stars'] (视为纯新增)，但这会污染增长榜。
+            # 现有逻辑是:
+            # growth = today_repo['stars'] # 原代码逻辑
             growth = today_repo['stars']
-            # 如果没有昨天的创建时间等信息，使用今天的数据
-            growth_info['created_at'] = growth_info.get('created_at', '')
-            growth_info['pushed_at'] = growth_info.get('pushed_at', '')
-        
-        growth_info['growth'] = growth
-        growth_data.append(growth_info)
+
+        if growth > 0:
+            growth_info = {
+                'id': today_repo['id'],
+                'full_name': today_repo['full_name'],
+                'stars': today_repo['stars'],
+                'growth': growth,
+                'description': today_repo.get('description', ''),
+                'html_url': f"https://github.com/{today_repo['full_name']}"
+            }
+            growth_data.append(growth_info)
     
-    # 按增长量降序排序
+    # 排序
     growth_data.sort(key=lambda x: x['growth'], reverse=True)
-    
     return growth_data
 
-
-def get_yesterday_date(today_date: str) -> str:
-    """获取昨天的日期字符串（YYYYMMDD格式）"""
-    try:
-        # 从字符串解析日期
-        today = datetime.datetime.strptime(today_date, "%Y%m%d")
-        yesterday = today - datetime.timedelta(days=1)
-        return yesterday.strftime("%Y%m%d")
-    except ValueError:
-        # 如果日期格式错误，尝试计算前一天
-        print(f"日期格式错误: {today_date}")
-        return ""
-
+def get_date_str(base_date: datetime.datetime, days_delta: int) -> str:
+    """获取偏移日期的字符串 YYYYMMDD"""
+    target_date = base_date - datetime.timedelta(days=days_delta)
+    return target_date.strftime("%Y%m%d")
 
 def find_latest_data_file(data_dir: str = "") -> str:
     """查找最新的数据文件"""
-    # 在上一级的 scriptData 目录中查找
     script_data_dir = os.path.join(data_dir, "scriptData")
+    if not os.path.exists(script_data_dir):
+        script_data_dir = "scriptData" 
     
     if not os.path.exists(script_data_dir):
-        print(f"警告: scriptData目录不存在: {script_data_dir}")
-        # 尝试在当前目录的上一级查找
-        script_data_dir = os.path.join("", "scriptData")
-        if not os.path.exists(script_data_dir):
-            print(f"错误: scriptData目录不存在: {script_data_dir}")
-            return ""
-    
-    print(f"正在搜索数据目录: {script_data_dir}")
-    
+        return ""
+        
     try:
         json_files = [f for f in os.listdir(script_data_dir) 
                      if f.startswith('github_top_1000_') and f.endswith('.json')]
-        
         if not json_files:
-            print(f"在 {script_data_dir} 中未找到 github_top_1000_*.json 文件")
             return ""
-        
-        # 按日期排序，返回最新的文件
         json_files.sort(reverse=True)
-        latest_file = json_files[0]
-        file_path = os.path.join(script_data_dir, latest_file)
-        
-        print(f"找到最新文件: {file_path}")
-        return file_path
-    except Exception as e:
-        print(f"查找文件时出错: {e}")
+        return os.path.join(script_data_dir, json_files[0])
+    except Exception:
         return ""
-
 
 def get_data_file_path(date_str: str) -> str:
     """根据日期获取数据文件路径"""
-    # 在上一级的 scriptData 目录中查找
-    script_data_dir = os.path.join("", "scriptData")
-    
+    script_data_dir = "scriptData"
     if not os.path.exists(script_data_dir):
-        # 如果上一级没有，尝试在当前目录的上一级
-        script_data_dir = os.path.join("", "scriptData")
-        if not os.path.exists(script_data_dir):
-            # 最后尝试直接使用相对路径
-            script_data_dir = "scriptData"
-    
+        if os.path.exists(os.path.join("..", "scriptData")):
+             script_data_dir = os.path.join("..", "scriptData")
+
     filename = f"github_top_1000_{date_str}.json"
-    file_path = os.path.join(script_data_dir, filename)
-    
-    return file_path
+    return os.path.join(script_data_dir, filename)
 
-
-def generate_markdown_file(data: List[Dict], date_str: str):
-    """生成Markdown文件，按照要求创建目录和文件"""
-    
-    # 生成目录名
+def generate_echarts_html(daily_data, weekly_data, monthly_data, date_str):
+    """生成带有ECharts的Hugo Markdown文件"""
     dir_name = f"content/post/anagithub{date_str}"
-    
-    # 创建目录
     os.makedirs(dir_name, exist_ok=True)
-    
-    # 创建Markdown文件路径
     md_filepath = os.path.join(dir_name, "index.md")
     
-    # 格式化日期
     formatted_date = format_offertime(date_str)
-    current_datetime = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+    current_time = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+
+    # 取前20名用于图表展示，避免图表过密
+    top_n = 20
     
+    # helper to process data for js
+    def process_data(data):
+        if not data: return [], [], []
+        top = data[:top_n]
+        names = [item['full_name'] for item in top]
+        values = [item['growth'] for item in top]
+        # 反转以在柱状图中从上到下显示
+        return names[::-1], values[::-1], top
+
+    d_names, d_values, _ = process_data(daily_data)
+    w_names, w_values, _ = process_data(weekly_data)
+    m_names, m_values, _ = process_data(monthly_data)
+
+    # 序列化数据给JS使用
+    daily_json = json.dumps({'categories': d_names, 'data': d_values}, ensure_ascii=False)
+    weekly_json = json.dumps({'categories': w_names, 'data': w_values}, ensure_ascii=False)
+    monthly_json = json.dumps({'categories': m_names, 'data': m_values}, ensure_ascii=False)
+
+    content = f"""---
+title: "GitHub 趋势报告 {formatted_date}"
+description: "GitHub 每日/每周/每月 增长趋势可视化报告"
+date: {formatted_date}T12:00:00+08:00
+categories:
+  - GitHub Trends
+---
+
+**生成时间**: {current_time}
+
+本报告展示了 GitHub 上 Star 数增长最快的仓库。
+
+<!-- ECharts 容器 -->
+<div id="main" style="width: 100%;height:600px;"></div>
+<div style="text-align: center; margin-top: 20px;">
+    <button onclick="updateChart('daily')" style="padding: 5px 10px;">日榜 (Daily)</button>
+    <button onclick="updateChart('weekly')" style="padding: 5px 10px;">周榜 (Weekly)</button>
+    <button onclick="updateChart('monthly')" style="padding: 5px 10px;">月榜 (Monthly)</button>
+</div>
+
+<!-- 引入 ECharts -->
+<script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
+
+<script type="text/javascript">
+    var chartDom = document.getElementById('main');
+    var myChart = echarts.init(chartDom);
+    var option;
+
+    // 数据源
+    var dataMap = {{
+        'daily': {daily_json},
+        'weekly': {weekly_json},
+        'monthly': {monthly_json}
+    }};
+
+    function getOption(type) {{
+        var currentData = dataMap[type];
+        var titleText = '';
+        if (type === 'daily') titleText = '日增长排行 (Top {top_n})';
+        else if (type === 'weekly') titleText = '周增长排行 (Top {top_n})';
+        else if (type === 'monthly') titleText = '月增长排行 (Top {top_n})';
+
+        if (!currentData || currentData.categories.length === 0) {{
+             return {{
+                title: {{ text: titleText + ' (暂无数据)' }},
+                xAxis: {{ show: false }},
+                yAxis: {{ show: false }}
+             }};
+        }}
+
+        return {{
+            title: {{
+                text: titleText,
+                left: 'center'
+            }},
+            tooltip: {{
+                trigger: 'axis',
+                axisPointer: {{ type: 'shadow' }}
+            }},
+            grid: {{
+                left: '3%',
+                right: '4%',
+                bottom: '3%',
+                containLabel: true
+            }},
+            xAxis: {{
+                type: 'value',
+                boundaryGap: [0, 0.01]
+            }},
+            yAxis: {{
+                type: 'category',
+                data: currentData.categories
+            }},
+            series: [{{
+                name: 'Stars Growth',
+                type: 'bar',
+                data: currentData.data,
+                itemStyle: {{
+                    color: new echarts.graphic.LinearGradient(0, 0, 1, 0, [
+                        {{offset: 0, color: '#83bff6'}},
+                        {{offset: 0.5, color: '#188df0'}},
+                        {{offset: 1, color: '#188df0'}}
+                    ])
+                }},
+                label: {{
+                    show: true,
+                    position: 'right'
+                }}
+            }}]
+        }};
+    }}
+
+    // 初始化显示日榜
+    option = getOption('daily');
+    myChart.setOption(option);
+
+    function updateChart(type) {{
+        myChart.setOption(getOption(type));
+    }}
+    
+    window.addEventListener('resize', function() {{
+        myChart.resize();
+    }});
+</script>
+
+"""
+    # 仍然生成Markdown表格以便SEO和纯文本查看 (只显示Daily Top 50)
+    # 或者是完全替代？用户说"代替原来的markdown的表达"。
+    # 但为了页面内容丰富性，下面放一个简表比较好。
+    if daily_data:
+        content += "\n\n### 🚀 今日 Top 50 详情\n\n"
+        content += "| 排名 | 仓库 | 增长 | 总 Stars |\n"
+        content += "|---|---|---|---|\n"
+        for i, repo in enumerate(daily_data[:50], 1):
+            content += f"| {i} | [{repo['full_name']}]({repo['html_url']}) | +{repo['growth']} | {repo['stars']} |\n"
+
     with open(md_filepath, 'w', encoding='utf-8') as f:
-        # 写入Front Matter
-        f.write("---\n")
-        f.write(f'title: "GitHub Top500增长榜{date_str}"\n')
-        f.write(f'description: "GitHub增长榜 Top500"\n')
-        f.write(f'date: {formatted_date} 14:22:51+0000\n')
-        f.write("categories:\n")
-        f.write("  - GitHub Top500\n")
-        f.write("---\n\n")
-        
-        # 写入标题
-        f.write(f"# GitHub Top500增长榜{date_str}\n\n")
-        f.write(f"**生成时间**: {current_datetime}\n\n")
-        f.write("以下是GitHub增长最快的500个仓库，按24小时内star增长数排序。\n\n")
-        
-        # 写入表格
-        f.write("| 排名 | 仓库 | Stars | 增长 | 创建时间 | 最后更新 |\n")
-        f.write("|------|------|-------|------|----------|----------|\n")
-        
-        # 写入前500名数据
-        for repo in data:
-            # 截断过长的仓库名
-            repo_name = repo['full_name']
-            if len(repo_name) > 40:
-                repo_name = repo_name[:37] + "..."
-            
-            f.write(f"| {repo['rank']} | [{repo['full_name']}](https://github.com/{repo['full_name']}) | "
-                   f"{repo['stars']:,} | +{repo['growth']:,} | "
-                   f"{repo['created_at'][:10] if repo['created_at'] else 'N/A'} | "
-                   f"{repo['pushed_at'][:10] if repo['pushed_at'] else 'N/A'} |\n")
+        f.write(content)
     
-    print(f"Markdown文件已生成: {md_filepath}")
-    return md_filepath
-
-
-def save_growth_json(data: List[Dict], date_str: str):
-    """保存增长榜JSON文件到指定目录"""
-    # 确保输出目录存在
-    output_dir = "scriptDataGrowth"
-    os.makedirs(output_dir, exist_ok=True)
-    
-    # 构建输出文件路径
-    output_filename = f"github_stars_growth_top_500_{date_str}.json"
-    output_path = os.path.join(output_dir, output_filename)
-    
-    # 保存结果到JSON文件
-    with open(output_path, 'w', encoding='utf-8') as f:
-        json.dump(data, f, ensure_ascii=False, indent=2)
-    
-    print(f"增长榜JSON结果已保存到: {output_path}")
-    return output_path
+    print(f"Report generated: {md_filepath}")
 
 
 def main():
-    """主函数：计算增长榜前500"""
-    
-    # 方法1：自动查找最新的数据文件
+    # 1. 确定基准日期 (今天)
     latest_file = find_latest_data_file()
-    if latest_file:
-        filename_only = os.path.basename(latest_file)
-        today_date_str = parse_date_from_filename(filename_only)
-        today_file = latest_file
-    else:
-        # 方法2：使用今天的日期
-        today = datetime.datetime.now()
-        today_date_str = today.strftime("%Y%m%d")
-        today_file = get_data_file_path(today_date_str)
-    
-    # 计算昨天的日期和文件名
-    yesterday_date_str = get_yesterday_date(today_date_str)
-    if not yesterday_date_str:
-        print("无法计算昨天的日期")
+    if not latest_file:
+        print("未找到数据文件")
         return
-    
-    yesterday_file = get_data_file_path(yesterday_date_str)
-    
-    print(f"分析数据:")
-    print(f"今天文件: {today_file}")
-    print(f"昨天文件: {yesterday_file}")
-    
-    # 加载数据
-    print("正在加载数据...")
-    today_data = load_json_file(today_file)
-    yesterday_data = load_json_file(yesterday_file)
-    
-    if not today_data:
-        print(f"今天的数据文件不存在或为空: {today_file}")
-        return
-    
-    if not yesterday_data:
-        print(f"警告: 昨天的数据文件不存在: {yesterday_file}")
-        print("将只使用今天的数据计算增长榜")
-    
-    # 计算增长
-    print("正在计算增长榜...")
-    growth_data = calculate_growth(today_data, yesterday_data)
-    
-    # 获取前500
-    top_500 = growth_data[:500]
-    
-    # 准备输出数据
-    output_data = []
-    for i, repo in enumerate(top_500, 1):
-        repo_info = {
-            'rank': i,
-            'id': repo['id'],
-            'full_name': repo['full_name'],
-            'stars': repo['stars'],
-            'growth': repo['growth'],
-            'created_at': repo['created_at'],
-            'pushed_at': repo['pushed_at'],
-            'offertime': format_offertime(today_date_str)
-        }
-        output_data.append(repo_info)
-    
-    # 保存结果到JSON文件（修改后的保存路径）
-    save_growth_json(output_data, today_date_str)
-    
-    print(f"\n分析完成！")
-    print(f"总共分析仓库数: {len(growth_data)}")
-    
-    # 输出前10名预览
-    print(f"增长榜前10名:")
-    print("-" * 100)
-    
-    for i, repo in enumerate(output_data[:10], 1):
-        print(f"{i:3d}. {repo['full_name'][:40]:40s} stars: {repo['stars']:7d} "
-              f"增长: {repo['growth']:+7d} 创建时间: {repo['created_at']}")
-    
-    # 输出一些统计信息
-    print("\n统计信息:")
-    print(f"平均增长: {sum(r['growth'] for r in top_500) / len(top_500):.1f}")
-    print(f"最大增长: {max(r['growth'] for r in top_500)}")
-    print(f"最小增长: {min(r['growth'] for r in top_500)}")
-    
-    # 生成Markdown文件
-    md_filepath = generate_markdown_file(output_data, today_date_str)
-    
-    # 输出前10名的Markdown表格格式预览
-    print(f"\nMarkdown文件前10行预览:")
-    print("-" * 100)
-    with open(md_filepath, 'r', encoding='utf-8') as f:
-        lines = f.readlines()
-        for i, line in enumerate(lines[:20]):  # 预览前20行
-            print(line.rstrip())
 
+    filename_only = os.path.basename(latest_file)
+    today_str = parse_date_from_filename(filename_only)
+    today = datetime.datetime.strptime(today_str, "%Y%m%d")
+    
+    print(f"当前基准日期: {today_str}")
 
-def analyze_specific_date(target_date: str):
-    """分析指定日期的增长榜"""
-    print(f"正在分析 {target_date} 的增长榜...")
-    
-    today_file = get_data_file_path(target_date)
-    yesterday_date_str = get_yesterday_date(target_date)
-    
-    if not yesterday_date_str:
-        print("无法计算昨天的日期")
-        return
-    
-    yesterday_file = get_data_file_path(yesterday_date_str)
-    
-    print(f"今天文件: {today_file}")
-    print(f"昨天文件: {yesterday_file}")
-    
-    # 重新运行主逻辑
-    today_data = load_json_file(today_file)
-    yesterday_data = load_json_file(yesterday_file)
-    
-    if not today_data:
-        print(f"数据文件不存在: {today_file}")
-        return
-    
-    growth_data = calculate_growth(today_data, yesterday_data)
-    top_500 = growth_data[:500]
-    
-    # 输出结果
-    output_data = []
-    for i, repo in enumerate(top_500, 1):
-        repo_info = {
-            'rank': i,
-            'id': repo['id'],
-            'full_name': repo['full_name'],
-            'stars': repo['stars'],
-            'growth': repo['growth'],
-            'created_at': repo['created_at'],
-            'pushed_at': repo['pushed_at'],
-            'offertime': format_offertime(target_date)
-        }
-        output_data.append(repo_info)
-    
-    # 保存结果到JSON文件（修改后的保存路径）
-    save_growth_json(output_data, target_date)
-    
-    # 生成Markdown文件
-    generate_markdown_file(output_data, target_date)
+    # 2. 计算目标日期
+    yesterday_str = get_date_str(today, 1)
+    last_week_str = get_date_str(today, 7)
+    last_month_str = get_date_str(today, 30)
 
+    # 3. 加载今日数据
+    today_data = load_json_file(latest_file)
+    
+    # 4. 加载历史数据
+    yesterday_data = load_json_file(get_data_file_path(yesterday_str))
+    week_data = load_json_file(get_data_file_path(last_week_str))
+    month_data = load_json_file(get_data_file_path(last_month_str))
+
+    # 5. 计算增长
+    print("Computing Daily Growth...")
+    daily_growth = calculate_growth(today_data, yesterday_data)
+    
+    print("Computing Weekly Growth...")
+    weekly_growth = calculate_growth(today_data, week_data)
+    
+    print("Computing Monthly Growth...")
+    monthly_growth = calculate_growth(today_data, month_data)
+
+    # 6. 生成报告
+    generate_echarts_html(daily_growth, weekly_growth, monthly_growth, today_str)
 
 if __name__ == "__main__":
-    import sys
-    
-    if len(sys.argv) > 1:
-        # 如果有命令行参数，分析指定日期的数据
-        target_date = sys.argv[1]
-        analyze_specific_date(target_date)
-    else:
-        # 没有参数，分析今天的数据
-        main()
+    main()
