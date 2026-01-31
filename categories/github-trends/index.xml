@@ -1,0 +1,3130 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GitHub Trends on jwj330</title><link>https://jwj330.github.io/categories/github-trends/</link><description>Recent content in GitHub Trends on jwj330</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Fri, 30 Jan 2026 12:00:00 +0800</lastBuildDate><atom:link href="https://jwj330.github.io/categories/github-trends/index.xml" rel="self" type="application/rss+xml"/><item><title>GitHub 趋势报告 2026-01-30</title><link>https://jwj330.github.io/p/github-%E8%B6%8B%E5%8A%BF%E6%8A%A5%E5%91%8A-2026-01-30/</link><pubDate>Fri, 30 Jan 2026 12:00:00 +0800</pubDate><guid>https://jwj330.github.io/p/github-%E8%B6%8B%E5%8A%BF%E6%8A%A5%E5%91%8A-2026-01-30/</guid><description>&lt;p&gt;&lt;strong&gt;生成时间&lt;/strong&gt;: 2026-01-30 20:33:29&lt;/p&gt;
+&lt;p&gt;本报告展示了 GitHub 上 Star 数增长最快的仓库。&lt;/p&gt;
+&lt;!-- ECharts 容器 --&gt;
+&lt;div id="main" style="width: 100%;height:600px;"&gt;&lt;/div&gt;
+&lt;div style="text-align: center; margin-top: 20px;"&gt;
+&lt;button onclick="updateChart('daily')" style="padding: 5px 10px;"&gt;日榜 (Daily)&lt;/button&gt;
+&lt;button onclick="updateChart('weekly')" style="padding: 5px 10px;"&gt;周榜 (Weekly)&lt;/button&gt;
+&lt;button onclick="updateChart('monthly')" style="padding: 5px 10px;"&gt;月榜 (Monthly)&lt;/button&gt;
+&lt;/div&gt;
+&lt;!-- 引入 ECharts --&gt;
+&lt;script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript"&gt;
+var chartDom = document.getElementById('main');
+var myChart = echarts.init(chartDom);
+var option;
+// 数据源
+var dataMap = {
+'daily': {"categories": ["clash-verge-rev/clash-verge-rev", "x1xhlol/system-prompts-and-models-of-ai-tools", "hashicorp/vault", "remotion-dev/remotion", "github/spec-kit", "firecrawl/firecrawl", "DigitalPlatDev/FreeDomain", "PaddlePaddle/PaddleOCR", "anthropics/claude-code", "daytonaio/daytona", "codecrafters-io/build-your-own-x", "Shubhamsaboo/awesome-llm-apps", "lobehub/lobehub", "sindresorhus/awesome", "obra/superpowers", "affaan-m/everything-claude-code", "anthropics/skills", "anomalyco/opencode", "openclaw/openclaw", "flameshot-org/flameshot"], "data": [198, 204, 206, 218, 231, 244, 257, 280, 321, 325, 326, 345, 368, 489, 763, 826, 900, 1018, 15227, 29093]},
+'weekly': {"categories": ["clash-verge-rev/clash-verge-rev", "immich-app/immich", "bmad-code-org/BMAD-METHOD", "x1xhlol/system-prompts-and-models-of-ai-tools", "firecrawl/firecrawl", "DigitalPlatDev/FreeDomain", "github/spec-kit", "daytonaio/daytona", "sindresorhus/awesome", "Shubhamsaboo/awesome-llm-apps", "codecrafters-io/build-your-own-x", "anthropics/claude-code", "obra/superpowers", "anomalyco/opencode", "anthropics/skills", "flameshot-org/flameshot", "block/goose", "remotion-dev/remotion", "affaan-m/everything-claude-code", "openclaw/openclaw"], "data": [1296, 1364, 1492, 1494, 1538, 1720, 1731, 1924, 2035, 2151, 2272, 2589, 6080, 7838, 8010, 29093, 29575, 33821, 35306, 117479]},
+'monthly': {"categories": ["codecrafters-io/build-your-own-x", "daytonaio/daytona", "anthropics/claude-code", "anthropics/skills", "flameshot-org/flameshot", "anthropics/prompt-eng-interactive-tutorial", "MHSanaei/3x-ui", "block/goose", "blakeblackshear/frigate", "chen08209/FlClash", "Lissy93/web-check", "tw93/Mole", "bmad-code-org/BMAD-METHOD", "remotion-dev/remotion", "affaan-m/everything-claude-code", "slatedocs/slate", "ManimCommunity/manim", "obra/superpowers", "anomalyco/opencode", "openclaw/openclaw"], "data": [8929, 10254, 12380, 28045, 29093, 29274, 29379, 29575, 29856, 30428, 31449, 32522, 33037, 33821, 35306, 36170, 36544, 40533, 48295, 117479]}
+};
+function getOption(type) {
+var currentData = dataMap[type];
+var titleText = '';
+if (type === 'daily') titleText = '日增长排行 (Top 20)';
+else if (type === 'weekly') titleText = '周增长排行 (Top 20)';
+else if (type === 'monthly') titleText = '月增长排行 (Top 20)';
+if (!currentData || currentData.categories.length === 0) {
+return {
+title: { text: titleText + ' (暂无数据)' },
+xAxis: { show: false },
+yAxis: { show: false }
+};
+}
+return {
+title: {
+text: titleText,
+left: 'center'
+},
+tooltip: {
+trigger: 'axis',
+axisPointer: { type: 'shadow' }
+},
+grid: {
+left: '3%',
+right: '4%',
+bottom: '3%',
+containLabel: true
+},
+xAxis: {
+type: 'value',
+boundaryGap: [0, 0.01]
+},
+yAxis: {
+type: 'category',
+data: currentData.categories
+},
+series: [{
+name: 'Stars Growth',
+type: 'bar',
+data: currentData.data,
+itemStyle: {
+color: new echarts.graphic.LinearGradient(0, 0, 1, 0, [
+{offset: 0, color: '#83bff6'},
+{offset: 0.5, color: '#188df0'},
+{offset: 1, color: '#188df0'}
+])
+},
+label: {
+show: true,
+position: 'right'
+}
+}]
+};
+}
+// 初始化显示日榜
+option = getOption('daily');
+myChart.setOption(option);
+function updateChart(type) {
+myChart.setOption(getOption(type));
+}
+window.addEventListener('resize', function() {
+myChart.resize();
+});
+&lt;/script&gt;
+&lt;h3 id="-今日-top-50-详情"&gt;🚀 今日 Top 50 详情
+&lt;/h3&gt;&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;排名&lt;/th&gt;
+&lt;th&gt;仓库&lt;/th&gt;
+&lt;th&gt;增长&lt;/th&gt;
+&lt;th&gt;总 Stars&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/flameshot-org/flameshot" target="_blank" rel="noopener"
+&gt;flameshot-org/flameshot&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+29093&lt;/td&gt;
+&lt;td&gt;29093&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;2&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/openclaw/openclaw" target="_blank" rel="noopener"
+&gt;openclaw/openclaw&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+15227&lt;/td&gt;
+&lt;td&gt;117479&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;3&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/anomalyco/opencode" target="_blank" rel="noopener"
+&gt;anomalyco/opencode&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+1018&lt;/td&gt;
+&lt;td&gt;93183&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;4&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/anthropics/skills" target="_blank" rel="noopener"
+&gt;anthropics/skills&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+900&lt;/td&gt;
+&lt;td&gt;58899&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;5&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/affaan-m/everything-claude-code" target="_blank" rel="noopener"
+&gt;affaan-m/everything-claude-code&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+826&lt;/td&gt;
+&lt;td&gt;35306&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;6&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/obra/superpowers" target="_blank" rel="noopener"
+&gt;obra/superpowers&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+763&lt;/td&gt;
+&lt;td&gt;40533&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;7&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/sindresorhus/awesome" target="_blank" rel="noopener"
+&gt;sindresorhus/awesome&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+489&lt;/td&gt;
+&lt;td&gt;433581&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;8&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/lobehub/lobehub" target="_blank" rel="noopener"
+&gt;lobehub/lobehub&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+368&lt;/td&gt;
+&lt;td&gt;71505&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;9&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/Shubhamsaboo/awesome-llm-apps" target="_blank" rel="noopener"
+&gt;Shubhamsaboo/awesome-llm-apps&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+345&lt;/td&gt;
+&lt;td&gt;91190&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;10&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/codecrafters-io/build-your-own-x" target="_blank" rel="noopener"
+&gt;codecrafters-io/build-your-own-x&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+326&lt;/td&gt;
+&lt;td&gt;462206&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;11&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/daytonaio/daytona" target="_blank" rel="noopener"
+&gt;daytonaio/daytona&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+325&lt;/td&gt;
+&lt;td&gt;51705&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;12&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/anthropics/claude-code" target="_blank" rel="noopener"
+&gt;anthropics/claude-code&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+321&lt;/td&gt;
+&lt;td&gt;62485&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;13&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/PaddlePaddle/PaddleOCR" target="_blank" rel="noopener"
+&gt;PaddlePaddle/PaddleOCR&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+280&lt;/td&gt;
+&lt;td&gt;69317&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;14&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/DigitalPlatDev/FreeDomain" target="_blank" rel="noopener"
+&gt;DigitalPlatDev/FreeDomain&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+257&lt;/td&gt;
+&lt;td&gt;144599&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;15&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/firecrawl/firecrawl" target="_blank" rel="noopener"
+&gt;firecrawl/firecrawl&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+244&lt;/td&gt;
+&lt;td&gt;78484&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;16&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/github/spec-kit" target="_blank" rel="noopener"
+&gt;github/spec-kit&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+231&lt;/td&gt;
+&lt;td&gt;66418&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;17&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/remotion-dev/remotion" target="_blank" rel="noopener"
+&gt;remotion-dev/remotion&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+218&lt;/td&gt;
+&lt;td&gt;33821&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;18&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/hashicorp/vault" target="_blank" rel="noopener"
+&gt;hashicorp/vault&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+206&lt;/td&gt;
+&lt;td&gt;34789&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;19&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/x1xhlol/system-prompts-and-models-of-ai-tools" target="_blank" rel="noopener"
+&gt;x1xhlol/system-prompts-and-models-of-ai-tools&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+204&lt;/td&gt;
+&lt;td&gt;112118&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;20&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/clash-verge-rev/clash-verge-rev" target="_blank" rel="noopener"
+&gt;clash-verge-rev/clash-verge-rev&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+198&lt;/td&gt;
+&lt;td&gt;95080&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;21&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/bmad-code-org/BMAD-METHOD" target="_blank" rel="noopener"
+&gt;bmad-code-org/BMAD-METHOD&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+178&lt;/td&gt;
+&lt;td&gt;33037&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;22&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/yt-dlp/yt-dlp" target="_blank" rel="noopener"
+&gt;yt-dlp/yt-dlp&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+175&lt;/td&gt;
+&lt;td&gt;144990&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;23&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/vinta/awesome-python" target="_blank" rel="noopener"
+&gt;vinta/awesome-python&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+166&lt;/td&gt;
+&lt;td&gt;280656&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;24&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/langgenius/dify" target="_blank" rel="noopener"
+&gt;langgenius/dify&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+164&lt;/td&gt;
+&lt;td&gt;128182&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;25&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/n8n-io/n8n" target="_blank" rel="noopener"
+&gt;n8n-io/n8n&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+162&lt;/td&gt;
+&lt;td&gt;172177&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;26&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/immich-app/immich" target="_blank" rel="noopener"
+&gt;immich-app/immich&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+159&lt;/td&gt;
+&lt;td&gt;91105&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;27&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/tw93/Mole" target="_blank" rel="noopener"
+&gt;tw93/Mole&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+153&lt;/td&gt;
+&lt;td&gt;32522&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;28&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/awesome-selfhosted/awesome-selfhosted" target="_blank" rel="noopener"
+&gt;awesome-selfhosted/awesome-selfhosted&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+149&lt;/td&gt;
+&lt;td&gt;270804&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;29&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/public-apis/public-apis" target="_blank" rel="noopener"
+&gt;public-apis/public-apis&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+144&lt;/td&gt;
+&lt;td&gt;394355&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;30&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/trimstray/the-book-of-secret-knowledge" target="_blank" rel="noopener"
+&gt;trimstray/the-book-of-secret-knowledge&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+144&lt;/td&gt;
+&lt;td&gt;204314&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;31&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/TeamNewPipe/NewPipe" target="_blank" rel="noopener"
+&gt;TeamNewPipe/NewPipe&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+133&lt;/td&gt;
+&lt;td&gt;36848&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;32&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/torvalds/linux" target="_blank" rel="noopener"
+&gt;torvalds/linux&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+128&lt;/td&gt;
+&lt;td&gt;215796&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;33&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/practical-tutorials/project-based-learning" target="_blank" rel="noopener"
+&gt;practical-tutorials/project-based-learning&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+123&lt;/td&gt;
+&lt;td&gt;257152&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;34&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/massgravel/Microsoft-Activation-Scripts" target="_blank" rel="noopener"
+&gt;massgravel/Microsoft-Activation-Scripts&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+123&lt;/td&gt;
+&lt;td&gt;164297&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;35&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/upstash/context7" target="_blank" rel="noopener"
+&gt;upstash/context7&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+123&lt;/td&gt;
+&lt;td&gt;44209&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;36&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/opendatalab/MinerU" target="_blank" rel="noopener"
+&gt;opendatalab/MinerU&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+117&lt;/td&gt;
+&lt;td&gt;53342&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;37&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/donnemartin/system-design-primer" target="_blank" rel="noopener"
+&gt;donnemartin/system-design-primer&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+115&lt;/td&gt;
+&lt;td&gt;333878&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;38&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/makeplane/plane" target="_blank" rel="noopener"
+&gt;makeplane/plane&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+114&lt;/td&gt;
+&lt;td&gt;45143&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;39&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/google-gemini/gemini-cli" target="_blank" rel="noopener"
+&gt;google-gemini/gemini-cli&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+112&lt;/td&gt;
+&lt;td&gt;93074&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;40&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/Comfy-Org/ComfyUI" target="_blank" rel="noopener"
+&gt;Comfy-Org/ComfyUI&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+110&lt;/td&gt;
+&lt;td&gt;101978&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;41&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/sansan0/TrendRadar" target="_blank" rel="noopener"
+&gt;sansan0/TrendRadar&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+110&lt;/td&gt;
+&lt;td&gt;45101&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;42&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/open-webui/open-webui" target="_blank" rel="noopener"
+&gt;open-webui/open-webui&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+106&lt;/td&gt;
+&lt;td&gt;122424&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;43&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/vllm-project/vllm" target="_blank" rel="noopener"
+&gt;vllm-project/vllm&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+106&lt;/td&gt;
+&lt;td&gt;69073&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;44&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/ollama/ollama" target="_blank" rel="noopener"
+&gt;ollama/ollama&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+103&lt;/td&gt;
+&lt;td&gt;161158&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;45&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/f/prompts.chat" target="_blank" rel="noopener"
+&gt;f/prompts.chat&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+103&lt;/td&gt;
+&lt;td&gt;144088&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;46&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/521xueweihan/HelloGitHub" target="_blank" rel="noopener"
+&gt;521xueweihan/HelloGitHub&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+99&lt;/td&gt;
+&lt;td&gt;141717&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;47&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/2dust/v2rayN" target="_blank" rel="noopener"
+&gt;2dust/v2rayN&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+99&lt;/td&gt;
+&lt;td&gt;95814&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;48&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/docling-project/docling" target="_blank" rel="noopener"
+&gt;docling-project/docling&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+99&lt;/td&gt;
+&lt;td&gt;51571&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;49&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/CherryHQ/cherry-studio" target="_blank" rel="noopener"
+&gt;CherryHQ/cherry-studio&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+99&lt;/td&gt;
+&lt;td&gt;38959&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;50&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/pathwaycom/pathway" target="_blank" rel="noopener"
+&gt;pathwaycom/pathway&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+98&lt;/td&gt;
+&lt;td&gt;59077&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;</description></item><item><title>GitHub 趋势报告 2026-01-29</title><link>https://jwj330.github.io/p/github-%E8%B6%8B%E5%8A%BF%E6%8A%A5%E5%91%8A-2026-01-29/</link><pubDate>Thu, 29 Jan 2026 12:00:00 +0800</pubDate><guid>https://jwj330.github.io/p/github-%E8%B6%8B%E5%8A%BF%E6%8A%A5%E5%91%8A-2026-01-29/</guid><description>&lt;p&gt;&lt;strong&gt;生成时间&lt;/strong&gt;: 2026-01-29 20:34:06&lt;/p&gt;
+&lt;p&gt;本报告展示了 GitHub 上 Star 数增长最快的仓库。&lt;/p&gt;
+&lt;!-- ECharts 容器 --&gt;
+&lt;div id="main" style="width: 100%;height:600px;"&gt;&lt;/div&gt;
+&lt;div style="text-align: center; margin-top: 20px;"&gt;
+&lt;button onclick="updateChart('daily')" style="padding: 5px 10px;"&gt;日榜 (Daily)&lt;/button&gt;
+&lt;button onclick="updateChart('weekly')" style="padding: 5px 10px;"&gt;周榜 (Weekly)&lt;/button&gt;
+&lt;button onclick="updateChart('monthly')" style="padding: 5px 10px;"&gt;月榜 (Monthly)&lt;/button&gt;
+&lt;/div&gt;
+&lt;!-- 引入 ECharts --&gt;
+&lt;script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript"&gt;
+var chartDom = document.getElementById('main');
+var myChart = echarts.init(chartDom);
+var option;
+// 数据源
+var dataMap = {
+'daily': {"categories": ["hashicorp/vault", "yt-dlp/yt-dlp", "DigitalPlatDev/FreeDomain", "Shubhamsaboo/awesome-llm-apps", "firecrawl/firecrawl", "immich-app/immich", "sindresorhus/awesome", "codecrafters-io/build-your-own-x", "github/spec-kit", "x1xhlol/system-prompts-and-models-of-ai-tools", "lobehub/lobehub", "remotion-dev/remotion", "bmad-code-org/BMAD-METHOD", "anthropics/claude-code", "daytonaio/daytona", "obra/superpowers", "affaan-m/everything-claude-code", "anomalyco/opencode", "anthropics/skills", "moltbot/moltbot"], "data": [233, 233, 240, 245, 247, 248, 263, 267, 268, 294, 297, 337, 352, 367, 388, 852, 930, 984, 1105, 15208]},
+'weekly': {"categories": ["yt-dlp/yt-dlp", "n8n-io/n8n", "bmad-code-org/BMAD-METHOD", "firecrawl/firecrawl", "x1xhlol/system-prompts-and-models-of-ai-tools", "DigitalPlatDev/FreeDomain", "github/spec-kit", "sindresorhus/awesome", "daytonaio/daytona", "Shubhamsaboo/awesome-llm-apps", "codecrafters-io/build-your-own-x", "anthropics/claude-code", "obra/superpowers", "anomalyco/opencode", "anthropics/skills", "OpenBMB/ChatDev", "block/goose", "remotion-dev/remotion", "affaan-m/everything-claude-code", "moltbot/moltbot"], "data": [1337, 1349, 1504, 1518, 1565, 1704, 1764, 1786, 1930, 2049, 2472, 2743, 6461, 8423, 8625, 29039, 29536, 33603, 34480, 102252]},
+'monthly': {"categories": ["codecrafters-io/build-your-own-x", "daytonaio/daytona", "anthropics/claude-code", "anthropics/skills", "OpenBMB/ChatDev", "anthropics/prompt-eng-interactive-tutorial", "MHSanaei/3x-ui", "block/goose", "blakeblackshear/frigate", "chen08209/FlClash", "Lissy93/web-check", "tw93/Mole", "bmad-code-org/BMAD-METHOD", "remotion-dev/remotion", "affaan-m/everything-claude-code", "slatedocs/slate", "ManimCommunity/manim", "obra/superpowers", "anomalyco/opencode", "moltbot/moltbot"], "data": [8799, 10034, 12309, 27910, 29039, 29253, 29334, 29536, 29838, 30348, 31386, 32369, 32859, 33603, 34480, 36170, 36522, 39770, 47826, 102252]}
+};
+function getOption(type) {
+var currentData = dataMap[type];
+var titleText = '';
+if (type === 'daily') titleText = '日增长排行 (Top 20)';
+else if (type === 'weekly') titleText = '周增长排行 (Top 20)';
+else if (type === 'monthly') titleText = '月增长排行 (Top 20)';
+if (!currentData || currentData.categories.length === 0) {
+return {
+title: { text: titleText + ' (暂无数据)' },
+xAxis: { show: false },
+yAxis: { show: false }
+};
+}
+return {
+title: {
+text: titleText,
+left: 'center'
+},
+tooltip: {
+trigger: 'axis',
+axisPointer: { type: 'shadow' }
+},
+grid: {
+left: '3%',
+right: '4%',
+bottom: '3%',
+containLabel: true
+},
+xAxis: {
+type: 'value',
+boundaryGap: [0, 0.01]
+},
+yAxis: {
+type: 'category',
+data: currentData.categories
+},
+series: [{
+name: 'Stars Growth',
+type: 'bar',
+data: currentData.data,
+itemStyle: {
+color: new echarts.graphic.LinearGradient(0, 0, 1, 0, [
+{offset: 0, color: '#83bff6'},
+{offset: 0.5, color: '#188df0'},
+{offset: 1, color: '#188df0'}
+])
+},
+label: {
+show: true,
+position: 'right'
+}
+}]
+};
+}
+// 初始化显示日榜
+option = getOption('daily');
+myChart.setOption(option);
+function updateChart(type) {
+myChart.setOption(getOption(type));
+}
+window.addEventListener('resize', function() {
+myChart.resize();
+});
+&lt;/script&gt;
+&lt;h3 id="-今日-top-50-详情"&gt;🚀 今日 Top 50 详情
+&lt;/h3&gt;&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;排名&lt;/th&gt;
+&lt;th&gt;仓库&lt;/th&gt;
+&lt;th&gt;增长&lt;/th&gt;
+&lt;th&gt;总 Stars&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/moltbot/moltbot" target="_blank" rel="noopener"
+&gt;moltbot/moltbot&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+15208&lt;/td&gt;
+&lt;td&gt;102252&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;2&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/anthropics/skills" target="_blank" rel="noopener"
+&gt;anthropics/skills&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+1105&lt;/td&gt;
+&lt;td&gt;57999&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;3&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/anomalyco/opencode" target="_blank" rel="noopener"
+&gt;anomalyco/opencode&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+984&lt;/td&gt;
+&lt;td&gt;92165&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;4&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/affaan-m/everything-claude-code" target="_blank" rel="noopener"
+&gt;affaan-m/everything-claude-code&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+930&lt;/td&gt;
+&lt;td&gt;34480&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;5&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/obra/superpowers" target="_blank" rel="noopener"
+&gt;obra/superpowers&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+852&lt;/td&gt;
+&lt;td&gt;39770&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;6&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/daytonaio/daytona" target="_blank" rel="noopener"
+&gt;daytonaio/daytona&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+388&lt;/td&gt;
+&lt;td&gt;51380&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;7&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/anthropics/claude-code" target="_blank" rel="noopener"
+&gt;anthropics/claude-code&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+367&lt;/td&gt;
+&lt;td&gt;62164&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;8&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/bmad-code-org/BMAD-METHOD" target="_blank" rel="noopener"
+&gt;bmad-code-org/BMAD-METHOD&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+352&lt;/td&gt;
+&lt;td&gt;32859&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;9&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/remotion-dev/remotion" target="_blank" rel="noopener"
+&gt;remotion-dev/remotion&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+337&lt;/td&gt;
+&lt;td&gt;33603&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;10&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/lobehub/lobehub" target="_blank" rel="noopener"
+&gt;lobehub/lobehub&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+297&lt;/td&gt;
+&lt;td&gt;71137&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;11&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/x1xhlol/system-prompts-and-models-of-ai-tools" target="_blank" rel="noopener"
+&gt;x1xhlol/system-prompts-and-models-of-ai-tools&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+294&lt;/td&gt;
+&lt;td&gt;111914&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;12&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/github/spec-kit" target="_blank" rel="noopener"
+&gt;github/spec-kit&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+268&lt;/td&gt;
+&lt;td&gt;66187&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;13&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/codecrafters-io/build-your-own-x" target="_blank" rel="noopener"
+&gt;codecrafters-io/build-your-own-x&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+267&lt;/td&gt;
+&lt;td&gt;461880&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;14&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/sindresorhus/awesome" target="_blank" rel="noopener"
+&gt;sindresorhus/awesome&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+263&lt;/td&gt;
+&lt;td&gt;433092&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;15&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/immich-app/immich" target="_blank" rel="noopener"
+&gt;immich-app/immich&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+248&lt;/td&gt;
+&lt;td&gt;90946&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;16&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/firecrawl/firecrawl" target="_blank" rel="noopener"
+&gt;firecrawl/firecrawl&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+247&lt;/td&gt;
+&lt;td&gt;78240&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;17&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/Shubhamsaboo/awesome-llm-apps" target="_blank" rel="noopener"
+&gt;Shubhamsaboo/awesome-llm-apps&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+245&lt;/td&gt;
+&lt;td&gt;90845&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;18&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/DigitalPlatDev/FreeDomain" target="_blank" rel="noopener"
+&gt;DigitalPlatDev/FreeDomain&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+240&lt;/td&gt;
+&lt;td&gt;144342&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;19&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/yt-dlp/yt-dlp" target="_blank" rel="noopener"
+&gt;yt-dlp/yt-dlp&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+233&lt;/td&gt;
+&lt;td&gt;144815&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;20&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/hashicorp/vault" target="_blank" rel="noopener"
+&gt;hashicorp/vault&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+233&lt;/td&gt;
+&lt;td&gt;34583&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;21&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/clash-verge-rev/clash-verge-rev" target="_blank" rel="noopener"
+&gt;clash-verge-rev/clash-verge-rev&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+206&lt;/td&gt;
+&lt;td&gt;94882&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;22&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/n8n-io/n8n" target="_blank" rel="noopener"
+&gt;n8n-io/n8n&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+190&lt;/td&gt;
+&lt;td&gt;172015&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;23&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/public-apis/public-apis" target="_blank" rel="noopener"
+&gt;public-apis/public-apis&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+185&lt;/td&gt;
+&lt;td&gt;394211&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;24&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/langgenius/dify" target="_blank" rel="noopener"
+&gt;langgenius/dify&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+164&lt;/td&gt;
+&lt;td&gt;128018&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;25&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/vinta/awesome-python" target="_blank" rel="noopener"
+&gt;vinta/awesome-python&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+151&lt;/td&gt;
+&lt;td&gt;280490&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;26&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/torvalds/linux" target="_blank" rel="noopener"
+&gt;torvalds/linux&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+148&lt;/td&gt;
+&lt;td&gt;215668&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;27&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/upstash/context7" target="_blank" rel="noopener"
+&gt;upstash/context7&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+145&lt;/td&gt;
+&lt;td&gt;44086&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;28&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/awesome-selfhosted/awesome-selfhosted" target="_blank" rel="noopener"
+&gt;awesome-selfhosted/awesome-selfhosted&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+143&lt;/td&gt;
+&lt;td&gt;270655&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;29&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/opendatalab/MinerU" target="_blank" rel="noopener"
+&gt;opendatalab/MinerU&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+136&lt;/td&gt;
+&lt;td&gt;53225&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;30&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/chen08209/FlClash" target="_blank" rel="noopener"
+&gt;chen08209/FlClash&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+131&lt;/td&gt;
+&lt;td&gt;30348&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;31&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/CherryHQ/cherry-studio" target="_blank" rel="noopener"
+&gt;CherryHQ/cherry-studio&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+124&lt;/td&gt;
+&lt;td&gt;38860&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;32&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/usememos/memos" target="_blank" rel="noopener"
+&gt;usememos/memos&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+121&lt;/td&gt;
+&lt;td&gt;56163&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;33&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/open-webui/open-webui" target="_blank" rel="noopener"
+&gt;open-webui/open-webui&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+119&lt;/td&gt;
+&lt;td&gt;122318&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;34&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/ollama/ollama" target="_blank" rel="noopener"
+&gt;ollama/ollama&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+118&lt;/td&gt;
+&lt;td&gt;161055&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;35&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/Comfy-Org/ComfyUI" target="_blank" rel="noopener"
+&gt;Comfy-Org/ComfyUI&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+118&lt;/td&gt;
+&lt;td&gt;101868&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;36&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/openai/codex" target="_blank" rel="noopener"
+&gt;openai/codex&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+116&lt;/td&gt;
+&lt;td&gt;58093&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;37&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/tw93/Mole" target="_blank" rel="noopener"
+&gt;tw93/Mole&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+116&lt;/td&gt;
+&lt;td&gt;32369&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;38&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/practical-tutorials/project-based-learning" target="_blank" rel="noopener"
+&gt;practical-tutorials/project-based-learning&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+113&lt;/td&gt;
+&lt;td&gt;257029&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;39&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/exo-explore/exo" target="_blank" rel="noopener"
+&gt;exo-explore/exo&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+111&lt;/td&gt;
+&lt;td&gt;40774&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;40&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/docling-project/docling" target="_blank" rel="noopener"
+&gt;docling-project/docling&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+107&lt;/td&gt;
+&lt;td&gt;51472&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;41&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/google-gemini/gemini-cli" target="_blank" rel="noopener"
+&gt;google-gemini/gemini-cli&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+106&lt;/td&gt;
+&lt;td&gt;92962&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;42&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/donnemartin/system-design-primer" target="_blank" rel="noopener"
+&gt;donnemartin/system-design-primer&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+105&lt;/td&gt;
+&lt;td&gt;333763&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;43&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/pathwaycom/llm-app" target="_blank" rel="noopener"
+&gt;pathwaycom/llm-app&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+104&lt;/td&gt;
+&lt;td&gt;55655&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;44&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/pathwaycom/pathway" target="_blank" rel="noopener"
+&gt;pathwaycom/pathway&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+103&lt;/td&gt;
+&lt;td&gt;58979&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;45&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/521xueweihan/HelloGitHub" target="_blank" rel="noopener"
+&gt;521xueweihan/HelloGitHub&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+98&lt;/td&gt;
+&lt;td&gt;141618&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;46&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/PaddlePaddle/PaddleOCR" target="_blank" rel="noopener"
+&gt;PaddlePaddle/PaddleOCR&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+96&lt;/td&gt;
+&lt;td&gt;69037&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;47&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/trimstray/the-book-of-secret-knowledge" target="_blank" rel="noopener"
+&gt;trimstray/the-book-of-secret-knowledge&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+91&lt;/td&gt;
+&lt;td&gt;204170&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;48&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/massgravel/Microsoft-Activation-Scripts" target="_blank" rel="noopener"
+&gt;massgravel/Microsoft-Activation-Scripts&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+91&lt;/td&gt;
+&lt;td&gt;164174&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;49&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/vllm-project/vllm" target="_blank" rel="noopener"
+&gt;vllm-project/vllm&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+89&lt;/td&gt;
+&lt;td&gt;68967&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;50&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/excalidraw/excalidraw" target="_blank" rel="noopener"
+&gt;excalidraw/excalidraw&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+88&lt;/td&gt;
+&lt;td&gt;115635&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;</description></item><item><title>GitHub 趋势报告 2026-01-28</title><link>https://jwj330.github.io/p/github-%E8%B6%8B%E5%8A%BF%E6%8A%A5%E5%91%8A-2026-01-28/</link><pubDate>Wed, 28 Jan 2026 12:00:00 +0800</pubDate><guid>https://jwj330.github.io/p/github-%E8%B6%8B%E5%8A%BF%E6%8A%A5%E5%91%8A-2026-01-28/</guid><description>&lt;p&gt;&lt;strong&gt;生成时间&lt;/strong&gt;: 2026-01-28 20:34:54&lt;/p&gt;
+&lt;p&gt;本报告展示了 GitHub 上 Star 数增长最快的仓库。&lt;/p&gt;
+&lt;!-- ECharts 容器 --&gt;
+&lt;div id="main" style="width: 100%;height:600px;"&gt;&lt;/div&gt;
+&lt;div style="text-align: center; margin-top: 20px;"&gt;
+&lt;button onclick="updateChart('daily')" style="padding: 5px 10px;"&gt;日榜 (Daily)&lt;/button&gt;
+&lt;button onclick="updateChart('weekly')" style="padding: 5px 10px;"&gt;周榜 (Weekly)&lt;/button&gt;
+&lt;button onclick="updateChart('monthly')" style="padding: 5px 10px;"&gt;月榜 (Monthly)&lt;/button&gt;
+&lt;/div&gt;
+&lt;!-- 引入 ECharts --&gt;
+&lt;script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript"&gt;
+var chartDom = document.getElementById('main');
+var myChart = echarts.init(chartDom);
+var option;
+// 数据源
+var dataMap = {
+'daily': {"categories": ["public-apis/public-apis", "daytonaio/daytona", "lobehub/lobehub", "firecrawl/firecrawl", "DigitalPlatDev/FreeDomain", "langgenius/dify", "hashicorp/vault", "github/spec-kit", "sindresorhus/awesome", "codecrafters-io/build-your-own-x", "anthropics/claude-code", "remotion-dev/remotion", "immich-app/immich", "Shubhamsaboo/awesome-llm-apps", "obra/superpowers", "anomalyco/opencode", "anthropics/skills", "affaan-m/everything-claude-code", "moltbot/moltbot", "OpenBMB/ChatDev"], "data": [227, 230, 230, 231, 244, 284, 305, 331, 336, 366, 399, 478, 485, 538, 1013, 1186, 1300, 1320, 18357, 29030]},
+'weekly': {"categories": ["browser-use/browser-use", "microsoft/Data-Science-For-Beginners", "firecrawl/firecrawl", "x1xhlol/system-prompts-and-models-of-ai-tools", "daytonaio/daytona", "DigitalPlatDev/FreeDomain", "sindresorhus/awesome", "github/spec-kit", "Shubhamsaboo/awesome-llm-apps", "codecrafters-io/build-your-own-x", "anthropics/claude-code", "obra/superpowers", "anthropics/skills", "anomalyco/opencode", "MHSanaei/3x-ui", "block/goose", "remotion-dev/remotion", "affaan-m/everything-claude-code", "slatedocs/slate", "moltbot/moltbot"], "data": [1417, 1500, 1523, 1557, 1733, 1739, 1749, 1772, 2085, 2534, 2760, 6755, 9019, 9095, 29276, 29455, 33266, 33550, 36169, 87044]},
+'monthly': {"categories": ["daytonaio/daytona", "anthropics/claude-code", "anthropics/skills", "OpenBMB/ChatDev", "anthropics/prompt-eng-interactive-tutorial", "MHSanaei/3x-ui", "block/goose", "Dokploy/dokploy", "blakeblackshear/frigate", "chen08209/FlClash", "Lissy93/web-check", "tw93/Mole", "bmad-code-org/BMAD-METHOD", "remotion-dev/remotion", "affaan-m/everything-claude-code", "slatedocs/slate", "ManimCommunity/manim", "obra/superpowers", "anomalyco/opencode", "moltbot/moltbot"], "data": [9893, 12214, 27764, 29030, 29232, 29276, 29455, 29586, 29814, 30217, 31309, 32253, 32507, 33266, 33550, 36169, 36505, 38918, 47430, 87044]}
+};
+function getOption(type) {
+var currentData = dataMap[type];
+var titleText = '';
+if (type === 'daily') titleText = '日增长排行 (Top 20)';
+else if (type === 'weekly') titleText = '周增长排行 (Top 20)';
+else if (type === 'monthly') titleText = '月增长排行 (Top 20)';
+if (!currentData || currentData.categories.length === 0) {
+return {
+title: { text: titleText + ' (暂无数据)' },
+xAxis: { show: false },
+yAxis: { show: false }
+};
+}
+return {
+title: {
+text: titleText,
+left: 'center'
+},
+tooltip: {
+trigger: 'axis',
+axisPointer: { type: 'shadow' }
+},
+grid: {
+left: '3%',
+right: '4%',
+bottom: '3%',
+containLabel: true
+},
+xAxis: {
+type: 'value',
+boundaryGap: [0, 0.01]
+},
+yAxis: {
+type: 'category',
+data: currentData.categories
+},
+series: [{
+name: 'Stars Growth',
+type: 'bar',
+data: currentData.data,
+itemStyle: {
+color: new echarts.graphic.LinearGradient(0, 0, 1, 0, [
+{offset: 0, color: '#83bff6'},
+{offset: 0.5, color: '#188df0'},
+{offset: 1, color: '#188df0'}
+])
+},
+label: {
+show: true,
+position: 'right'
+}
+}]
+};
+}
+// 初始化显示日榜
+option = getOption('daily');
+myChart.setOption(option);
+function updateChart(type) {
+myChart.setOption(getOption(type));
+}
+window.addEventListener('resize', function() {
+myChart.resize();
+});
+&lt;/script&gt;
+&lt;h3 id="-今日-top-50-详情"&gt;🚀 今日 Top 50 详情
+&lt;/h3&gt;&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;排名&lt;/th&gt;
+&lt;th&gt;仓库&lt;/th&gt;
+&lt;th&gt;增长&lt;/th&gt;
+&lt;th&gt;总 Stars&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/OpenBMB/ChatDev" target="_blank" rel="noopener"
+&gt;OpenBMB/ChatDev&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+29030&lt;/td&gt;
+&lt;td&gt;29030&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;2&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/moltbot/moltbot" target="_blank" rel="noopener"
+&gt;moltbot/moltbot&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+18357&lt;/td&gt;
+&lt;td&gt;87044&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;3&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/affaan-m/everything-claude-code" target="_blank" rel="noopener"
+&gt;affaan-m/everything-claude-code&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+1320&lt;/td&gt;
+&lt;td&gt;33550&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;4&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/anthropics/skills" target="_blank" rel="noopener"
+&gt;anthropics/skills&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+1300&lt;/td&gt;
+&lt;td&gt;56894&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;5&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/anomalyco/opencode" target="_blank" rel="noopener"
+&gt;anomalyco/opencode&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+1186&lt;/td&gt;
+&lt;td&gt;91181&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;6&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/obra/superpowers" target="_blank" rel="noopener"
+&gt;obra/superpowers&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+1013&lt;/td&gt;
+&lt;td&gt;38918&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;7&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/Shubhamsaboo/awesome-llm-apps" target="_blank" rel="noopener"
+&gt;Shubhamsaboo/awesome-llm-apps&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+538&lt;/td&gt;
+&lt;td&gt;90600&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;8&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/immich-app/immich" target="_blank" rel="noopener"
+&gt;immich-app/immich&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+485&lt;/td&gt;
+&lt;td&gt;90698&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;9&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/remotion-dev/remotion" target="_blank" rel="noopener"
+&gt;remotion-dev/remotion&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+478&lt;/td&gt;
+&lt;td&gt;33266&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;10&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/anthropics/claude-code" target="_blank" rel="noopener"
+&gt;anthropics/claude-code&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+399&lt;/td&gt;
+&lt;td&gt;61797&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;11&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/codecrafters-io/build-your-own-x" target="_blank" rel="noopener"
+&gt;codecrafters-io/build-your-own-x&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+366&lt;/td&gt;
+&lt;td&gt;461613&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;12&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/sindresorhus/awesome" target="_blank" rel="noopener"
+&gt;sindresorhus/awesome&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+336&lt;/td&gt;
+&lt;td&gt;432829&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;13&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/github/spec-kit" target="_blank" rel="noopener"
+&gt;github/spec-kit&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+331&lt;/td&gt;
+&lt;td&gt;65919&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;14&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/hashicorp/vault" target="_blank" rel="noopener"
+&gt;hashicorp/vault&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+305&lt;/td&gt;
+&lt;td&gt;34350&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;15&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/langgenius/dify" target="_blank" rel="noopener"
+&gt;langgenius/dify&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+284&lt;/td&gt;
+&lt;td&gt;127854&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;16&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/DigitalPlatDev/FreeDomain" target="_blank" rel="noopener"
+&gt;DigitalPlatDev/FreeDomain&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+244&lt;/td&gt;
+&lt;td&gt;144102&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;17&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/firecrawl/firecrawl" target="_blank" rel="noopener"
+&gt;firecrawl/firecrawl&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+231&lt;/td&gt;
+&lt;td&gt;77993&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;18&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/lobehub/lobehub" target="_blank" rel="noopener"
+&gt;lobehub/lobehub&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+230&lt;/td&gt;
+&lt;td&gt;70840&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;19&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/daytonaio/daytona" target="_blank" rel="noopener"
+&gt;daytonaio/daytona&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+230&lt;/td&gt;
+&lt;td&gt;50992&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;20&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/public-apis/public-apis" target="_blank" rel="noopener"
+&gt;public-apis/public-apis&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+227&lt;/td&gt;
+&lt;td&gt;394026&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;21&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/x1xhlol/system-prompts-and-models-of-ai-tools" target="_blank" rel="noopener"
+&gt;x1xhlol/system-prompts-and-models-of-ai-tools&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+216&lt;/td&gt;
+&lt;td&gt;111620&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;22&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/bmad-code-org/BMAD-METHOD" target="_blank" rel="noopener"
+&gt;bmad-code-org/BMAD-METHOD&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+205&lt;/td&gt;
+&lt;td&gt;32507&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;23&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/n8n-io/n8n" target="_blank" rel="noopener"
+&gt;n8n-io/n8n&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+200&lt;/td&gt;
+&lt;td&gt;171825&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;24&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/clash-verge-rev/clash-verge-rev" target="_blank" rel="noopener"
+&gt;clash-verge-rev/clash-verge-rev&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+187&lt;/td&gt;
+&lt;td&gt;94676&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;25&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/vinta/awesome-python" target="_blank" rel="noopener"
+&gt;vinta/awesome-python&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+178&lt;/td&gt;
+&lt;td&gt;280339&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;26&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/yt-dlp/yt-dlp" target="_blank" rel="noopener"
+&gt;yt-dlp/yt-dlp&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+167&lt;/td&gt;
+&lt;td&gt;144582&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;27&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/awesome-selfhosted/awesome-selfhosted" target="_blank" rel="noopener"
+&gt;awesome-selfhosted/awesome-selfhosted&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+166&lt;/td&gt;
+&lt;td&gt;270512&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;28&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/opendatalab/MinerU" target="_blank" rel="noopener"
+&gt;opendatalab/MinerU&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+158&lt;/td&gt;
+&lt;td&gt;53089&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;29&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/tw93/Mole" target="_blank" rel="noopener"
+&gt;tw93/Mole&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+156&lt;/td&gt;
+&lt;td&gt;32253&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;30&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/521xueweihan/HelloGitHub" target="_blank" rel="noopener"
+&gt;521xueweihan/HelloGitHub&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+151&lt;/td&gt;
+&lt;td&gt;141520&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;31&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/upstash/context7" target="_blank" rel="noopener"
+&gt;upstash/context7&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+149&lt;/td&gt;
+&lt;td&gt;43941&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;32&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/trimstray/the-book-of-secret-knowledge" target="_blank" rel="noopener"
+&gt;trimstray/the-book-of-secret-knowledge&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+147&lt;/td&gt;
+&lt;td&gt;204079&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;33&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/CherryHQ/cherry-studio" target="_blank" rel="noopener"
+&gt;CherryHQ/cherry-studio&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+147&lt;/td&gt;
+&lt;td&gt;38736&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;34&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/EbookFoundation/free-programming-books" target="_blank" rel="noopener"
+&gt;EbookFoundation/free-programming-books&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+140&lt;/td&gt;
+&lt;td&gt;381293&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;35&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/practical-tutorials/project-based-learning" target="_blank" rel="noopener"
+&gt;practical-tutorials/project-based-learning&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+139&lt;/td&gt;
+&lt;td&gt;256916&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;36&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/torvalds/linux" target="_blank" rel="noopener"
+&gt;torvalds/linux&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+136&lt;/td&gt;
+&lt;td&gt;215520&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;37&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/openai/codex" target="_blank" rel="noopener"
+&gt;openai/codex&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+134&lt;/td&gt;
+&lt;td&gt;57977&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;38&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/pathwaycom/pathway" target="_blank" rel="noopener"
+&gt;pathwaycom/pathway&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+132&lt;/td&gt;
+&lt;td&gt;58876&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;39&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/exo-explore/exo" target="_blank" rel="noopener"
+&gt;exo-explore/exo&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+129&lt;/td&gt;
+&lt;td&gt;40663&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;40&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/google-gemini/gemini-cli" target="_blank" rel="noopener"
+&gt;google-gemini/gemini-cli&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+127&lt;/td&gt;
+&lt;td&gt;92856&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;41&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/open-webui/open-webui" target="_blank" rel="noopener"
+&gt;open-webui/open-webui&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+126&lt;/td&gt;
+&lt;td&gt;122199&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;42&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/ollama/ollama" target="_blank" rel="noopener"
+&gt;ollama/ollama&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+125&lt;/td&gt;
+&lt;td&gt;160937&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;43&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/sansan0/TrendRadar" target="_blank" rel="noopener"
+&gt;sansan0/TrendRadar&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+124&lt;/td&gt;
+&lt;td&gt;44904&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;44&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/vllm-project/vllm" target="_blank" rel="noopener"
+&gt;vllm-project/vllm&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+121&lt;/td&gt;
+&lt;td&gt;68878&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;45&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/pathwaycom/llm-app" target="_blank" rel="noopener"
+&gt;pathwaycom/llm-app&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+121&lt;/td&gt;
+&lt;td&gt;55551&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;46&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/massgravel/Microsoft-Activation-Scripts" target="_blank" rel="noopener"
+&gt;massgravel/Microsoft-Activation-Scripts&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+113&lt;/td&gt;
+&lt;td&gt;164083&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;47&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/iptv-org/iptv" target="_blank" rel="noopener"
+&gt;iptv-org/iptv&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+109&lt;/td&gt;
+&lt;td&gt;110659&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;48&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/f/awesome-chatgpt-prompts" target="_blank" rel="noopener"
+&gt;f/awesome-chatgpt-prompts&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+107&lt;/td&gt;
+&lt;td&gt;143911&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;49&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/OpenBB-finance/OpenBB" target="_blank" rel="noopener"
+&gt;OpenBB-finance/OpenBB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+107&lt;/td&gt;
+&lt;td&gt;59568&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;50&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/donnemartin/system-design-primer" target="_blank" rel="noopener"
+&gt;donnemartin/system-design-primer&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+104&lt;/td&gt;
+&lt;td&gt;333658&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;</description></item><item><title>GitHub 趋势报告 2026-01-27</title><link>https://jwj330.github.io/p/github-%E8%B6%8B%E5%8A%BF%E6%8A%A5%E5%91%8A-2026-01-27/</link><pubDate>Tue, 27 Jan 2026 12:00:00 +0800</pubDate><guid>https://jwj330.github.io/p/github-%E8%B6%8B%E5%8A%BF%E6%8A%A5%E5%91%8A-2026-01-27/</guid><description>&lt;p&gt;&lt;strong&gt;生成时间&lt;/strong&gt;: 2026-01-27 20:27:03&lt;/p&gt;
+&lt;p&gt;本报告展示了 GitHub 上 Star 数增长最快的仓库。&lt;/p&gt;
+&lt;!-- ECharts 容器 --&gt;
+&lt;div id="main" style="width: 100%;height:600px;"&gt;&lt;/div&gt;
+&lt;div style="text-align: center; margin-top: 20px;"&gt;
+&lt;button onclick="updateChart('daily')" style="padding: 5px 10px;"&gt;日榜 (Daily)&lt;/button&gt;
+&lt;button onclick="updateChart('weekly')" style="padding: 5px 10px;"&gt;周榜 (Weekly)&lt;/button&gt;
+&lt;button onclick="updateChart('monthly')" style="padding: 5px 10px;"&gt;月榜 (Monthly)&lt;/button&gt;
+&lt;/div&gt;
+&lt;!-- 引入 ECharts --&gt;
+&lt;script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript"&gt;
+var chartDom = document.getElementById('main');
+var myChart = echarts.init(chartDom);
+var option;
+// 数据源
+var dataMap = {
+'daily': {"categories": ["public-apis/public-apis", "clash-verge-rev/clash-verge-rev", "langgenius/dify", "DigitalPlatDev/FreeDomain", "n8n-io/n8n", "firecrawl/firecrawl", "bmad-code-org/BMAD-METHOD", "block/goose", "sindresorhus/awesome", "github/spec-kit", "daytonaio/daytona", "codecrafters-io/build-your-own-x", "Shubhamsaboo/awesome-llm-apps", "anthropics/claude-code", "remotion-dev/remotion", "obra/superpowers", "anomalyco/opencode", "anthropics/skills", "affaan-m/everything-claude-code", "moltbot/moltbot"], "data": [214, 217, 235, 235, 235, 245, 257, 262, 282, 289, 292, 353, 425, 455, 984, 1050, 1292, 1455, 1503, 25481]},
+'weekly': {"categories": ["tw93/Mole", "yt-dlp/yt-dlp", "sindresorhus/awesome", "x1xhlol/system-prompts-and-models-of-ai-tools", "Shubhamsaboo/awesome-llm-apps", "github/spec-kit", "microsoft/Data-Science-For-Beginners", "DigitalPlatDev/FreeDomain", "daytonaio/daytona", "codecrafters-io/build-your-own-x", "anthropics/claude-code", "obra/superpowers", "anthropics/skills", "anomalyco/opencode", "MHSanaei/3x-ui", "block/goose", "affaan-m/everything-claude-code", "remotion-dev/remotion", "slatedocs/slate", "moltbot/moltbot"], "data": [1524, 1528, 1645, 1654, 1689, 1726, 1738, 1769, 2150, 2484, 2772, 7062, 8919, 9689, 29220, 29354, 32230, 32788, 36168, 68687]},
+'monthly': {"categories": [], "data": []}
+};
+function getOption(type) {
+var currentData = dataMap[type];
+var titleText = '';
+if (type === 'daily') titleText = '日增长排行 (Top 20)';
+else if (type === 'weekly') titleText = '周增长排行 (Top 20)';
+else if (type === 'monthly') titleText = '月增长排行 (Top 20)';
+if (!currentData || currentData.categories.length === 0) {
+return {
+title: { text: titleText + ' (暂无数据)' },
+xAxis: { show: false },
+yAxis: { show: false }
+};
+}
+return {
+title: {
+text: titleText,
+left: 'center'
+},
+tooltip: {
+trigger: 'axis',
+axisPointer: { type: 'shadow' }
+},
+grid: {
+left: '3%',
+right: '4%',
+bottom: '3%',
+containLabel: true
+},
+xAxis: {
+type: 'value',
+boundaryGap: [0, 0.01]
+},
+yAxis: {
+type: 'category',
+data: currentData.categories
+},
+series: [{
+name: 'Stars Growth',
+type: 'bar',
+data: currentData.data,
+itemStyle: {
+color: new echarts.graphic.LinearGradient(0, 0, 1, 0, [
+{offset: 0, color: '#83bff6'},
+{offset: 0.5, color: '#188df0'},
+{offset: 1, color: '#188df0'}
+])
+},
+label: {
+show: true,
+position: 'right'
+}
+}]
+};
+}
+// 初始化显示日榜
+option = getOption('daily');
+myChart.setOption(option);
+function updateChart(type) {
+myChart.setOption(getOption(type));
+}
+window.addEventListener('resize', function() {
+myChart.resize();
+});
+&lt;/script&gt;
+&lt;h3 id="-今日-top-50-详情"&gt;🚀 今日 Top 50 详情
+&lt;/h3&gt;&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;排名&lt;/th&gt;
+&lt;th&gt;仓库&lt;/th&gt;
+&lt;th&gt;增长&lt;/th&gt;
+&lt;th&gt;总 Stars&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/moltbot/moltbot" target="_blank" rel="noopener"
+&gt;moltbot/moltbot&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+25481&lt;/td&gt;
+&lt;td&gt;68687&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;2&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/affaan-m/everything-claude-code" target="_blank" rel="noopener"
+&gt;affaan-m/everything-claude-code&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+1503&lt;/td&gt;
+&lt;td&gt;32230&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;3&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/anthropics/skills" target="_blank" rel="noopener"
+&gt;anthropics/skills&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+1455&lt;/td&gt;
+&lt;td&gt;55594&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;4&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/anomalyco/opencode" target="_blank" rel="noopener"
+&gt;anomalyco/opencode&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+1292&lt;/td&gt;
+&lt;td&gt;89995&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;5&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/obra/superpowers" target="_blank" rel="noopener"
+&gt;obra/superpowers&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+1050&lt;/td&gt;
+&lt;td&gt;37905&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;6&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/remotion-dev/remotion" target="_blank" rel="noopener"
+&gt;remotion-dev/remotion&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+984&lt;/td&gt;
+&lt;td&gt;32788&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;7&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/anthropics/claude-code" target="_blank" rel="noopener"
+&gt;anthropics/claude-code&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+455&lt;/td&gt;
+&lt;td&gt;61398&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;8&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/Shubhamsaboo/awesome-llm-apps" target="_blank" rel="noopener"
+&gt;Shubhamsaboo/awesome-llm-apps&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+425&lt;/td&gt;
+&lt;td&gt;90062&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;9&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/codecrafters-io/build-your-own-x" target="_blank" rel="noopener"
+&gt;codecrafters-io/build-your-own-x&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+353&lt;/td&gt;
+&lt;td&gt;461247&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;10&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/daytonaio/daytona" target="_blank" rel="noopener"
+&gt;daytonaio/daytona&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+292&lt;/td&gt;
+&lt;td&gt;50762&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;11&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/github/spec-kit" target="_blank" rel="noopener"
+&gt;github/spec-kit&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+289&lt;/td&gt;
+&lt;td&gt;65588&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;12&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/sindresorhus/awesome" target="_blank" rel="noopener"
+&gt;sindresorhus/awesome&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+282&lt;/td&gt;
+&lt;td&gt;432493&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;13&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/block/goose" target="_blank" rel="noopener"
+&gt;block/goose&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+262&lt;/td&gt;
+&lt;td&gt;29354&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;14&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/bmad-code-org/BMAD-METHOD" target="_blank" rel="noopener"
+&gt;bmad-code-org/BMAD-METHOD&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+257&lt;/td&gt;
+&lt;td&gt;32302&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;15&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/firecrawl/firecrawl" target="_blank" rel="noopener"
+&gt;firecrawl/firecrawl&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+245&lt;/td&gt;
+&lt;td&gt;77762&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;16&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/n8n-io/n8n" target="_blank" rel="noopener"
+&gt;n8n-io/n8n&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+235&lt;/td&gt;
+&lt;td&gt;171625&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;17&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/DigitalPlatDev/FreeDomain" target="_blank" rel="noopener"
+&gt;DigitalPlatDev/FreeDomain&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+235&lt;/td&gt;
+&lt;td&gt;143858&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;18&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/langgenius/dify" target="_blank" rel="noopener"
+&gt;langgenius/dify&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+235&lt;/td&gt;
+&lt;td&gt;127570&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;19&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/clash-verge-rev/clash-verge-rev" target="_blank" rel="noopener"
+&gt;clash-verge-rev/clash-verge-rev&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+217&lt;/td&gt;
+&lt;td&gt;94489&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;20&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/public-apis/public-apis" target="_blank" rel="noopener"
+&gt;public-apis/public-apis&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+214&lt;/td&gt;
+&lt;td&gt;393799&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;21&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/x1xhlol/system-prompts-and-models-of-ai-tools" target="_blank" rel="noopener"
+&gt;x1xhlol/system-prompts-and-models-of-ai-tools&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+200&lt;/td&gt;
+&lt;td&gt;111404&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;22&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/tw93/Mole" target="_blank" rel="noopener"
+&gt;tw93/Mole&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+196&lt;/td&gt;
+&lt;td&gt;32097&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;23&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/awesome-selfhosted/awesome-selfhosted" target="_blank" rel="noopener"
+&gt;awesome-selfhosted/awesome-selfhosted&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+193&lt;/td&gt;
+&lt;td&gt;270346&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;24&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/pathwaycom/pathway" target="_blank" rel="noopener"
+&gt;pathwaycom/pathway&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+193&lt;/td&gt;
+&lt;td&gt;58744&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;25&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/pathwaycom/llm-app" target="_blank" rel="noopener"
+&gt;pathwaycom/llm-app&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+187&lt;/td&gt;
+&lt;td&gt;55430&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;26&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/yt-dlp/yt-dlp" target="_blank" rel="noopener"
+&gt;yt-dlp/yt-dlp&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+168&lt;/td&gt;
+&lt;td&gt;144415&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;27&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/usememos/memos" target="_blank" rel="noopener"
+&gt;usememos/memos&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+158&lt;/td&gt;
+&lt;td&gt;55938&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;28&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/upstash/context7" target="_blank" rel="noopener"
+&gt;upstash/context7&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+158&lt;/td&gt;
+&lt;td&gt;43792&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;29&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/hashicorp/vault" target="_blank" rel="noopener"
+&gt;hashicorp/vault&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+158&lt;/td&gt;
+&lt;td&gt;34045&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;30&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/vinta/awesome-python" target="_blank" rel="noopener"
+&gt;vinta/awesome-python&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+155&lt;/td&gt;
+&lt;td&gt;280161&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;31&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/iptv-org/iptv" target="_blank" rel="noopener"
+&gt;iptv-org/iptv&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+151&lt;/td&gt;
+&lt;td&gt;110550&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;32&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/openai/codex" target="_blank" rel="noopener"
+&gt;openai/codex&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+141&lt;/td&gt;
+&lt;td&gt;57843&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;33&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/trimstray/the-book-of-secret-knowledge" target="_blank" rel="noopener"
+&gt;trimstray/the-book-of-secret-knowledge&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+137&lt;/td&gt;
+&lt;td&gt;203932&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;34&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/ollama/ollama" target="_blank" rel="noopener"
+&gt;ollama/ollama&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+133&lt;/td&gt;
+&lt;td&gt;160812&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;35&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/CherryHQ/cherry-studio" target="_blank" rel="noopener"
+&gt;CherryHQ/cherry-studio&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+131&lt;/td&gt;
+&lt;td&gt;38589&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;36&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/google-gemini/gemini-cli" target="_blank" rel="noopener"
+&gt;google-gemini/gemini-cli&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+130&lt;/td&gt;
+&lt;td&gt;92729&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;37&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/open-webui/open-webui" target="_blank" rel="noopener"
+&gt;open-webui/open-webui&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+129&lt;/td&gt;
+&lt;td&gt;122073&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;38&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/immich-app/immich" target="_blank" rel="noopener"
+&gt;immich-app/immich&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+122&lt;/td&gt;
+&lt;td&gt;90213&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;39&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/opendatalab/MinerU" target="_blank" rel="noopener"
+&gt;opendatalab/MinerU&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+121&lt;/td&gt;
+&lt;td&gt;52931&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;40&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/FoundationAgents/OpenManus" target="_blank" rel="noopener"
+&gt;FoundationAgents/OpenManus&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+117&lt;/td&gt;
+&lt;td&gt;53742&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;41&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/f/awesome-chatgpt-prompts" target="_blank" rel="noopener"
+&gt;f/awesome-chatgpt-prompts&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+114&lt;/td&gt;
+&lt;td&gt;143804&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;42&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/Comfy-Org/ComfyUI" target="_blank" rel="noopener"
+&gt;Comfy-Org/ComfyUI&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+114&lt;/td&gt;
+&lt;td&gt;101653&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;43&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/521xueweihan/HelloGitHub" target="_blank" rel="noopener"
+&gt;521xueweihan/HelloGitHub&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+113&lt;/td&gt;
+&lt;td&gt;141369&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;44&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/sansan0/TrendRadar" target="_blank" rel="noopener"
+&gt;sansan0/TrendRadar&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+111&lt;/td&gt;
+&lt;td&gt;44780&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;45&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/vllm-project/vllm" target="_blank" rel="noopener"
+&gt;vllm-project/vllm&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+106&lt;/td&gt;
+&lt;td&gt;68757&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;46&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/Lissy93/web-check" target="_blank" rel="noopener"
+&gt;Lissy93/web-check&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+101&lt;/td&gt;
+&lt;td&gt;31205&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;47&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/DataTalksClub/data-engineering-zoomcamp" target="_blank" rel="noopener"
+&gt;DataTalksClub/data-engineering-zoomcamp&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+99&lt;/td&gt;
+&lt;td&gt;37441&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;48&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/torvalds/linux" target="_blank" rel="noopener"
+&gt;torvalds/linux&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+98&lt;/td&gt;
+&lt;td&gt;215384&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;49&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/docling-project/docling" target="_blank" rel="noopener"
+&gt;docling-project/docling&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+97&lt;/td&gt;
+&lt;td&gt;51268&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;50&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/donnemartin/system-design-primer" target="_blank" rel="noopener"
+&gt;donnemartin/system-design-primer&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+96&lt;/td&gt;
+&lt;td&gt;333554&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;</description></item><item><title>GitHub 趋势报告 2026-01-26</title><link>https://jwj330.github.io/p/github-%E8%B6%8B%E5%8A%BF%E6%8A%A5%E5%91%8A-2026-01-26/</link><pubDate>Mon, 26 Jan 2026 12:00:00 +0800</pubDate><guid>https://jwj330.github.io/p/github-%E8%B6%8B%E5%8A%BF%E6%8A%A5%E5%91%8A-2026-01-26/</guid><description>&lt;p&gt;&lt;strong&gt;生成时间&lt;/strong&gt;: 2026-01-26 20:30:32&lt;/p&gt;
+&lt;p&gt;本报告展示了 GitHub 上 Star 数增长最快的仓库。&lt;/p&gt;
+&lt;!-- ECharts 容器 --&gt;
+&lt;div id="main" style="width: 100%;height:600px;"&gt;&lt;/div&gt;
+&lt;div style="text-align: center; margin-top: 20px;"&gt;
+&lt;button onclick="updateChart('daily')" style="padding: 5px 10px;"&gt;日榜 (Daily)&lt;/button&gt;
+&lt;button onclick="updateChart('weekly')" style="padding: 5px 10px;"&gt;周榜 (Weekly)&lt;/button&gt;
+&lt;button onclick="updateChart('monthly')" style="padding: 5px 10px;"&gt;月榜 (Monthly)&lt;/button&gt;
+&lt;/div&gt;
+&lt;!-- 引入 ECharts --&gt;
+&lt;script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript"&gt;
+var chartDom = document.getElementById('main');
+var myChart = echarts.init(chartDom);
+var option;
+// 数据源
+var dataMap = {
+'daily': {"categories": ["firecrawl/firecrawl", "sindresorhus/awesome", "tw93/Mole", "DigitalPlatDev/FreeDomain", "DataTalksClub/data-engineering-zoomcamp", "bmad-code-org/BMAD-METHOD", "github/spec-kit", "Shubhamsaboo/awesome-llm-apps", "openai/codex", "codecrafters-io/build-your-own-x", "anthropics/claude-code", "pathwaycom/pathway", "pathwaycom/llm-app", "obra/superpowers", "remotion-dev/remotion", "anthropics/skills", "anomalyco/opencode", "block/goose", "affaan-m/everything-claude-code", "clawdbot/clawdbot"], "data": [224, 234, 235, 247, 248, 250, 286, 291, 313, 330, 390, 451, 459, 993, 1325, 1356, 1422, 29092, 30727, 43206]},
+'weekly': {"categories": ["tw93/Mole", "sindresorhus/awesome", "public-apis/public-apis", "twitter/the-algorithm", "github/spec-kit", "microsoft/Data-Science-For-Beginners", "DigitalPlatDev/FreeDomain", "x1xhlol/system-prompts-and-models-of-ai-tools", "daytonaio/daytona", "codecrafters-io/build-your-own-x", "anthropics/claude-code", "obra/superpowers", "anthropics/skills", "anomalyco/opencode", "block/goose", "MHSanaei/3x-ui", "affaan-m/everything-claude-code", "remotion-dev/remotion", "slatedocs/slate", "clawdbot/clawdbot"], "data": [1557, 1574, 1612, 1663, 1699, 1768, 1775, 1798, 2169, 2453, 2710, 7197, 8605, 10219, 29092, 29170, 30727, 31804, 36168, 43206]},
+'monthly': {"categories": [], "data": []}
+};
+function getOption(type) {
+var currentData = dataMap[type];
+var titleText = '';
+if (type === 'daily') titleText = '日增长排行 (Top 20)';
+else if (type === 'weekly') titleText = '周增长排行 (Top 20)';
+else if (type === 'monthly') titleText = '月增长排行 (Top 20)';
+if (!currentData || currentData.categories.length === 0) {
+return {
+title: { text: titleText + ' (暂无数据)' },
+xAxis: { show: false },
+yAxis: { show: false }
+};
+}
+return {
+title: {
+text: titleText,
+left: 'center'
+},
+tooltip: {
+trigger: 'axis',
+axisPointer: { type: 'shadow' }
+},
+grid: {
+left: '3%',
+right: '4%',
+bottom: '3%',
+containLabel: true
+},
+xAxis: {
+type: 'value',
+boundaryGap: [0, 0.01]
+},
+yAxis: {
+type: 'category',
+data: currentData.categories
+},
+series: [{
+name: 'Stars Growth',
+type: 'bar',
+data: currentData.data,
+itemStyle: {
+color: new echarts.graphic.LinearGradient(0, 0, 1, 0, [
+{offset: 0, color: '#83bff6'},
+{offset: 0.5, color: '#188df0'},
+{offset: 1, color: '#188df0'}
+])
+},
+label: {
+show: true,
+position: 'right'
+}
+}]
+};
+}
+// 初始化显示日榜
+option = getOption('daily');
+myChart.setOption(option);
+function updateChart(type) {
+myChart.setOption(getOption(type));
+}
+window.addEventListener('resize', function() {
+myChart.resize();
+});
+&lt;/script&gt;
+&lt;h3 id="-今日-top-50-详情"&gt;🚀 今日 Top 50 详情
+&lt;/h3&gt;&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;排名&lt;/th&gt;
+&lt;th&gt;仓库&lt;/th&gt;
+&lt;th&gt;增长&lt;/th&gt;
+&lt;th&gt;总 Stars&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/clawdbot/clawdbot" target="_blank" rel="noopener"
+&gt;clawdbot/clawdbot&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+43206&lt;/td&gt;
+&lt;td&gt;43206&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;2&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/affaan-m/everything-claude-code" target="_blank" rel="noopener"
+&gt;affaan-m/everything-claude-code&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+30727&lt;/td&gt;
+&lt;td&gt;30727&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;3&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/block/goose" target="_blank" rel="noopener"
+&gt;block/goose&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+29092&lt;/td&gt;
+&lt;td&gt;29092&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;4&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/anomalyco/opencode" target="_blank" rel="noopener"
+&gt;anomalyco/opencode&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+1422&lt;/td&gt;
+&lt;td&gt;88703&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;5&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/anthropics/skills" target="_blank" rel="noopener"
+&gt;anthropics/skills&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+1356&lt;/td&gt;
+&lt;td&gt;54139&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;6&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/remotion-dev/remotion" target="_blank" rel="noopener"
+&gt;remotion-dev/remotion&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+1325&lt;/td&gt;
+&lt;td&gt;31804&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;7&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/obra/superpowers" target="_blank" rel="noopener"
+&gt;obra/superpowers&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+993&lt;/td&gt;
+&lt;td&gt;36855&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;8&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/pathwaycom/llm-app" target="_blank" rel="noopener"
+&gt;pathwaycom/llm-app&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+459&lt;/td&gt;
+&lt;td&gt;55243&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;9&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/pathwaycom/pathway" target="_blank" rel="noopener"
+&gt;pathwaycom/pathway&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+451&lt;/td&gt;
+&lt;td&gt;58551&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;10&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/anthropics/claude-code" target="_blank" rel="noopener"
+&gt;anthropics/claude-code&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+390&lt;/td&gt;
+&lt;td&gt;60943&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;11&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/codecrafters-io/build-your-own-x" target="_blank" rel="noopener"
+&gt;codecrafters-io/build-your-own-x&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+330&lt;/td&gt;
+&lt;td&gt;460894&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;12&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/openai/codex" target="_blank" rel="noopener"
+&gt;openai/codex&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+313&lt;/td&gt;
+&lt;td&gt;57702&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;13&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/Shubhamsaboo/awesome-llm-apps" target="_blank" rel="noopener"
+&gt;Shubhamsaboo/awesome-llm-apps&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+291&lt;/td&gt;
+&lt;td&gt;89637&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;14&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/github/spec-kit" target="_blank" rel="noopener"
+&gt;github/spec-kit&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+286&lt;/td&gt;
+&lt;td&gt;65299&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;15&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/bmad-code-org/BMAD-METHOD" target="_blank" rel="noopener"
+&gt;bmad-code-org/BMAD-METHOD&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+250&lt;/td&gt;
+&lt;td&gt;32045&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;16&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/DataTalksClub/data-engineering-zoomcamp" target="_blank" rel="noopener"
+&gt;DataTalksClub/data-engineering-zoomcamp&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+248&lt;/td&gt;
+&lt;td&gt;37342&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;17&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/DigitalPlatDev/FreeDomain" target="_blank" rel="noopener"
+&gt;DigitalPlatDev/FreeDomain&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+247&lt;/td&gt;
+&lt;td&gt;143623&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;18&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/tw93/Mole" target="_blank" rel="noopener"
+&gt;tw93/Mole&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+235&lt;/td&gt;
+&lt;td&gt;31901&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;19&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/sindresorhus/awesome" target="_blank" rel="noopener"
+&gt;sindresorhus/awesome&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+234&lt;/td&gt;
+&lt;td&gt;432211&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;20&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/firecrawl/firecrawl" target="_blank" rel="noopener"
+&gt;firecrawl/firecrawl&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+224&lt;/td&gt;
+&lt;td&gt;77517&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;21&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/clash-verge-rev/clash-verge-rev" target="_blank" rel="noopener"
+&gt;clash-verge-rev/clash-verge-rev&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+215&lt;/td&gt;
+&lt;td&gt;94272&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;22&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/immich-app/immich" target="_blank" rel="noopener"
+&gt;immich-app/immich&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+203&lt;/td&gt;
+&lt;td&gt;90091&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;23&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/n8n-io/n8n" target="_blank" rel="noopener"
+&gt;n8n-io/n8n&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+201&lt;/td&gt;
+&lt;td&gt;171390&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;24&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/sansan0/TrendRadar" target="_blank" rel="noopener"
+&gt;sansan0/TrendRadar&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+201&lt;/td&gt;
+&lt;td&gt;44669&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;25&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/iptv-org/iptv" target="_blank" rel="noopener"
+&gt;iptv-org/iptv&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+183&lt;/td&gt;
+&lt;td&gt;110399&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;26&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/public-apis/public-apis" target="_blank" rel="noopener"
+&gt;public-apis/public-apis&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+179&lt;/td&gt;
+&lt;td&gt;393585&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;27&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/yt-dlp/yt-dlp" target="_blank" rel="noopener"
+&gt;yt-dlp/yt-dlp&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+178&lt;/td&gt;
+&lt;td&gt;144247&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;28&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/x1xhlol/system-prompts-and-models-of-ai-tools" target="_blank" rel="noopener"
+&gt;x1xhlol/system-prompts-and-models-of-ai-tools&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+175&lt;/td&gt;
+&lt;td&gt;111204&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;29&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/upstash/context7" target="_blank" rel="noopener"
+&gt;upstash/context7&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+174&lt;/td&gt;
+&lt;td&gt;43634&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;30&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/langgenius/dify" target="_blank" rel="noopener"
+&gt;langgenius/dify&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+173&lt;/td&gt;
+&lt;td&gt;127335&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;31&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/awesome-selfhosted/awesome-selfhosted" target="_blank" rel="noopener"
+&gt;awesome-selfhosted/awesome-selfhosted&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+161&lt;/td&gt;
+&lt;td&gt;270153&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;32&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/usememos/memos" target="_blank" rel="noopener"
+&gt;usememos/memos&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+150&lt;/td&gt;
+&lt;td&gt;55780&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;33&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/massgravel/Microsoft-Activation-Scripts" target="_blank" rel="noopener"
+&gt;massgravel/Microsoft-Activation-Scripts&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+139&lt;/td&gt;
+&lt;td&gt;163879&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;34&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/vinta/awesome-python" target="_blank" rel="noopener"
+&gt;vinta/awesome-python&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+133&lt;/td&gt;
+&lt;td&gt;280006&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;35&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/trimstray/the-book-of-secret-knowledge" target="_blank" rel="noopener"
+&gt;trimstray/the-book-of-secret-knowledge&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+132&lt;/td&gt;
+&lt;td&gt;203795&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;36&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/f/awesome-chatgpt-prompts" target="_blank" rel="noopener"
+&gt;f/awesome-chatgpt-prompts&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+130&lt;/td&gt;
+&lt;td&gt;143690&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;37&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/Lissy93/web-check" target="_blank" rel="noopener"
+&gt;Lissy93/web-check&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+130&lt;/td&gt;
+&lt;td&gt;31104&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;38&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/Comfy-Org/ComfyUI" target="_blank" rel="noopener"
+&gt;Comfy-Org/ComfyUI&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+127&lt;/td&gt;
+&lt;td&gt;101539&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;39&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/donnemartin/system-design-primer" target="_blank" rel="noopener"
+&gt;donnemartin/system-design-primer&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+124&lt;/td&gt;
+&lt;td&gt;333458&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;40&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/amruthpillai/reactive-resume" target="_blank" rel="noopener"
+&gt;amruthpillai/reactive-resume&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+119&lt;/td&gt;
+&lt;td&gt;34723&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;41&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/browser-use/browser-use" target="_blank" rel="noopener"
+&gt;browser-use/browser-use&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+118&lt;/td&gt;
+&lt;td&gt;77142&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;42&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/521xueweihan/HelloGitHub" target="_blank" rel="noopener"
+&gt;521xueweihan/HelloGitHub&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+115&lt;/td&gt;
+&lt;td&gt;141256&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;43&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/google-gemini/gemini-cli" target="_blank" rel="noopener"
+&gt;google-gemini/gemini-cli&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+115&lt;/td&gt;
+&lt;td&gt;92599&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;44&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/ollama/ollama" target="_blank" rel="noopener"
+&gt;ollama/ollama&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+108&lt;/td&gt;
+&lt;td&gt;160679&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;45&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/modelcontextprotocol/servers" target="_blank" rel="noopener"
+&gt;modelcontextprotocol/servers&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+104&lt;/td&gt;
+&lt;td&gt;77244&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;46&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/open-webui/open-webui" target="_blank" rel="noopener"
+&gt;open-webui/open-webui&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+103&lt;/td&gt;
+&lt;td&gt;121944&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;47&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/astral-sh/uv" target="_blank" rel="noopener"
+&gt;astral-sh/uv&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+103&lt;/td&gt;
+&lt;td&gt;77833&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;48&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/vllm-project/vllm" target="_blank" rel="noopener"
+&gt;vllm-project/vllm&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+103&lt;/td&gt;
+&lt;td&gt;68651&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;49&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/practical-tutorials/project-based-learning" target="_blank" rel="noopener"
+&gt;practical-tutorials/project-based-learning&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+98&lt;/td&gt;
+&lt;td&gt;256698&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;50&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/torvalds/linux" target="_blank" rel="noopener"
+&gt;torvalds/linux&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+98&lt;/td&gt;
+&lt;td&gt;215286&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;</description></item><item><title>GitHub 趋势报告 2026-01-25</title><link>https://jwj330.github.io/p/github-%E8%B6%8B%E5%8A%BF%E6%8A%A5%E5%91%8A-2026-01-25/</link><pubDate>Sun, 25 Jan 2026 12:00:00 +0800</pubDate><guid>https://jwj330.github.io/p/github-%E8%B6%8B%E5%8A%BF%E6%8A%A5%E5%91%8A-2026-01-25/</guid><description>&lt;p&gt;&lt;strong&gt;生成时间&lt;/strong&gt;: 2026-01-25 20:27:31&lt;/p&gt;
+&lt;p&gt;本报告展示了 GitHub 上 Star 数增长最快的仓库。&lt;/p&gt;
+&lt;!-- ECharts 容器 --&gt;
+&lt;div id="main" style="width: 100%;height:600px;"&gt;&lt;/div&gt;
+&lt;div style="text-align: center; margin-top: 20px;"&gt;
+&lt;button onclick="updateChart('daily')" style="padding: 5px 10px;"&gt;日榜 (Daily)&lt;/button&gt;
+&lt;button onclick="updateChart('weekly')" style="padding: 5px 10px;"&gt;周榜 (Weekly)&lt;/button&gt;
+&lt;button onclick="updateChart('monthly')" style="padding: 5px 10px;"&gt;月榜 (Monthly)&lt;/button&gt;
+&lt;/div&gt;
+&lt;!-- 引入 ECharts --&gt;
+&lt;script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript"&gt;
+var chartDom = document.getElementById('main');
+var myChart = echarts.init(chartDom);
+var option;
+// 数据源
+var dataMap = {
+'daily': {"categories": ["clash-verge-rev/clash-verge-rev", "n8n-io/n8n", "tw93/Mole", "Shubhamsaboo/awesome-llm-apps", "public-apis/public-apis", "firecrawl/firecrawl", "github/spec-kit", "x1xhlol/system-prompts-and-models-of-ai-tools", "yt-dlp/yt-dlp", "daytonaio/daytona", "sindresorhus/awesome", "openai/codex", "DigitalPlatDev/FreeDomain", "anthropics/claude-code", "codecrafters-io/build-your-own-x", "browser-use/browser-use", "obra/superpowers", "anthropics/skills", "anomalyco/opencode", "remotion-dev/remotion"], "data": [154, 158, 162, 167, 168, 170, 174, 175, 176, 216, 235, 238, 245, 282, 306, 312, 654, 908, 939, 1098]},
+'weekly': {"categories": ["n8n-io/n8n", "firecrawl/firecrawl", "sindresorhus/awesome", "tw93/Mole", "github/spec-kit", "yt-dlp/yt-dlp", "twitter/the-algorithm", "microsoft/Data-Science-For-Beginners", "public-apis/public-apis", "DigitalPlatDev/FreeDomain", "x1xhlol/system-prompts-and-models-of-ai-tools", "daytonaio/daytona", "codecrafters-io/build-your-own-x", "anthropics/claude-code", "anthropics/skills", "anomalyco/opencode", "MHSanaei/3x-ui", "remotion-dev/remotion", "obra/superpowers", "slatedocs/slate"], "data": [1405, 1550, 1557, 1592, 1647, 1653, 1660, 1759, 1793, 1816, 1939, 2400, 2485, 2692, 8283, 10765, 29105, 30479, 35862, 36169]},
+'monthly': {"categories": [], "data": []}
+};
+function getOption(type) {
+var currentData = dataMap[type];
+var titleText = '';
+if (type === 'daily') titleText = '日增长排行 (Top 20)';
+else if (type === 'weekly') titleText = '周增长排行 (Top 20)';
+else if (type === 'monthly') titleText = '月增长排行 (Top 20)';
+if (!currentData || currentData.categories.length === 0) {
+return {
+title: { text: titleText + ' (暂无数据)' },
+xAxis: { show: false },
+yAxis: { show: false }
+};
+}
+return {
+title: {
+text: titleText,
+left: 'center'
+},
+tooltip: {
+trigger: 'axis',
+axisPointer: { type: 'shadow' }
+},
+grid: {
+left: '3%',
+right: '4%',
+bottom: '3%',
+containLabel: true
+},
+xAxis: {
+type: 'value',
+boundaryGap: [0, 0.01]
+},
+yAxis: {
+type: 'category',
+data: currentData.categories
+},
+series: [{
+name: 'Stars Growth',
+type: 'bar',
+data: currentData.data,
+itemStyle: {
+color: new echarts.graphic.LinearGradient(0, 0, 1, 0, [
+{offset: 0, color: '#83bff6'},
+{offset: 0.5, color: '#188df0'},
+{offset: 1, color: '#188df0'}
+])
+},
+label: {
+show: true,
+position: 'right'
+}
+}]
+};
+}
+// 初始化显示日榜
+option = getOption('daily');
+myChart.setOption(option);
+function updateChart(type) {
+myChart.setOption(getOption(type));
+}
+window.addEventListener('resize', function() {
+myChart.resize();
+});
+&lt;/script&gt;
+&lt;h3 id="-今日-top-50-详情"&gt;🚀 今日 Top 50 详情
+&lt;/h3&gt;&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;排名&lt;/th&gt;
+&lt;th&gt;仓库&lt;/th&gt;
+&lt;th&gt;增长&lt;/th&gt;
+&lt;th&gt;总 Stars&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/remotion-dev/remotion" target="_blank" rel="noopener"
+&gt;remotion-dev/remotion&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+1098&lt;/td&gt;
+&lt;td&gt;30479&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;2&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/anomalyco/opencode" target="_blank" rel="noopener"
+&gt;anomalyco/opencode&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+939&lt;/td&gt;
+&lt;td&gt;87281&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;3&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/anthropics/skills" target="_blank" rel="noopener"
+&gt;anthropics/skills&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+908&lt;/td&gt;
+&lt;td&gt;52783&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;4&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/obra/superpowers" target="_blank" rel="noopener"
+&gt;obra/superpowers&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+654&lt;/td&gt;
+&lt;td&gt;35862&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;5&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/browser-use/browser-use" target="_blank" rel="noopener"
+&gt;browser-use/browser-use&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+312&lt;/td&gt;
+&lt;td&gt;77024&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;6&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/codecrafters-io/build-your-own-x" target="_blank" rel="noopener"
+&gt;codecrafters-io/build-your-own-x&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+306&lt;/td&gt;
+&lt;td&gt;460564&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;7&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/anthropics/claude-code" target="_blank" rel="noopener"
+&gt;anthropics/claude-code&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+282&lt;/td&gt;
+&lt;td&gt;60553&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;8&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/DigitalPlatDev/FreeDomain" target="_blank" rel="noopener"
+&gt;DigitalPlatDev/FreeDomain&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+245&lt;/td&gt;
+&lt;td&gt;143376&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;9&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/openai/codex" target="_blank" rel="noopener"
+&gt;openai/codex&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+238&lt;/td&gt;
+&lt;td&gt;57389&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;10&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/sindresorhus/awesome" target="_blank" rel="noopener"
+&gt;sindresorhus/awesome&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+235&lt;/td&gt;
+&lt;td&gt;431977&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;11&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/daytonaio/daytona" target="_blank" rel="noopener"
+&gt;daytonaio/daytona&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+216&lt;/td&gt;
+&lt;td&gt;50385&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;12&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/yt-dlp/yt-dlp" target="_blank" rel="noopener"
+&gt;yt-dlp/yt-dlp&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+176&lt;/td&gt;
+&lt;td&gt;144069&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;13&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/x1xhlol/system-prompts-and-models-of-ai-tools" target="_blank" rel="noopener"
+&gt;x1xhlol/system-prompts-and-models-of-ai-tools&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+175&lt;/td&gt;
+&lt;td&gt;111029&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;14&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/github/spec-kit" target="_blank" rel="noopener"
+&gt;github/spec-kit&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+174&lt;/td&gt;
+&lt;td&gt;65013&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;15&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/firecrawl/firecrawl" target="_blank" rel="noopener"
+&gt;firecrawl/firecrawl&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+170&lt;/td&gt;
+&lt;td&gt;77293&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;16&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/public-apis/public-apis" target="_blank" rel="noopener"
+&gt;public-apis/public-apis&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+168&lt;/td&gt;
+&lt;td&gt;393406&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;17&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/Shubhamsaboo/awesome-llm-apps" target="_blank" rel="noopener"
+&gt;Shubhamsaboo/awesome-llm-apps&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+167&lt;/td&gt;
+&lt;td&gt;89346&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;18&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/tw93/Mole" target="_blank" rel="noopener"
+&gt;tw93/Mole&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+162&lt;/td&gt;
+&lt;td&gt;31666&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;19&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/n8n-io/n8n" target="_blank" rel="noopener"
+&gt;n8n-io/n8n&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+158&lt;/td&gt;
+&lt;td&gt;171189&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;20&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/clash-verge-rev/clash-verge-rev" target="_blank" rel="noopener"
+&gt;clash-verge-rev/clash-verge-rev&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+154&lt;/td&gt;
+&lt;td&gt;94057&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;21&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/awesome-selfhosted/awesome-selfhosted" target="_blank" rel="noopener"
+&gt;awesome-selfhosted/awesome-selfhosted&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+151&lt;/td&gt;
+&lt;td&gt;269992&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;22&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/vinta/awesome-python" target="_blank" rel="noopener"
+&gt;vinta/awesome-python&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+147&lt;/td&gt;
+&lt;td&gt;279873&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;23&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/usememos/memos" target="_blank" rel="noopener"
+&gt;usememos/memos&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+130&lt;/td&gt;
+&lt;td&gt;55630&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;24&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/bmad-code-org/BMAD-METHOD" target="_blank" rel="noopener"
+&gt;bmad-code-org/BMAD-METHOD&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+129&lt;/td&gt;
+&lt;td&gt;31795&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;25&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/upstash/context7" target="_blank" rel="noopener"
+&gt;upstash/context7&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+125&lt;/td&gt;
+&lt;td&gt;43460&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;26&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/pathwaycom/pathway" target="_blank" rel="noopener"
+&gt;pathwaycom/pathway&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+123&lt;/td&gt;
+&lt;td&gt;58100&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;27&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/pathwaycom/llm-app" target="_blank" rel="noopener"
+&gt;pathwaycom/llm-app&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+123&lt;/td&gt;
+&lt;td&gt;54784&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;28&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/ollama/ollama" target="_blank" rel="noopener"
+&gt;ollama/ollama&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+117&lt;/td&gt;
+&lt;td&gt;160571&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;29&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/google-gemini/gemini-cli" target="_blank" rel="noopener"
+&gt;google-gemini/gemini-cli&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+116&lt;/td&gt;
+&lt;td&gt;92484&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;30&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/DataTalksClub/data-engineering-zoomcamp" target="_blank" rel="noopener"
+&gt;DataTalksClub/data-engineering-zoomcamp&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+113&lt;/td&gt;
+&lt;td&gt;37094&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;31&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/f/awesome-chatgpt-prompts" target="_blank" rel="noopener"
+&gt;f/awesome-chatgpt-prompts&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+112&lt;/td&gt;
+&lt;td&gt;143560&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;32&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/521xueweihan/HelloGitHub" target="_blank" rel="noopener"
+&gt;521xueweihan/HelloGitHub&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+112&lt;/td&gt;
+&lt;td&gt;141141&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;33&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/donnemartin/system-design-primer" target="_blank" rel="noopener"
+&gt;donnemartin/system-design-primer&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+108&lt;/td&gt;
+&lt;td&gt;333334&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;34&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/Comfy-Org/ComfyUI" target="_blank" rel="noopener"
+&gt;Comfy-Org/ComfyUI&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+105&lt;/td&gt;
+&lt;td&gt;101412&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;35&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/trimstray/the-book-of-secret-knowledge" target="_blank" rel="noopener"
+&gt;trimstray/the-book-of-secret-knowledge&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+104&lt;/td&gt;
+&lt;td&gt;203663&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;36&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/sansan0/TrendRadar" target="_blank" rel="noopener"
+&gt;sansan0/TrendRadar&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+101&lt;/td&gt;
+&lt;td&gt;44468&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;37&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/Lissy93/web-check" target="_blank" rel="noopener"
+&gt;Lissy93/web-check&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+100&lt;/td&gt;
+&lt;td&gt;30974&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;38&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/massgravel/Microsoft-Activation-Scripts" target="_blank" rel="noopener"
+&gt;massgravel/Microsoft-Activation-Scripts&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+95&lt;/td&gt;
+&lt;td&gt;163740&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;39&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/vllm-project/vllm" target="_blank" rel="noopener"
+&gt;vllm-project/vllm&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+90&lt;/td&gt;
+&lt;td&gt;68548&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;40&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/torvalds/linux" target="_blank" rel="noopener"
+&gt;torvalds/linux&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+89&lt;/td&gt;
+&lt;td&gt;215188&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;41&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/tw93/Pake" target="_blank" rel="noopener"
+&gt;tw93/Pake&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+85&lt;/td&gt;
+&lt;td&gt;45324&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;42&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/practical-tutorials/project-based-learning" target="_blank" rel="noopener"
+&gt;practical-tutorials/project-based-learning&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+83&lt;/td&gt;
+&lt;td&gt;256600&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;43&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/avelino/awesome-go" target="_blank" rel="noopener"
+&gt;avelino/awesome-go&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+83&lt;/td&gt;
+&lt;td&gt;163429&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;44&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/open-webui/open-webui" target="_blank" rel="noopener"
+&gt;open-webui/open-webui&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+83&lt;/td&gt;
+&lt;td&gt;121841&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;45&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/Asabeneh/30-Days-Of-Python" target="_blank" rel="noopener"
+&gt;Asabeneh/30-Days-Of-Python&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+81&lt;/td&gt;
+&lt;td&gt;56566&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;46&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/twitter/the-algorithm" target="_blank" rel="noopener"
+&gt;twitter/the-algorithm&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+76&lt;/td&gt;
+&lt;td&gt;72143&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;47&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/immich-app/immich" target="_blank" rel="noopener"
+&gt;immich-app/immich&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+74&lt;/td&gt;
+&lt;td&gt;89888&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;48&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/iptv-org/iptv" target="_blank" rel="noopener"
+&gt;iptv-org/iptv&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+73&lt;/td&gt;
+&lt;td&gt;110216&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;49&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/anthropics/claude-cookbooks" target="_blank" rel="noopener"
+&gt;anthropics/claude-cookbooks&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+72&lt;/td&gt;
+&lt;td&gt;31842&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;50&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/langgenius/dify" target="_blank" rel="noopener"
+&gt;langgenius/dify&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+70&lt;/td&gt;
+&lt;td&gt;127162&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;</description></item><item><title>GitHub 趋势报告 2026-01-24</title><link>https://jwj330.github.io/p/github-%E8%B6%8B%E5%8A%BF%E6%8A%A5%E5%91%8A-2026-01-24/</link><pubDate>Sat, 24 Jan 2026 12:00:00 +0800</pubDate><guid>https://jwj330.github.io/p/github-%E8%B6%8B%E5%8A%BF%E6%8A%A5%E5%91%8A-2026-01-24/</guid><description>&lt;p&gt;&lt;strong&gt;生成时间&lt;/strong&gt;: 2026-01-24 20:24:52&lt;/p&gt;
+&lt;p&gt;本报告展示了 GitHub 上 Star 数增长最快的仓库。&lt;/p&gt;
+&lt;!-- ECharts 容器 --&gt;
+&lt;div id="main" style="width: 100%;height:600px;"&gt;&lt;/div&gt;
+&lt;div style="text-align: center; margin-top: 20px;"&gt;
+&lt;button onclick="updateChart('daily')" style="padding: 5px 10px;"&gt;日榜 (Daily)&lt;/button&gt;
+&lt;button onclick="updateChart('weekly')" style="padding: 5px 10px;"&gt;周榜 (Weekly)&lt;/button&gt;
+&lt;button onclick="updateChart('monthly')" style="padding: 5px 10px;"&gt;月榜 (Monthly)&lt;/button&gt;
+&lt;/div&gt;
+&lt;!-- 引入 ECharts --&gt;
+&lt;script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript"&gt;
+var chartDom = document.getElementById('main');
+var myChart = echarts.init(chartDom);
+var option;
+// 数据源
+var dataMap = {
+'daily': {"categories": ["public-apis/public-apis", "github/spec-kit", "yt-dlp/yt-dlp", "upstash/context7", "awesome-selfhosted/awesome-selfhosted", "firecrawl/firecrawl", "Asabeneh/30-Days-Of-Python", "openai/codex", "sindresorhus/awesome", "microsoft/Data-Science-For-Beginners", "x1xhlol/system-prompts-and-models-of-ai-tools", "DigitalPlatDev/FreeDomain", "codecrafters-io/build-your-own-x", "anthropics/claude-code", "browser-use/browser-use", "daytonaio/daytona", "obra/superpowers", "anthropics/skills", "anomalyco/opencode", "remotion-dev/remotion"], "data": [149, 152, 153, 156, 166, 177, 180, 184, 196, 228, 230, 252, 324, 375, 383, 388, 755, 986, 997, 29381]},
+'weekly': {"categories": ["n8n-io/n8n", "sindresorhus/awesome", "firecrawl/firecrawl", "github/spec-kit", "twitter/the-algorithm", "tw93/Mole", "microsoft/Data-Science-For-Beginners", "yt-dlp/yt-dlp", "public-apis/public-apis", "DigitalPlatDev/FreeDomain", "x1xhlol/system-prompts-and-models-of-ai-tools", "codecrafters-io/build-your-own-x", "daytonaio/daytona", "anthropics/claude-code", "anthropics/skills", "anomalyco/opencode", "MHSanaei/3x-ui", "remotion-dev/remotion", "obra/superpowers", "slatedocs/slate"], "data": [1421, 1567, 1607, 1645, 1647, 1658, 1727, 1729, 1785, 1845, 1984, 2635, 2664, 2718, 8099, 11442, 29051, 29381, 35208, 36167]},
+'monthly': {"categories": [], "data": []}
+};
+function getOption(type) {
+var currentData = dataMap[type];
+var titleText = '';
+if (type === 'daily') titleText = '日增长排行 (Top 20)';
+else if (type === 'weekly') titleText = '周增长排行 (Top 20)';
+else if (type === 'monthly') titleText = '月增长排行 (Top 20)';
+if (!currentData || currentData.categories.length === 0) {
+return {
+title: { text: titleText + ' (暂无数据)' },
+xAxis: { show: false },
+yAxis: { show: false }
+};
+}
+return {
+title: {
+text: titleText,
+left: 'center'
+},
+tooltip: {
+trigger: 'axis',
+axisPointer: { type: 'shadow' }
+},
+grid: {
+left: '3%',
+right: '4%',
+bottom: '3%',
+containLabel: true
+},
+xAxis: {
+type: 'value',
+boundaryGap: [0, 0.01]
+},
+yAxis: {
+type: 'category',
+data: currentData.categories
+},
+series: [{
+name: 'Stars Growth',
+type: 'bar',
+data: currentData.data,
+itemStyle: {
+color: new echarts.graphic.LinearGradient(0, 0, 1, 0, [
+{offset: 0, color: '#83bff6'},
+{offset: 0.5, color: '#188df0'},
+{offset: 1, color: '#188df0'}
+])
+},
+label: {
+show: true,
+position: 'right'
+}
+}]
+};
+}
+// 初始化显示日榜
+option = getOption('daily');
+myChart.setOption(option);
+function updateChart(type) {
+myChart.setOption(getOption(type));
+}
+window.addEventListener('resize', function() {
+myChart.resize();
+});
+&lt;/script&gt;
+&lt;h3 id="-今日-top-50-详情"&gt;🚀 今日 Top 50 详情
+&lt;/h3&gt;&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;排名&lt;/th&gt;
+&lt;th&gt;仓库&lt;/th&gt;
+&lt;th&gt;增长&lt;/th&gt;
+&lt;th&gt;总 Stars&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/remotion-dev/remotion" target="_blank" rel="noopener"
+&gt;remotion-dev/remotion&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+29381&lt;/td&gt;
+&lt;td&gt;29381&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;2&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/anomalyco/opencode" target="_blank" rel="noopener"
+&gt;anomalyco/opencode&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+997&lt;/td&gt;
+&lt;td&gt;86342&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;3&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/anthropics/skills" target="_blank" rel="noopener"
+&gt;anthropics/skills&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+986&lt;/td&gt;
+&lt;td&gt;51875&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;4&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/obra/superpowers" target="_blank" rel="noopener"
+&gt;obra/superpowers&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+755&lt;/td&gt;
+&lt;td&gt;35208&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;5&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/daytonaio/daytona" target="_blank" rel="noopener"
+&gt;daytonaio/daytona&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+388&lt;/td&gt;
+&lt;td&gt;50169&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;6&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/browser-use/browser-use" target="_blank" rel="noopener"
+&gt;browser-use/browser-use&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+383&lt;/td&gt;
+&lt;td&gt;76712&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;7&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/anthropics/claude-code" target="_blank" rel="noopener"
+&gt;anthropics/claude-code&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+375&lt;/td&gt;
+&lt;td&gt;60271&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;8&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/codecrafters-io/build-your-own-x" target="_blank" rel="noopener"
+&gt;codecrafters-io/build-your-own-x&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+324&lt;/td&gt;
+&lt;td&gt;460258&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;9&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/DigitalPlatDev/FreeDomain" target="_blank" rel="noopener"
+&gt;DigitalPlatDev/FreeDomain&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+252&lt;/td&gt;
+&lt;td&gt;143131&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;10&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/x1xhlol/system-prompts-and-models-of-ai-tools" target="_blank" rel="noopener"
+&gt;x1xhlol/system-prompts-and-models-of-ai-tools&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+230&lt;/td&gt;
+&lt;td&gt;110854&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;11&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/microsoft/Data-Science-For-Beginners" target="_blank" rel="noopener"
+&gt;microsoft/Data-Science-For-Beginners&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+228&lt;/td&gt;
+&lt;td&gt;33532&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;12&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/sindresorhus/awesome" target="_blank" rel="noopener"
+&gt;sindresorhus/awesome&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+196&lt;/td&gt;
+&lt;td&gt;431742&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;13&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/openai/codex" target="_blank" rel="noopener"
+&gt;openai/codex&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+184&lt;/td&gt;
+&lt;td&gt;57151&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;14&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/Asabeneh/30-Days-Of-Python" target="_blank" rel="noopener"
+&gt;Asabeneh/30-Days-Of-Python&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+180&lt;/td&gt;
+&lt;td&gt;56485&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;15&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/firecrawl/firecrawl" target="_blank" rel="noopener"
+&gt;firecrawl/firecrawl&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+177&lt;/td&gt;
+&lt;td&gt;77123&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;16&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/awesome-selfhosted/awesome-selfhosted" target="_blank" rel="noopener"
+&gt;awesome-selfhosted/awesome-selfhosted&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+166&lt;/td&gt;
+&lt;td&gt;269841&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;17&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/upstash/context7" target="_blank" rel="noopener"
+&gt;upstash/context7&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+156&lt;/td&gt;
+&lt;td&gt;43335&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;18&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/yt-dlp/yt-dlp" target="_blank" rel="noopener"
+&gt;yt-dlp/yt-dlp&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+153&lt;/td&gt;
+&lt;td&gt;143893&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;19&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/github/spec-kit" target="_blank" rel="noopener"
+&gt;github/spec-kit&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+152&lt;/td&gt;
+&lt;td&gt;64839&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;20&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/public-apis/public-apis" target="_blank" rel="noopener"
+&gt;public-apis/public-apis&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+149&lt;/td&gt;
+&lt;td&gt;393238&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;21&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/n8n-io/n8n" target="_blank" rel="noopener"
+&gt;n8n-io/n8n&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+145&lt;/td&gt;
+&lt;td&gt;171031&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;22&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/Shubhamsaboo/awesome-llm-apps" target="_blank" rel="noopener"
+&gt;Shubhamsaboo/awesome-llm-apps&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+140&lt;/td&gt;
+&lt;td&gt;89179&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;23&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/vinta/awesome-python" target="_blank" rel="noopener"
+&gt;vinta/awesome-python&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+139&lt;/td&gt;
+&lt;td&gt;279726&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;24&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/tw93/Mole" target="_blank" rel="noopener"
+&gt;tw93/Mole&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+134&lt;/td&gt;
+&lt;td&gt;31504&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;25&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/trimstray/the-book-of-secret-knowledge" target="_blank" rel="noopener"
+&gt;trimstray/the-book-of-secret-knowledge&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+123&lt;/td&gt;
+&lt;td&gt;203559&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;26&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/bmad-code-org/BMAD-METHOD" target="_blank" rel="noopener"
+&gt;bmad-code-org/BMAD-METHOD&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+121&lt;/td&gt;
+&lt;td&gt;31666&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;27&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/clash-verge-rev/clash-verge-rev" target="_blank" rel="noopener"
+&gt;clash-verge-rev/clash-verge-rev&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+119&lt;/td&gt;
+&lt;td&gt;93903&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;28&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/donnemartin/system-design-primer" target="_blank" rel="noopener"
+&gt;donnemartin/system-design-primer&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+115&lt;/td&gt;
+&lt;td&gt;333226&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;29&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/open-webui/open-webui" target="_blank" rel="noopener"
+&gt;open-webui/open-webui&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+111&lt;/td&gt;
+&lt;td&gt;121758&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;30&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/vllm-project/vllm" target="_blank" rel="noopener"
+&gt;vllm-project/vllm&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+110&lt;/td&gt;
+&lt;td&gt;68458&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;31&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/ollama/ollama" target="_blank" rel="noopener"
+&gt;ollama/ollama&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+108&lt;/td&gt;
+&lt;td&gt;160454&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;32&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/excalidraw/excalidraw" target="_blank" rel="noopener"
+&gt;excalidraw/excalidraw&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+106&lt;/td&gt;
+&lt;td&gt;115265&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;33&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/usememos/memos" target="_blank" rel="noopener"
+&gt;usememos/memos&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+105&lt;/td&gt;
+&lt;td&gt;55500&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;34&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/massgravel/Microsoft-Activation-Scripts" target="_blank" rel="noopener"
+&gt;massgravel/Microsoft-Activation-Scripts&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+104&lt;/td&gt;
+&lt;td&gt;163645&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;35&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/f/awesome-chatgpt-prompts" target="_blank" rel="noopener"
+&gt;f/awesome-chatgpt-prompts&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+103&lt;/td&gt;
+&lt;td&gt;143448&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;36&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/anthropics/claude-cookbooks" target="_blank" rel="noopener"
+&gt;anthropics/claude-cookbooks&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+101&lt;/td&gt;
+&lt;td&gt;31770&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;37&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/pathwaycom/pathway" target="_blank" rel="noopener"
+&gt;pathwaycom/pathway&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+100&lt;/td&gt;
+&lt;td&gt;57977&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;38&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/pathwaycom/llm-app" target="_blank" rel="noopener"
+&gt;pathwaycom/llm-app&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+98&lt;/td&gt;
+&lt;td&gt;54661&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;39&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/fastapi/full-stack-fastapi-template" target="_blank" rel="noopener"
+&gt;fastapi/full-stack-fastapi-template&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+98&lt;/td&gt;
+&lt;td&gt;41047&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;40&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/DataTalksClub/data-engineering-zoomcamp" target="_blank" rel="noopener"
+&gt;DataTalksClub/data-engineering-zoomcamp&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+98&lt;/td&gt;
+&lt;td&gt;36981&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;41&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/google-gemini/gemini-cli" target="_blank" rel="noopener"
+&gt;google-gemini/gemini-cli&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+97&lt;/td&gt;
+&lt;td&gt;92368&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;42&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/twitter/the-algorithm" target="_blank" rel="noopener"
+&gt;twitter/the-algorithm&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+92&lt;/td&gt;
+&lt;td&gt;72067&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;43&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/521xueweihan/HelloGitHub" target="_blank" rel="noopener"
+&gt;521xueweihan/HelloGitHub&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+89&lt;/td&gt;
+&lt;td&gt;141029&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;44&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/Comfy-Org/ComfyUI" target="_blank" rel="noopener"
+&gt;Comfy-Org/ComfyUI&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+89&lt;/td&gt;
+&lt;td&gt;101307&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;45&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/Lissy93/web-check" target="_blank" rel="noopener"
+&gt;Lissy93/web-check&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+87&lt;/td&gt;
+&lt;td&gt;30874&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;46&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/langgenius/dify" target="_blank" rel="noopener"
+&gt;langgenius/dify&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+84&lt;/td&gt;
+&lt;td&gt;127092&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;47&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/avelino/awesome-go" target="_blank" rel="noopener"
+&gt;avelino/awesome-go&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+83&lt;/td&gt;
+&lt;td&gt;163346&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;48&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/ghostty-org/ghostty" target="_blank" rel="noopener"
+&gt;ghostty-org/ghostty&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+83&lt;/td&gt;
+&lt;td&gt;42021&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;49&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/2dust/v2rayN" target="_blank" rel="noopener"
+&gt;2dust/v2rayN&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+81&lt;/td&gt;
+&lt;td&gt;95328&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;50&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/microsoft/markitdown" target="_blank" rel="noopener"
+&gt;microsoft/markitdown&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;+78&lt;/td&gt;
+&lt;td&gt;85699&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;</description></item></channel></rss>
