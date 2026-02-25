@@ -1,69 +1,53 @@
-<img align="right" width="150" alt="logo" src="https://user-images.githubusercontent.com/5889006/190859553-5b229b4f-c476-4cbd-928f-890f5265ca4c.png">
+# GitHub 趋势分析自动报告系统
 
-# Hugo Theme Stack Starter Template
+[![Hugo](https://img.shields.io/badge/Hugo-0.121.2-blue.svg)](https://gohugo.io/)
+[![Theme](https://img.shields.io/badge/Theme-Stack-green.svg)](https://github.com/CaiJimmy/hugo-theme-stack)
 
-This is a quick start template for [Hugo theme Stack](https://github.com/CaiJimmy/hugo-theme-stack). It uses [Hugo modules](https://gohugo.io/hugo-modules/) feature to load the theme.
+本项目是一个基于 [Hugo](https://gohugo.io/) 构建的 **GitHub 趋势分析自动报告系统**，旨在自动生成的 GitHub 数据分析报告并进行在线展示。
 
-It comes with a basic theme structure and configuration. GitHub action has been set up to deploy the theme to a public GitHub page automatically. Also, there's a cron job to update the theme automatically everyday.
+## 项目概览
 
-## Get started
+该博客自动化生成并展示 **GitHub Top500 增长榜**，帮助开发者发现全球最热门和增长最快的开源项目。
 
-1. Click *Use this template*, and create your repository as `<username>.github.io` on GitHub.
-![Step 1](https://user-images.githubusercontent.com/5889006/156916624-20b2a784-f3a9-4718-aa5f-ce2a436b241f.png)
+- **网站标题**: jwj330
+- **主要内容**: GitHub 趋势分析、技术笔记
+- **默认语言**: 简体中文 (zh-cn)
+- **站点格言**: "朝闻道 夕可眠矣"
 
-2. Once the repository is created, create a GitHub codespace associated with it.
-![Create codespace](https://user-images.githubusercontent.com/5889006/156916672-43b7b6e9-4ffb-4704-b4ba-d5ca40ffcae7.png)
+##  技术架构
 
-3. And voila! You're ready to go. The codespace has been configured with the latest version of Hugo extended, just run `hugo server` in the terminal and see your new site in action.
+- **静态网站生成器**: [Hugo](https://gohugo.io/)
+- **主题**: [Hugo Theme Stack](https://github.com/CaiJimmy/hugo-theme-stack) - 一个设计简洁、功能强大的卡片式主题。
+- **内容格式**: Markdown
+- **自动化**: 包含自动化抓取和生成日报/周报的脚本。
 
-4. Check `config` folder for the configuration files. You can edit them to suit your needs. Make sure to update the `baseurl` property in `config/_default/config.toml` to your site's URL.
+## 📂 目录结构
 
-5. Open Settings -> Pages. Change the build branch from `master` to `gh-pages`.
-![Build](https://github.com/namanh11611/hugo-theme-stack-starter/assets/16586200/12c763cd-bead-4923-b610-8788f388fcb5)
-
-6. Once you're done editing the site, just commit it and push it. GitHub action will deploy the site automatically to GitHub page asociated with the repository.
-![GitHub action](https://user-images.githubusercontent.com/5889006/156916881-90b8bb9b-1925-4e60-9d7a-8026cda729bf.png)
-
----
-
-In case you don't want to use GitHub codespace, you can also run this template in your local machine. **You need to install Git, Go and Hugo extended locally.**
-
-## Update theme manually
-
-Run:
-
-```bash
-hugo mod get -u github.com/CaiJimmy/hugo-theme-stack/v3
-hugo mod tidy
+```text
+.
+├── config/_default       # 项目配置文件 (参数、菜单、语言等)
+├── content               # 博客文章内容 (Markdown 文件)
+│   ├── post              # 主要博文，包含大量的 GitHub 增长榜分析
+│   └── page              # 静态页面 (关于、档案等)
+├── script                # 数据抓取与处理脚本
+├── scriptData            # 脚本运行产生的中间数据
+├── static                # 静态资源 (图片、图标等)
+└── public                # 编译生成的静态网页 (部署用)
 ```
 
-> This starter template has been configured with `v3` version of theme. Due to the limitation of Go module, once the `v4` or up version of theme is released, you need to update the theme manually. (Modifying `config/module.toml` file)
+##  本地运行
 
-## Deploy to another static page hostings
+在本地运行或预览该博客，您需要安装 [Hugo](https://gohugo.io/installation/)。
 
-If you want to build this site using another static page hosting, you need to make sure they have Go installed in the machine. 
-
-<details>
-  <summary>Vercel</summary>
-  
-You need to overwrite build command to install manually Go:
-
-```
-amazon-linux-extras install golang1.11 && hugo --gc --minify
-```
-
-![](https://user-images.githubusercontent.com/5889006/156917172-01e4d418-3469-4ffb-97e4-a905d28b8424.png)
-
-If you are using Node.js 20, you need to overwrite the install command to install manually Go:
-
-```
-dnf install -y golang
-```
-
-![image](https://github.com/zhi-yi-huang/hugo-theme-stack-starter/assets/83860323/777c1109-dfc8-4893-9db7-1305ec027cf5)
+1. **克隆仓库**:
+   ```bash
+   git clone https://github.com/jwj330/jwj330.github.io.git
+   cd jwj330.github.io
+1: 
+2. **启动预览服务器**:
+   ```bash
+   hugo server
+   ```
+3. **访问预览**: 默认在浏览器打开 `http://localhost:1313`。
 
 
-Make sure also to specify Hugo version in the environment variable `HUGO_VERSION` (Use the latest version of Hugo extended):
-
-![Environment variable](https://user-images.githubusercontent.com/5889006/156917212-afb7c70d-ab85-480f-8288-b15781a462c0.png)
-</details>
