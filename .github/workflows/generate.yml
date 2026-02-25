@@ -29,11 +29,11 @@ jobs:
 
     - name: Run GitHub Top Repos Script
       env:
-        GitHubToken: ${{ secrets.GITHUBTOKEN }}  # 使用您设置的Repository secret
+        GITHUBTOKEN: ${{ secrets.GITHUBTOKEN }}  # 使用您设置的Repository secret
       run: |
         # python script/generate.py
-        echo "Running StoreData4RestAPI_GraphQL.py..."
-        python script/StoreData4RestAPI_GraphQL.py
+        echo "Running FetchGHArchiveData.py..."
+        python script/FetchGHArchiveData.py
         echo "Running AnalyzeData2.py.."
         python script/AnalyzeData2.py
 

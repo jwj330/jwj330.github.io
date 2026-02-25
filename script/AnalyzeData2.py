@@ -6,9 +6,10 @@ import datetime
 from typing import List, Dict, Any
 
 def parse_date_from_filename(filename: str) -> str:
-    """从文件名解析日期"""
-    date_str = filename.replace("github_top_1000_", "").replace(".json", "")
-    return date_str
+    """从文件名解析日期 (支持 gharchive 和 github_top_1000)"""
+    import re
+    match = re.search(r'(\d{8})', filename)
+    return match.group(1) if match else ""
 
 def format_offertime(date_str: str) -> str:
     """将YYYYMMDD格式转换为YYYY-MM-DD格式"""
@@ -25,15 +26,36 @@ def load_json_file(filepath: str) -> Dict[str, Dict[str, Any]]:
             data = json.load(f)
         repo_dict = {}
         for repo in data:
-            repo_dict[str(repo['id'])] = repo
+            # 兼容不同来源的 ID 字段名
+            repo_id = str(repo.get('id') or repo.get('repo_id'))
+            repo_dict[repo_id] = repo
         return repo_dict
     except Exception as e:
         print(f"加载文件时出错 {filepath}: {e}")
         return {}
 
-def calculate_growth(today_data: Dict[str, Dict], past_data: Dict[str, Dict]) -> List[Dict]:
-    """计算stars增长"""
+def calculate_growth(today_data: Dict[str, Dict], past_data: Dict[str, Dict], gh_growth_data: Dict[str, Dict] = None) -> List[Dict]:
+    """计算stars增长，优先使用传入的 gh_growth_data (GH Archive)"""
     growth_data = []
+    
+    # 如果有 GH Archive 增长数据，直接转换格式
+    if gh_growth_data:
+        for repo_id, repo in gh_growth_data.items():
+            growth_info = {
+                'id': repo.get('id') or repo.get('repo_id'),
+                'full_name': repo['full_name'],
+                'stars': repo.get('stars') or repo.get('total_stars') or 0,
+                'growth': int(repo.get('growth', 0)),
+                'description': repo.get('description', ''),
+                'html_url': repo.get('html_url') or f"https://github.com/{repo['full_name']}"
+            }
+            growth_data.append(growth_info)
+        
+        # 排序并返回
+        growth_data.sort(key=lambda x: x['growth'], reverse=True)
+        return growth_data
+
+    # 兜底逻辑：使用原有的差值计算
     if not past_data:
         return []
 
@@ -42,13 +64,6 @@ def calculate_growth(today_data: Dict[str, Dict], past_data: Dict[str, Dict]) ->
         if repo_id in past_data:
             growth = today_repo['stars'] - past_data[repo_id]['stars']
         else:
-            # 新上榜或者之前不在数据中，可视情况处理，这里简单处理为0或者今天的stars
-            # 为了增长榜的准确性，如果不在历史数据中，通常意味着无法计算确切增长
-            # 但既然是"每日采集"，如果昨天没采到，其实增长就是未知的。
-            # 这里保守策略：如果不在历史数据中，增长设为0 (或者忽略)
-            # 也可以设为 today_repo['stars'] (视为纯新增)，但这会污染增长榜。
-            # 现有逻辑是:
-            # growth = today_repo['stars'] # 原代码逻辑
             growth = today_repo['stars']
 
         if growth > 0:
@@ -62,7 +77,6 @@ def calculate_growth(today_data: Dict[str, Dict], past_data: Dict[str, Dict]) ->
             }
             growth_data.append(growth_info)
     
-    # 排序
     growth_data.sort(key=lambda x: x['growth'], reverse=True)
     return growth_data
 
@@ -72,7 +86,7 @@ def get_date_str(base_date: datetime.datetime, days_delta: int) -> str:
     return target_date.strftime("%Y%m%d")
 
 def find_latest_data_file(data_dir: str = "") -> str:
-    """查找最新的数据文件"""
+    """查找最新的 GH Archive 数据文件（过去 24 小时）"""
     script_data_dir = os.path.join(data_dir, "scriptData")
     if not os.path.exists(script_data_dir):
         script_data_dir = "scriptData" 
@@ -81,8 +95,14 @@ def find_latest_data_file(data_dir: str = "") -> str:
         return ""
         
     try:
+        # 优先使用 gharchive 数据作为基准
         json_files = [f for f in os.listdir(script_data_dir) 
-                     if f.startswith('github_top_1000_') and f.endswith('.json')]
+                     if f.startswith('gharchive_growth_past_24_hours_') and f.endswith('.json')]
+        if not json_files:
+            # 兜底旧文件
+            json_files = [f for f in os.listdir(script_data_dir) 
+                         if f.startswith('github_top_1000_') and f.endswith('.json')]
+        
         if not json_files:
             return ""
         json_files.sort(reverse=True)
@@ -91,12 +111,18 @@ def find_latest_data_file(data_dir: str = "") -> str:
         return ""
 
 def get_data_file_path(date_str: str) -> str:
-    """根据日期获取数据文件路径"""
+    """根据日期获取 API 数据文件路径 (用于计算 stars, 如果存在)"""
     script_data_dir = "scriptData"
     if not os.path.exists(script_data_dir):
         if os.path.exists(os.path.join("..", "scriptData")):
              script_data_dir = os.path.join("..", "scriptData")
 
+    filename = f"gharchive_growth_past_24_hours_{date_str}.json"
+    path = os.path.join(script_data_dir, filename)
+    if os.path.exists(path):
+        return path
+    
+    # 兜底旧格式
     filename = f"github_top_1000_{date_str}.json"
     return os.path.join(script_data_dir, filename)
 
@@ -130,10 +156,26 @@ def generate_echarts_html(daily_data, weekly_data, monthly_data, date_str):
     weekly_json = json.dumps({'categories': w_names, 'data': w_values}, ensure_ascii=False)
     monthly_json = json.dumps({'categories': m_names, 'data': m_values}, ensure_ascii=False)
 
+    # 计算标题和描述
+    def get_clean_name(full_name):
+        return full_name.split('/')[-1] if '/' in full_name else full_name
+
+    article_title = f"{formatted_date} GitHub增长趋势报告"
+    
+    desc_items = [f"{i+1}.{get_clean_name(item['full_name'])}+{item['growth']}" for i, item in enumerate(daily_data[:5])]
+    article_desc = " ".join(desc_items)
+
+    # 计算日期：如果是今天，使用当前时间以确保 Hugo 立即可见
+    today_now = datetime.datetime.now()
+    if date_str == today_now.strftime("%Y%m%d"):
+        post_date = today_now.strftime('%Y-%m-%dT%H:%M:%S+08:00')
+    else:
+        post_date = f"{formatted_date}T12:00:00+08:00"
+
     content = f"""---
-title: "GitHub 趋势报告 {formatted_date}"
-description: "GitHub 每日/每周/每月 增长趋势可视化报告"
-date: {formatted_date}T12:00:00+08:00
+title: "{article_title}"
+description: "{article_desc}"
+date: {post_date}
 categories:
   - GitHub Trends
 ---
@@ -236,14 +278,26 @@ categories:
 </script>
 
 """
-    # 仍然生成Markdown表格以便SEO和纯文本查看 (只显示Daily Top 50)
-    # 或者是完全替代？用户说"代替原来的markdown的表达"。
-    # 但为了页面内容丰富性，下面放一个简表比较好。
+    # 生成 Markdown 表格
     if daily_data:
-        content += "\n\n### 🚀 今日 Top 50 详情\n\n"
+        content += "\n\n### 🚀 今日 Top 30 详情\n\n"
         content += "| 排名 | 仓库 | 增长 | 总 Stars |\n"
         content += "|---|---|---|---|\n"
-        for i, repo in enumerate(daily_data[:50], 1):
+        for i, repo in enumerate(daily_data[:30], 1):
+            content += f"| {i} | [{repo['full_name']}]({repo['html_url']}) | +{repo['growth']} | {repo['stars']} |\n"
+
+    if weekly_data:
+        content += "\n\n### 📅 本周 Top 120 详情\n\n"
+        content += "| 排名 | 仓库 | 增长 | 总 Stars |\n"
+        content += "|---|---|---|---|\n"
+        for i, repo in enumerate(weekly_data[:120], 1):
+            content += f"| {i} | [{repo['full_name']}]({repo['html_url']}) | +{repo['growth']} | {repo['stars']} |\n"
+
+    if monthly_data:
+        content += "\n\n### 🌙 本月 Top 300 详情\n\n"
+        content += "| 排名 | 仓库 | 增长 | 总 Stars |\n"
+        content += "|---|---|---|---|\n"
+        for i, repo in enumerate(monthly_data[:300], 1):
             content += f"| {i} | [{repo['full_name']}]({repo['html_url']}) | +{repo['growth']} | {repo['stars']} |\n"
 
     with open(md_filepath, 'w', encoding='utf-8') as f:
@@ -253,14 +307,32 @@ categories:
 
 
 def main():
-    # 1. 确定基准日期 (今天)
-    latest_file = find_latest_data_file()
-    if not latest_file:
-        print("未找到数据文件")
+    # 1. 确定基准日期 (今天 或 参数指定)
+    import sys
+    today_str = ""
+    latest_file = ""
+    
+    if len(sys.argv) > 1 and len(sys.argv[1]) == 8 and sys.argv[1].isdigit():
+        today_str = sys.argv[1]
+        latest_file = os.path.join("scriptData", f"gharchive_growth_past_24_hours_{today_str}.json")
+        if not os.path.exists(latest_file):
+             # 兜底旧格式
+             latest_file = os.path.join("scriptData", f"github_top_1000_{today_str}.json")
+        print(f"Manual date override: {today_str}")
+    else:
+        latest_file = find_latest_data_file()
+
+    if not latest_file or not os.path.exists(latest_file):
+        print("Error: No data files found in scriptData/. Please run FetchGHArchiveData.py first.")
         return
 
     filename_only = os.path.basename(latest_file)
     today_str = parse_date_from_filename(filename_only)
+    
+    # 检查是否是今天生成的
+    real_today = datetime.datetime.now().strftime("%Y%m%d")
+    if today_str != real_today:
+        print(f"Warning: Latest data file found is from {today_str}, not today ({real_today}).")
     today = datetime.datetime.strptime(today_str, "%Y%m%d")
     
     print(f"当前基准日期: {today_str}")
@@ -273,20 +345,29 @@ def main():
     # 3. 加载今日数据
     today_data = load_json_file(latest_file)
     
-    # 4. 加载历史数据
+    # 4. 加载历史数据与 GH Archive 增长数据
     yesterday_data = load_json_file(get_data_file_path(yesterday_str))
     week_data = load_json_file(get_data_file_path(last_week_str))
     month_data = load_json_file(get_data_file_path(last_month_str))
 
+    # 尝试加载 GH Archive 数据
+    gh_daily_file = os.path.join("scriptData", f"gharchive_growth_past_24_hours_{today_str}.json")
+    gh_weekly_file = os.path.join("scriptData", f"gharchive_growth_past_week_{today_str}.json")
+    gh_monthly_file = os.path.join("scriptData", f"gharchive_growth_past_month_{today_str}.json")
+
+    gh_daily_data = load_json_file(gh_daily_file) if os.path.exists(gh_daily_file) else None
+    gh_weekly_data = load_json_file(gh_weekly_file) if os.path.exists(gh_weekly_file) else None
+    gh_monthly_data = load_json_file(gh_monthly_file) if os.path.exists(gh_monthly_file) else None
+
     # 5. 计算增长
     print("Computing Daily Growth...")
-    daily_growth = calculate_growth(today_data, yesterday_data)
+    daily_growth = calculate_growth(today_data, yesterday_data, gh_daily_data)
     
     print("Computing Weekly Growth...")
-    weekly_growth = calculate_growth(today_data, week_data)
+    weekly_growth = calculate_growth(today_data, week_data, gh_weekly_data)
     
     print("Computing Monthly Growth...")
-    monthly_growth = calculate_growth(today_data, month_data)
+    monthly_growth = calculate_growth(today_data, month_data, gh_monthly_data)
 
     # 6. 生成报告
     generate_echarts_html(daily_growth, weekly_growth, monthly_growth, today_str)
