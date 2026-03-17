@@ -1,0 +1,1642 @@
+[
+  {
+    "id": "1075372545",
+    "full_name": "msitarzewski/agency-agents",
+    "growth": 5628,
+    "stars": 51429,
+    "forks": 820,
+    "description": "A complete AI agency at your fingertips - From frontend wizards to Reddit community ninjas, from whimsy injectors to reality checkers. Each agent is a specialized expert with personality, processes, and proven deliverables.",
+    "html_url": "https://github.com/msitarzewski/agency-agents",
+    "offertime": "2026-03-17"
+  },
+  {
+    "id": "1103012935",
+    "full_name": "openclaw/openclaw",
+    "growth": 5077,
+    "stars": 224760,
+    "forks": 1082,
+    "description": "Your own personal AI assistant. Any OS. Any Platform. The lobster way. 🦞 ",
+    "html_url": "https://github.com/openclaw/openclaw",
+    "offertime": "2026-03-17"
+  },
+  {
+    "id": "1174820787",
+    "full_name": "karpathy/autoresearch",
+    "growth": 3914,
+    "stars": 40206,
+    "forks": 564,
+    "description": "AI agents running research on single-GPU nanochat training automatically",
+    "html_url": "https://github.com/karpathy/autoresearch",
+    "offertime": "2026-03-17"
+  },
+  {
+    "id": "1104332987",
+    "full_name": "666ghj/MiroFish",
+    "growth": 3855,
+    "stars": 32452,
+    "forks": 571,
+    "description": "A Simple and Universal Swarm Intelligence Engine, Predicting Anything. 简洁通用的群体智能引擎，预测万物",
+    "html_url": "https://github.com/666ghj/MiroFish",
+    "offertime": "2026-03-17"
+  },
+  {
+    "id": "1073224795",
+    "full_name": "obra/superpowers",
+    "growth": 2863,
+    "stars": 60312,
+    "forks": 253,
+    "description": "An agentic skills framework & software development methodology that works.",
+    "html_url": "https://github.com/obra/superpowers",
+    "offertime": "2026-03-17"
+  },
+  {
+    "id": "1136590548",
+    "full_name": "affaan-m/everything-claude-code",
+    "growth": 2394,
+    "stars": 51199,
+    "forks": 339,
+    "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
+    "html_url": "https://github.com/affaan-m/everything-claude-code",
+    "offertime": "2026-03-17"
+  },
+  {
+    "id": "1170821064",
+    "full_name": "paperclipai/paperclip",
+    "growth": 2346,
+    "stars": 27915,
+    "forks": 359,
+    "description": "Open-source orchestration for zero-human companies",
+    "html_url": "https://github.com/paperclipai/paperclip",
+    "offertime": "2026-03-17"
+  },
+  {
+    "id": "1128123594",
+    "full_name": "volcengine/OpenViking",
+    "growth": 1918,
+    "stars": 15099,
+    "forks": 130,
+    "description": "OpenViking is an open-source context database designed specifically for AI Agents(such as openclaw). OpenViking unifies the management of context (memory, resources, and skills) that Agents need through a file system paradigm, enabling hierarchical context delivery and self-evolving.",
+    "html_url": "https://github.com/volcengine/OpenViking",
+    "offertime": "2026-03-17"
+  },
+  {
+    "id": "598667202",
+    "full_name": "lightpanda-io/browser",
+    "growth": 1657,
+    "stars": 20947,
+    "forks": 110,
+    "description": "Lightpanda: the headless browser designed for AI and automation",
+    "html_url": "https://github.com/lightpanda-io/browser",
+    "offertime": "2026-03-17"
+  },
+  {
+    "id": "1062458369",
+    "full_name": "alibaba/page-agent",
+    "growth": 1469,
+    "stars": 10390,
+    "forks": 114,
+    "description": "JavaScript in-page GUI agent. Control web interfaces with natural language.",
+    "html_url": "https://github.com/alibaba/page-agent",
+    "offertime": "2026-03-17"
+  },
+  {
+    "id": "1061953414",
+    "full_name": "anthropics/skills",
+    "growth": 1348,
+    "stars": 74774,
+    "forks": 186,
+    "description": "Public repository for Agent Skills",
+    "html_url": "https://github.com/anthropics/skills",
+    "offertime": "2026-03-17"
+  },
+  {
+    "id": "1097346685",
+    "full_name": "pbakaus/impeccable",
+    "growth": 1161,
+    "stars": 9910,
+    "forks": 55,
+    "description": "The design language that makes your AI harness better at design.",
+    "html_url": "https://github.com/pbakaus/impeccable",
+    "offertime": "2026-03-17"
+  },
+  {
+    "id": "838253246",
+    "full_name": "microsoft/BitNet",
+    "growth": 1149,
+    "stars": 35235,
+    "forks": 92,
+    "description": "Official inference framework for 1-bit LLMs",
+    "html_url": "https://github.com/microsoft/BitNet",
+    "offertime": "2026-03-17"
+  },
+  {
+    "id": "1010681419",
+    "full_name": "shareAI-lab/learn-claude-code",
+    "growth": 1143,
+    "stars": 30388,
+    "forks": 128,
+    "description": "Bash is all you need -  A nano Claude Code–like agent, built from 0 to 1",
+    "html_url": "https://github.com/shareAI-lab/learn-claude-code",
+    "offertime": "2026-03-17"
+  },
+  {
+    "id": "575865240",
+    "full_name": "AstrBotDevs/AstrBot",
+    "growth": 1086,
+    "stars": 25572,
+    "forks": 47,
+    "description": "Agentic IM Chatbot infrastructure that integrates lots of IM platforms, LLMs, plugins and AI feature, and can be your openclaw alternative. ✨",
+    "html_url": "https://github.com/AstrBotDevs/AstrBot",
+    "offertime": "2026-03-17"
+  },
+  {
+    "id": "1087192965",
+    "full_name": "shanraisshan/claude-code-best-practice",
+    "growth": 1050,
+    "stars": 18093,
+    "forks": 72,
+    "description": "practice made claude perfect",
+    "html_url": "https://github.com/shanraisshan/claude-code-best-practice",
+    "offertime": "2026-03-17"
+  },
+  {
+    "id": "633927609",
+    "full_name": "promptfoo/promptfoo",
+    "growth": 1050,
+    "stars": 17156,
+    "forks": 91,
+    "description": "Test your prompts, agents, and RAGs. Red teaming/pentesting/vulnerability scanning for AI. Compare performance of GPT, Claude, Gemini, Llama, and more. Simple declarative configs with command line and CI/CD integration.",
+    "html_url": "https://github.com/promptfoo/promptfoo",
+    "offertime": "2026-03-17"
+  },
+  {
+    "id": "1086436947",
+    "full_name": "andrewyng/context-hub",
+    "growth": 987,
+    "stars": 9095,
+    "forks": 66,
+    "description": "",
+    "html_url": "https://github.com/andrewyng/context-hub",
+    "offertime": "2026-03-17"
+  },
+  {
+    "id": "1024554267",
+    "full_name": "NousResearch/hermes-agent",
+    "growth": 968,
+    "stars": 8426,
+    "forks": 93,
+    "description": "The agent that grows with you",
+    "html_url": "https://github.com/NousResearch/hermes-agent",
+    "offertime": "2026-03-17"
+  },
+  {
+    "id": "1061041576",
+    "full_name": "p-e-w/heretic",
+    "growth": 957,
+    "stars": 15662,
+    "forks": 84,
+    "description": "Fully automatic censorship removal for language models",
+    "html_url": "https://github.com/p-e-w/heretic",
+    "offertime": "2026-03-17"
+  },
+  {
+    "id": "1141704318",
+    "full_name": "VoltAgent/awesome-openclaw-skills",
+    "growth": 925,
+    "stars": 38895,
+    "forks": 93,
+    "description": "The awesome collection of OpenClaw skills. 5,400+ skills filtered and categorized from the official OpenClaw Skills Registry.🦞",
+    "html_url": "https://github.com/VoltAgent/awesome-openclaw-skills",
+    "offertime": "2026-03-17"
+  },
+  {
+    "id": "1130564872",
+    "full_name": "koala73/worldmonitor",
+    "growth": 886,
+    "stars": 39995,
+    "forks": 111,
+    "description": "Real-time global intelligence dashboard — AI-powered news aggregation, geopolitical monitoring, and infrastructure tracking in a unified situational awareness interface",
+    "html_url": "https://github.com/koala73/worldmonitor",
+    "offertime": "2026-03-17"
+  },
+  {
+    "id": "1031059905",
+    "full_name": "abhigyanpatwari/GitNexus",
+    "growth": 865,
+    "stars": 16585,
+    "forks": 103,
+    "description": "GitNexus: The Zero-Server Code Intelligence Engine -       GitNexus is a client-side knowledge graph creator that runs entirely in your browser. Drop in a GitHub repo or ZIP file, and get an interactive knowledge graph wit a built in Graph RAG Agent. Perfect for code exploration",
+    "html_url": "https://github.com/abhigyanpatwari/GitNexus",
+    "offertime": "2026-03-17"
+  },
+  {
+    "id": "997737944",
+    "full_name": "ruvnet/RuView",
+    "growth": 793,
+    "stars": 37766,
+    "forks": 120,
+    "description": "π RuView: WiFi DensePose turns commodity WiFi signals into real-time human pose estimation, vital sign monitoring, and presence detection — all without a single pixel of video. ",
+    "html_url": "https://github.com/ruvnet/RuView",
+    "offertime": "2026-03-17"
+  },
+  {
+    "id": "1116260703",
+    "full_name": "gsd-build/get-shit-done",
+    "growth": 757,
+    "stars": 31754,
+    "forks": 49,
+    "description": "A light-weight and powerful meta-prompting, context engineering and spec-driven development system for Claude Code by TÂCHES.",
+    "html_url": "https://github.com/gsd-build/get-shit-done",
+    "offertime": "2026-03-17"
+  },
+  {
+    "id": "1131513930",
+    "full_name": "ZhuLinsen/daily_stock_analysis",
+    "growth": 756,
+    "stars": 21886,
+    "forks": 854,
+    "description": "LLM驱动的 A/H/美股智能分析器，多数据源行情 + 实时新闻 + Gemini 决策仪表盘 + 多渠道推送，零成本，纯白嫖，定时运行",
+    "html_url": "https://github.com/ZhuLinsen/daily_stock_analysis",
+    "offertime": "2026-03-17"
+  },
+  {
+    "id": "1106996539",
+    "full_name": "nextlevelbuilder/ui-ux-pro-max-skill",
+    "growth": 735,
+    "stars": 34148,
+    "forks": 59,
+    "description": "An AI SKILL that provide design intelligence for building professional UI/UX multiple platforms",
+    "html_url": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill",
+    "offertime": "2026-03-17"
+  },
+  {
+    "id": "1176340473",
+    "full_name": "NawfalMotii79/PLFM_RADAR",
+    "growth": 681,
+    "stars": 3173,
+    "forks": 132,
+    "description": "Open-source, low-cost 10.5 GHz PLFM phased array RADAR system",
+    "html_url": "https://github.com/NawfalMotii79/PLFM_RADAR",
+    "offertime": "2026-03-17"
+  },
+  {
+    "id": "1075431749",
+    "full_name": "karpathy/nanochat",
+    "growth": 675,
+    "stars": 43973,
+    "forks": 88,
+    "description": "The best ChatGPT that $100 can buy.",
+    "html_url": "https://github.com/karpathy/nanochat",
+    "offertime": "2026-03-17"
+  },
+  {
+    "id": "1027384981",
+    "full_name": "langchain-ai/deepagents",
+    "growth": 659,
+    "stars": 13913,
+    "forks": 93,
+    "description": "Agent harness built with LangChain and LangGraph. Equipped with a planning tool, a filesystem backend, and the ability to spawn subagents - well-equipped to handle complex agentic tasks.",
+    "html_url": "https://github.com/langchain-ai/deepagents",
+    "offertime": "2026-03-17"
+  },
+  {
+    "id": "1166462689",
+    "full_name": "nikopueringer/CorridorKey",
+    "growth": 648,
+    "stars": 7981,
+    "forks": 36,
+    "description": "Perfect Green Screen Keys",
+    "html_url": "https://github.com/nikopueringer/CorridorKey",
+    "offertime": "2026-03-17"
+  },
+  {
+    "id": "979115477",
+    "full_name": "bytedance/deer-flow",
+    "growth": 639,
+    "stars": 31453,
+    "forks": 94,
+    "description": "An open-source SuperAgent harness that researches, codes, and creates. With the help of sandboxes, memories, tools, skills and subagents, it handles different levels of tasks that could take minutes to hours.",
+    "html_url": "https://github.com/bytedance/deer-flow",
+    "offertime": "2026-03-17"
+  },
+  {
+    "id": "1157171418",
+    "full_name": "jundot/omlx",
+    "growth": 635,
+    "stars": 5561,
+    "forks": 52,
+    "description": "LLM inference server with continuous batching & SSD caching for Apple Silicon — managed from the macOS menu bar",
+    "html_url": "https://github.com/jundot/omlx",
+    "offertime": "2026-03-17"
+  },
+  {
+    "id": "1158588224",
+    "full_name": "AlexsJones/llmfit",
+    "growth": 626,
+    "stars": 17492,
+    "forks": 45,
+    "description": "Hundreds of models & providers. One command to find what runs on your hardware.",
+    "html_url": "https://github.com/AlexsJones/llmfit",
+    "offertime": "2026-03-17"
+  },
+  {
+    "id": "1035029907",
+    "full_name": "badlogic/pi-mono",
+    "growth": 615,
+    "stars": 25044,
+    "forks": 84,
+    "description": "AI agent toolkit: coding agent CLI, unified LLM API, TUI & web UI libraries, Slack bot, vLLM pods",
+    "html_url": "https://github.com/badlogic/pi-mono",
+    "offertime": "2026-03-17"
+  },
+  {
+    "id": "1100776768",
+    "full_name": "anthropics/claude-plugins-official",
+    "growth": 614,
+    "stars": 12485,
+    "forks": 55,
+    "description": "Official, Anthropic-managed directory of high quality Claude Code Plugins.",
+    "html_url": "https://github.com/anthropics/claude-plugins-official",
+    "offertime": "2026-03-17"
+  },
+  {
+    "id": "1171026502",
+    "full_name": "googleworkspace/cli",
+    "growth": 614,
+    "stars": 21168,
+    "forks": 53,
+    "description": "Google Workspace CLI — one command-line tool for Drive, Gmail, Calendar, Sheets, Docs, Chat, Admin, and more. Dynamically built from Google Discovery Service. Includes AI agent skills.",
+    "html_url": "https://github.com/googleworkspace/cli",
+    "offertime": "2026-03-17"
+  },
+  {
+    "id": "1048065319",
+    "full_name": "thedotmack/claude-mem",
+    "growth": 612,
+    "stars": 30678,
+    "forks": 67,
+    "description": "A Claude Code plugin that automatically captures everything Claude does during your coding sessions, compresses it with AI (using Claude's agent-sdk), and injects relevant context back into future sessions.",
+    "html_url": "https://github.com/thedotmack/claude-mem",
+    "offertime": "2026-03-17"
+  },
+  {
+    "id": "1031912724",
+    "full_name": "farion1231/cc-switch",
+    "growth": 607,
+    "stars": 29376,
+    "forks": 29,
+    "description": "A cross-platform desktop All-in-One assistant tool for Claude Code, Codex, OpenCode, openclaw & Gemini CLI.",
+    "html_url": "https://github.com/farion1231/cc-switch",
+    "offertime": "2026-03-17"
+  },
+  {
+    "id": "1139971460",
+    "full_name": "rtk-ai/rtk",
+    "growth": 600,
+    "stars": 9606,
+    "forks": 33,
+    "description": "CLI proxy that reduces LLM token consumption by 60-90% on common dev commands. Single Rust binary, zero dependencies",
+    "html_url": "https://github.com/rtk-ai/rtk",
+    "offertime": "2026-03-17"
+  },
+  {
+    "id": "1153093670",
+    "full_name": "hesamsheikh/awesome-openclaw-usecases",
+    "growth": 571,
+    "stars": 25711,
+    "forks": 58,
+    "description": "A community collection of OpenClaw use cases for making life easier.",
+    "html_url": "https://github.com/hesamsheikh/awesome-openclaw-usecases",
+    "offertime": "2026-03-17"
+  },
+  {
+    "id": "702796244",
+    "full_name": "fishaudio/fish-speech",
+    "growth": 566,
+    "stars": 27981,
+    "forks": 42,
+    "description": "SOTA Open Source TTS",
+    "html_url": "https://github.com/fishaudio/fish-speech",
+    "offertime": "2026-03-17"
+  },
+  {
+    "id": "872119017",
+    "full_name": "D4Vinci/Scrapling",
+    "growth": 535,
+    "stars": 30662,
+    "forks": 71,
+    "description": "🕷️ An adaptive Web Scraping framework that handles everything from a single request to a full-scale crawl!",
+    "html_url": "https://github.com/D4Vinci/Scrapling",
+    "offertime": "2026-03-17"
+  },
+  {
+    "id": "1018113827",
+    "full_name": "langflow-ai/openrag",
+    "growth": 534,
+    "stars": 3182,
+    "forks": 38,
+    "description": "OpenRAG is a comprehensive, single package Retrieval-Augmented Generation platform built on Langflow, Docling, and Opensearch. ",
+    "html_url": "https://github.com/langflow-ai/openrag",
+    "offertime": "2026-03-17"
+  },
+  {
+    "id": "1028159967",
+    "full_name": "InsForge/InsForge",
+    "growth": 527,
+    "stars": 4861,
+    "forks": 44,
+    "description": "Give agents everything they need to ship fullstack apps. The backend built for agentic development. ",
+    "html_url": "https://github.com/InsForge/InsForge",
+    "offertime": "2026-03-17"
+  },
+  {
+    "id": "1147094660",
+    "full_name": "HKUDS/nanobot",
+    "growth": 522,
+    "stars": 34276,
+    "forks": 134,
+    "description": "\"🐈 nanobot: The Ultra-Lightweight OpenClaw\"",
+    "html_url": "https://github.com/HKUDS/nanobot",
+    "offertime": "2026-03-17"
+  },
+  {
+    "id": "758002818",
+    "full_name": "systemdesign42/system-design-academy",
+    "growth": 518,
+    "stars": 23597,
+    "forks": 75,
+    "description": "If you want to become good at system design, join this newsletter now 👇",
+    "html_url": "https://github.com/systemdesign42/system-design-academy",
+    "offertime": "2026-03-17"
+  },
+  {
+    "id": "1078079172",
+    "full_name": "ComposioHQ/awesome-claude-skills",
+    "growth": 504,
+    "stars": 37330,
+    "forks": 59,
+    "description": "A curated list of awesome Claude Skills, resources, and tools for customizing Claude AI workflows",
+    "html_url": "https://github.com/ComposioHQ/awesome-claude-skills",
+    "offertime": "2026-03-17"
+  },
+  {
+    "id": "1146738089",
+    "full_name": "qwibitai/nanoclaw",
+    "growth": 503,
+    "stars": 23827,
+    "forks": 494,
+    "description": "A lightweight alternative to OpenClaw that runs in containers for security. Connects to WhatsApp, Telegram, Slack, Discord, Gmail and other messaging apps,, has memory, scheduled jobs, and runs directly on Anthropic's Agents SDK",
+    "html_url": "https://github.com/qwibitai/nanoclaw",
+    "offertime": "2026-03-17"
+  },
+  {
+    "id": "1167965563",
+    "full_name": "openai/symphony",
+    "growth": 503,
+    "stars": 13187,
+    "forks": 47,
+    "description": "Symphony turns project work into isolated, autonomous implementation runs, allowing teams to manage work instead of supervising coding agents.",
+    "html_url": "https://github.com/openai/symphony",
+    "offertime": "2026-03-17"
+  },
+  {
+    "id": "896924279",
+    "full_name": "moeru-ai/airi",
+    "growth": 483,
+    "stars": 34243,
+    "forks": 59,
+    "description": "💖🧸 Self hosted, you-owned Grok Companion, a container of souls of waifu, cyber livings to bring them into our worlds, wishing to achieve Neuro-sama's altitude. Capable of realtime voice chat, Minecraft, Factorio playing. Web / macOS / Windows supported.",
+    "html_url": "https://github.com/moeru-ai/airi",
+    "offertime": "2026-03-17"
+  },
+  {
+    "id": "1132001614",
+    "full_name": "vercel-labs/agent-browser",
+    "growth": 480,
+    "stars": 23053,
+    "forks": 25,
+    "description": "Browser automation CLI for AI agents",
+    "html_url": "https://github.com/vercel-labs/agent-browser",
+    "offertime": "2026-03-17"
+  },
+  {
+    "id": "1167576951",
+    "full_name": "Gen-Verse/OpenClaw-RL",
+    "growth": 479,
+    "stars": 3353,
+    "forks": 45,
+    "description": "OpenClaw-RL: Train any agent simply by talking",
+    "html_url": "https://github.com/Gen-Verse/OpenClaw-RL",
+    "offertime": "2026-03-17"
+  },
+  {
+    "id": "1161277811",
+    "full_name": "Martian-Engineering/lossless-claw",
+    "growth": 478,
+    "stars": 2531,
+    "forks": 29,
+    "description": "Lossless Claw — LCM (Lossless Context Management) plugin for OpenClaw",
+    "html_url": "https://github.com/Martian-Engineering/lossless-claw",
+    "offertime": "2026-03-17"
+  },
+  {
+    "id": "1134426800",
+    "full_name": "sickn33/antigravity-awesome-skills",
+    "growth": 478,
+    "stars": 25249,
+    "forks": 59,
+    "description": "The Ultimate Collection of 800+ Agentic Skills for Claude Code/Antigravity/Cursor. Battle-tested, high-performance skills for AI agents including official skills from Anthropic and Vercel.",
+    "html_url": "https://github.com/sickn33/antigravity-awesome-skills",
+    "offertime": "2026-03-17"
+  },
+  {
+    "id": "1012087571",
+    "full_name": "router-for-me/CLIProxyAPI",
+    "growth": 473,
+    "stars": 17407,
+    "forks": 64,
+    "description": "Wrap Gemini CLI, Antigravity, ChatGPT Codex, Claude Code, Qwen Code, iFlow as an OpenAI/Gemini/Claude/Codex compatible API service, allowing you to enjoy the free Gemini 2.5 Pro, GPT 5, Claude, Qwen model through API",
+    "html_url": "https://github.com/router-for-me/CLIProxyAPI",
+    "offertime": "2026-03-17"
+  },
+  {
+    "id": "1165324947",
+    "full_name": "agentscope-ai/CoPaw",
+    "growth": 467,
+    "stars": 12450,
+    "forks": 78,
+    "description": "Your Personal AI Assistant; easy to install, deploy on your own machine or on the cloud; supports multiple chat apps with easily extensible capabilities.",
+    "html_url": "https://github.com/agentscope-ai/CoPaw",
+    "offertime": "2026-03-17"
+  },
+  {
+    "id": "1156956890",
+    "full_name": "zeroclaw-labs/zeroclaw",
+    "growth": 461,
+    "stars": 27665,
+    "forks": 80,
+    "description": "Fast, small, and fully autonomous AI assistant infrastructure — deploy anywhere, swap anything 🦀",
+    "html_url": "https://github.com/zeroclaw-labs/zeroclaw",
+    "offertime": "2026-03-17"
+  },
+  {
+    "id": "1032459340",
+    "full_name": "Fission-AI/OpenSpec",
+    "growth": 456,
+    "stars": 31576,
+    "forks": 19,
+    "description": "Spec-driven development (SDD) for AI coding assistants.",
+    "html_url": "https://github.com/Fission-AI/OpenSpec",
+    "offertime": "2026-03-17"
+  },
+  {
+    "id": "880800549",
+    "full_name": "canopy-network/canopy",
+    "growth": 452,
+    "stars": 6921,
+    "forks": 349,
+    "description": "The official go implementation of the Canopy Network protocol",
+    "html_url": "https://github.com/canopy-network/canopy",
+    "offertime": "2026-03-17"
+  },
+  {
+    "id": "1166160145",
+    "full_name": "TomBadash/Mouser",
+    "growth": 449,
+    "stars": 2082,
+    "forks": 8,
+    "description": "A lightweight, open-source alternative to Logitech Options+ for remapping buttons on the Logitech MX Master 3S mouse",
+    "html_url": "https://github.com/TomBadash/Mouser",
+    "offertime": "2026-03-17"
+  },
+  {
+    "id": "1108837393",
+    "full_name": "code-yeongyu/oh-my-openagent",
+    "growth": 442,
+    "stars": 33878,
+    "forks": 32,
+    "description": "omo; the best agent harness - previously oh-my-opencode",
+    "html_url": "https://github.com/code-yeongyu/oh-my-openagent",
+    "offertime": "2026-03-17"
+  },
+  {
+    "id": "1181479848",
+    "full_name": "calesthio/Crucix",
+    "growth": 432,
+    "stars": 2926,
+    "forks": 56,
+    "description": "Your personal intelligence agent. Watches the world from multiple data sources and pings you when something changes.",
+    "html_url": "https://github.com/calesthio/Crucix",
+    "offertime": "2026-03-17"
+  },
+  {
+    "id": "1175285052",
+    "full_name": "ParthJadhav/app-store-screenshots",
+    "growth": 431,
+    "stars": 2864,
+    "forks": 33,
+    "description": "end to end app store screenshot creation using AI",
+    "html_url": "https://github.com/ParthJadhav/app-store-screenshots",
+    "offertime": "2026-03-17"
+  },
+  {
+    "id": "986349490",
+    "full_name": "EdoStra/Marketing-for-Founders",
+    "growth": 428,
+    "stars": 5340,
+    "forks": 19,
+    "description": "Practical marketing resources to get the first 10 / 100 / 1000 users for your SaaS / App / Startup",
+    "html_url": "https://github.com/EdoStra/Marketing-for-Founders",
+    "offertime": "2026-03-17"
+  },
+  {
+    "id": "1118601518",
+    "full_name": "Wei-Shaw/sub2api",
+    "growth": 412,
+    "stars": 6379,
+    "forks": 49,
+    "description": "Sub2API-CRS2 一站式开源中转服务，让 Claude、Openai 、Gemini、Antigravity订阅统一接入，支持拼车共享，更高效分摊成本，原生工具无缝使用。",
+    "html_url": "https://github.com/Wei-Shaw/sub2api",
+    "offertime": "2026-03-17"
+  },
+  {
+    "id": "1173152133",
+    "full_name": "BigBodyCobain/Shadowbroker",
+    "growth": 402,
+    "stars": 3476,
+    "forks": 76,
+    "description": "Open-source intelligence for the global theater. Track everything from the corporate/private jets of the wealthy, and spy satellites, to seismic events in one unified interface. The knowledge is available to all but rarely aggregated in the open, until now.",
+    "html_url": "https://github.com/BigBodyCobain/Shadowbroker",
+    "offertime": "2026-03-17"
+  },
+  {
+    "id": "896144595",
+    "full_name": "virattt/ai-hedge-fund",
+    "growth": 386,
+    "stars": 45886,
+    "forks": 62,
+    "description": "An AI Hedge Fund Team",
+    "html_url": "https://github.com/virattt/ai-hedge-fund",
+    "offertime": "2026-03-17"
+  },
+  {
+    "id": "1164477708",
+    "full_name": "mksglu/context-mode",
+    "growth": 367,
+    "stars": 5021,
+    "forks": 31,
+    "description": "MCP is the protocol for tool access. We're the virtualization layer for context.",
+    "html_url": "https://github.com/mksglu/context-mode",
+    "offertime": "2026-03-17"
+  },
+  {
+    "id": "1149707767",
+    "full_name": "sipeed/picoclaw",
+    "growth": 364,
+    "stars": 25224,
+    "forks": 78,
+    "description": "Tiny, Fast, and Deployable anywhere — automate the mundane, unleash your creativity",
+    "html_url": "https://github.com/sipeed/picoclaw",
+    "offertime": "2026-03-17"
+  },
+  {
+    "id": "1112365301",
+    "full_name": "tobi/qmd",
+    "growth": 356,
+    "stars": 15851,
+    "forks": 23,
+    "description": "mini cli search engine for your docs, knowledge bases, meeting notes, whatever. Tracking current sota approaches while being all local",
+    "html_url": "https://github.com/tobi/qmd",
+    "offertime": "2026-03-17"
+  },
+  {
+    "id": "1007827531",
+    "full_name": "Crosstalk-Solutions/project-nomad",
+    "growth": 350,
+    "stars": 2163,
+    "forks": 39,
+    "description": "Project N.O.M.A.D, is a self-contained, offline survival computer packed with critical tools, knowledge, and AI to keep you informed and empowered—anytime, anywhere.",
+    "html_url": "https://github.com/Crosstalk-Solutions/project-nomad",
+    "offertime": "2026-03-17"
+  },
+  {
+    "id": "1069943001",
+    "full_name": "Nagi-ovo/gemini-voyager",
+    "growth": 344,
+    "stars": 12507,
+    "forks": 13,
+    "description": "An all-in-one enhancement suite for Google Gemini & AI Studio - timeline navigation, folder management, prompt library, and chat export in one powerful extension. / Google Gemini & AI Studio 全能增强插件：集成时间轴导航、文件夹管理、提示词库及聊天导出等众多功能。",
+    "html_url": "https://github.com/Nagi-ovo/gemini-voyager",
+    "offertime": "2026-03-17"
+  },
+  {
+    "id": "1052050442",
+    "full_name": "datawhalechina/hello-agents",
+    "growth": 342,
+    "stars": 28160,
+    "forks": 55,
+    "description": "📚 《从零开始构建智能体》——从零开始的智能体原理与实践教程",
+    "html_url": "https://github.com/datawhalechina/hello-agents",
+    "offertime": "2026-03-17"
+  },
+  {
+    "id": "1086419061",
+    "full_name": "vectorize-io/hindsight",
+    "growth": 338,
+    "stars": 4582,
+    "forks": 14,
+    "description": "Hindsight: Agent Memory That  Learns",
+    "html_url": "https://github.com/vectorize-io/hindsight",
+    "offertime": "2026-03-17"
+  },
+  {
+    "id": "1145786318",
+    "full_name": "Leey21/awesome-ai-research-writing",
+    "growth": 338,
+    "stars": 12715,
+    "forks": 21,
+    "description": "Elevate your AI research writing, no more tedious polishing ✨ ",
+    "html_url": "https://github.com/Leey21/awesome-ai-research-writing",
+    "offertime": "2026-03-17"
+  },
+  {
+    "id": "1165277268",
+    "full_name": "Panniantong/Agent-Reach",
+    "growth": 335,
+    "stars": 9701,
+    "forks": 14,
+    "description": "Give your AI agent eyes to see the entire internet. Read & search Twitter, Reddit, YouTube, GitHub, Bilibili, XiaoHongShu — one CLI, zero API fees.",
+    "html_url": "https://github.com/Panniantong/Agent-Reach",
+    "offertime": "2026-03-17"
+  },
+  {
+    "id": "1079084637",
+    "full_name": "alirezarezvani/claude-skills",
+    "growth": 333,
+    "stars": 5537,
+    "forks": 38,
+    "description": "169 production-ready skills & plugins for Claude Code, OpenAI Codex, and OpenClaw — engineering, marketing, product, compliance, C-level advisory, and more. Install via /plugin marketplace.",
+    "html_url": "https://github.com/alirezarezvani/claude-skills",
+    "offertime": "2026-03-17"
+  },
+  {
+    "id": "822604462",
+    "full_name": "666ghj/BettaFish",
+    "growth": 333,
+    "stars": 35735,
+    "forks": 58,
+    "description": "微舆：人人可用的多Agent舆情分析助手，打破信息茧房，还原舆情原貌，预测未来走向，辅助决策！从0实现，不依赖任何框架。",
+    "html_url": "https://github.com/666ghj/BettaFish",
+    "offertime": "2026-03-17"
+  },
+  {
+    "id": "1129786550",
+    "full_name": "teng-lin/notebooklm-py",
+    "growth": 322,
+    "stars": 6160,
+    "forks": 32,
+    "description": "Unofficial Python API and agentic skill for Google NotebookLM. Full programmatic access to NotebookLM's features—including capabilities the web UI doesn't expose—via Python, CLI, and AI agents like Claude Code, Codex, and OpenClaw.",
+    "html_url": "https://github.com/teng-lin/notebooklm-py",
+    "offertime": "2026-03-17"
+  },
+  {
+    "id": "1166506614",
+    "full_name": "mukul975/Anthropic-Cybersecurity-Skills",
+    "growth": 319,
+    "stars": 2302,
+    "forks": 65,
+    "description": "734+ structured cybersecurity skills for AI agents · MITRE ATT&CK mapped · agentskills.io standard · Claude Code, Copilot, Codex CLI, Cursor, Gemini CLI",
+    "html_url": "https://github.com/mukul975/Anthropic-Cybersecurity-Skills",
+    "offertime": "2026-03-17"
+  },
+  {
+    "id": "875378461",
+    "full_name": "dimensionalOS/dimos",
+    "growth": 313,
+    "stars": 1632,
+    "forks": 45,
+    "description": "Dimensional is the agentic operating system for physical space. Vibecode humanoids, quadrupeds, drones, and other hardware platforms in natural language and build multi-agent systems that work seamlessly with physical input (cameras, lidar, actuators).",
+    "html_url": "https://github.com/dimensionalOS/dimos",
+    "offertime": "2026-03-17"
+  },
+  {
+    "id": "1135212071",
+    "full_name": "coreyhaines31/marketingskills",
+    "growth": 312,
+    "stars": 14278,
+    "forks": 60,
+    "description": "Marketing skills for Claude Code and AI agents. CRO, copywriting, SEO, analytics, and growth engineering.",
+    "html_url": "https://github.com/coreyhaines31/marketingskills",
+    "offertime": "2026-03-17"
+  },
+  {
+    "id": "717197250",
+    "full_name": "QuantumNous/new-api",
+    "growth": 306,
+    "stars": 21374,
+    "forks": 59,
+    "description": "A unified AI model hub for aggregation & distribution. It supports cross-converting various LLMs into OpenAI-compatible, Claude-compatible, or Gemini-compatible formats. A centralized gateway for personal and enterprise model management. 🍥",
+    "html_url": "https://github.com/QuantumNous/new-api",
+    "offertime": "2026-03-17"
+  },
+  {
+    "id": "1062356571",
+    "full_name": "tw93/Mole",
+    "growth": 303,
+    "stars": 36870,
+    "forks": 15,
+    "description": "🐹 Deep clean and optimize your Mac.",
+    "html_url": "https://github.com/tw93/Mole",
+    "offertime": "2026-03-17"
+  },
+  {
+    "id": "940076402",
+    "full_name": "kepano/defuddle",
+    "growth": 298,
+    "stars": 5308,
+    "forks": 10,
+    "description": "Get the main content of any page as Markdown.",
+    "html_url": "https://github.com/kepano/defuddle",
+    "offertime": "2026-03-17"
+  },
+  {
+    "id": "1161025758",
+    "full_name": "TraderAlice/OpenAlice",
+    "growth": 295,
+    "stars": 2262,
+    "forks": 34,
+    "description": "File-driven AI trading agent engine for crypto and securities markets",
+    "html_url": "https://github.com/TraderAlice/OpenAlice",
+    "offertime": "2026-03-17"
+  },
+  {
+    "id": "1181380420",
+    "full_name": "skernelx/tavily-key-generator",
+    "growth": 294,
+    "stars": 1262,
+    "forks": 208,
+    "description": "Auto batch register Tavily API Keys with pluggable email backends",
+    "html_url": "https://github.com/skernelx/tavily-key-generator",
+    "offertime": "2026-03-17"
+  },
+  {
+    "id": "969302809",
+    "full_name": "hesreallyhim/awesome-claude-code",
+    "growth": 293,
+    "stars": 28800,
+    "forks": 29,
+    "description": "A curated list of awesome skills, hooks, slash-commands, agent orchestrators, applications, and plugins for Claude Code by Anthropic",
+    "html_url": "https://github.com/hesreallyhim/awesome-claude-code",
+    "offertime": "2026-03-17"
+  },
+  {
+    "id": "931352845",
+    "full_name": "linshenkx/prompt-optimizer",
+    "growth": 291,
+    "stars": 24906,
+    "forks": 27,
+    "description": "一款提示词优化器，助力于编写高质量的提示词",
+    "html_url": "https://github.com/linshenkx/prompt-optimizer",
+    "offertime": "2026-03-17"
+  },
+  {
+    "id": "1178493295",
+    "full_name": "gsd-build/gsd-2",
+    "growth": 279,
+    "stars": 1684,
+    "forks": 26,
+    "description": "A powerful meta-prompting, context engineering and spec-driven development system that enables agents to work for long periods of time autonomously without losing track of the big picture",
+    "html_url": "https://github.com/gsd-build/gsd-2",
+    "offertime": "2026-03-17"
+  },
+  {
+    "id": "1166139870",
+    "full_name": "RightNow-AI/openfang",
+    "growth": 275,
+    "stars": 14785,
+    "forks": 44,
+    "description": "Open-source Agent Operating System",
+    "html_url": "https://github.com/RightNow-AI/openfang",
+    "offertime": "2026-03-17"
+  },
+  {
+    "id": "1136666433",
+    "full_name": "blader/humanizer",
+    "growth": 273,
+    "stars": 9764,
+    "forks": 36,
+    "description": "Claude Code skill that removes signs of AI-generated writing from text",
+    "html_url": "https://github.com/blader/humanizer",
+    "offertime": "2026-03-17"
+  },
+  {
+    "id": "1176898834",
+    "full_name": "aiming-lab/MetaClaw",
+    "growth": 272,
+    "stars": 1592,
+    "forks": 32,
+    "description": "Just talk to your agent — it learns and EVOLVES.",
+    "html_url": "https://github.com/aiming-lab/MetaClaw",
+    "offertime": "2026-03-17"
+  },
+  {
+    "id": "1054793726",
+    "full_name": "ChromeDevTools/chrome-devtools-mcp",
+    "growth": 264,
+    "stars": 29765,
+    "forks": 20,
+    "description": "Chrome DevTools for coding agents",
+    "html_url": "https://github.com/ChromeDevTools/chrome-devtools-mcp",
+    "offertime": "2026-03-17"
+  },
+  {
+    "id": "1150626239",
+    "full_name": "ValueCell-ai/ClawX",
+    "growth": 264,
+    "stars": 4772,
+    "forks": 43,
+    "description": "ClawX is a desktop app that provides a graphical interface for OpenClaw AI agents. It turns CLI-based AI orchestration into a desktop experience without using the terminal. We’ve moved from clawx.dev to claw-x.com.",
+    "html_url": "https://github.com/ValueCell-ai/ClawX",
+    "offertime": "2026-03-17"
+  },
+  {
+    "id": "1126947080",
+    "full_name": "kepano/obsidian-skills",
+    "growth": 262,
+    "stars": 14531,
+    "forks": 19,
+    "description": "Agent skills for Obsidian. Teach your agent to use Markdown, Bases, JSON Canvas, and use the CLI.",
+    "html_url": "https://github.com/kepano/obsidian-skills",
+    "offertime": "2026-03-17"
+  },
+  {
+    "id": "1181982220",
+    "full_name": "jackwener/opencli",
+    "growth": 261,
+    "stars": 1338,
+    "forks": 21,
+    "description": "",
+    "html_url": "https://github.com/jackwener/opencli",
+    "offertime": "2026-03-17"
+  },
+  {
+    "id": "679343504",
+    "full_name": "topoteretes/cognee",
+    "growth": 259,
+    "stars": 14272,
+    "forks": 17,
+    "description": "Knowledge Engine for AI Agent Memory in 6 lines of code",
+    "html_url": "https://github.com/topoteretes/cognee",
+    "offertime": "2026-03-17"
+  },
+  {
+    "id": "1175748667",
+    "full_name": "jackwener/xiaohongshu-cli",
+    "growth": 246,
+    "stars": 1264,
+    "forks": 26,
+    "description": "A CLI for Xiaohongshu (小红书) — search, read, interact via reverse-engineered API",
+    "html_url": "https://github.com/jackwener/xiaohongshu-cli",
+    "offertime": "2026-03-17"
+  },
+  {
+    "id": "1172617973",
+    "full_name": "Flowseal/tg-ws-proxy",
+    "growth": 228,
+    "stars": 2121,
+    "forks": 11,
+    "description": "Local SOCKS5 proxy server for partial bypassing of Telegram loading",
+    "html_url": "https://github.com/Flowseal/tg-ws-proxy",
+    "offertime": "2026-03-17"
+  },
+  {
+    "id": "1146413571",
+    "full_name": "epiral/bb-browser",
+    "growth": 219,
+    "stars": 1127,
+    "forks": 27,
+    "description": "Your browser is the API. CLI + MCP server for AI agents to control Chrome with your login state.",
+    "html_url": "https://github.com/epiral/bb-browser",
+    "offertime": "2026-03-17"
+  },
+  {
+    "id": "1140828984",
+    "full_name": "ysharma3501/LuxTTS",
+    "growth": 216,
+    "stars": 2424,
+    "forks": 28,
+    "description": "A high-quality rapid TTS voice cloning model that reaches speeds of 150x realtime.",
+    "html_url": "https://github.com/ysharma3501/LuxTTS",
+    "offertime": "2026-03-17"
+  },
+  {
+    "id": "1079456184",
+    "full_name": "K-Dense-AI/claude-scientific-skills",
+    "growth": 208,
+    "stars": 15300,
+    "forks": 28,
+    "description": "A set of ready to use Agent Skills for research, science, engineering, analysis, finance and writing.",
+    "html_url": "https://github.com/K-Dense-AI/claude-scientific-skills",
+    "offertime": "2026-03-17"
+  },
+  {
+    "id": "824301644",
+    "full_name": "cheahjs/free-llm-api-resources",
+    "growth": 207,
+    "stars": 16093,
+    "forks": 16,
+    "description": "A list of free LLM inference resources accessible via API.",
+    "html_url": "https://github.com/cheahjs/free-llm-api-resources",
+    "offertime": "2026-03-17"
+  },
+  {
+    "id": "1158198234",
+    "full_name": "open-jarvis/OpenJarvis",
+    "growth": 203,
+    "stars": 1101,
+    "forks": 38,
+    "description": "Personal AI, On Personal Devices",
+    "html_url": "https://github.com/open-jarvis/OpenJarvis",
+    "offertime": "2026-03-17"
+  },
+  {
+    "id": "1080070047",
+    "full_name": "Jeffallan/claude-skills",
+    "growth": 187,
+    "stars": 6921,
+    "forks": 7,
+    "description": "66 Specialized Skills for Full-Stack Developers. Transform Claude Code into your expert pair programmer.",
+    "html_url": "https://github.com/Jeffallan/claude-skills",
+    "offertime": "2026-03-17"
+  },
+  {
+    "id": "656099147",
+    "full_name": "mem0ai/mem0",
+    "growth": 184,
+    "stars": 47936,
+    "forks": 18,
+    "description": "Universal memory layer for AI Agents",
+    "html_url": "https://github.com/mem0ai/mem0",
+    "offertime": "2026-03-17"
+  },
+  {
+    "id": "958531089",
+    "full_name": "VectifyAI/PageIndex",
+    "growth": 183,
+    "stars": 22081,
+    "forks": 21,
+    "description": "📑 PageIndex: Document Index for Vectorless, Reasoning-based RAG",
+    "html_url": "https://github.com/VectifyAI/PageIndex",
+    "offertime": "2026-03-17"
+  },
+  {
+    "id": "1154879377",
+    "full_name": "open-webui/open-terminal",
+    "growth": 178,
+    "stars": 1925,
+    "forks": 13,
+    "description": "A computer you can curl ⚡",
+    "html_url": "https://github.com/open-webui/open-terminal",
+    "offertime": "2026-03-17"
+  },
+  {
+    "id": "1155594962",
+    "full_name": "peteromallet/desloppify",
+    "growth": 173,
+    "stars": 2488,
+    "forks": 11,
+    "description": "Agent harness to make your slop code well-engineered and beautiful.",
+    "html_url": "https://github.com/peteromallet/desloppify",
+    "offertime": "2026-03-17"
+  },
+  {
+    "id": "1039237865",
+    "full_name": "CodeGraphContext/CodeGraphContext",
+    "growth": 171,
+    "stars": 2296,
+    "forks": 23,
+    "description": "An MCP server plus a CLI tool that indexes local code into a graph database to provide context to AI assistants.",
+    "html_url": "https://github.com/CodeGraphContext/CodeGraphContext",
+    "offertime": "2026-03-17"
+  },
+  {
+    "id": "651517185",
+    "full_name": "NanmiCoder/MediaCrawler",
+    "growth": 171,
+    "stars": 44232,
+    "forks": 34,
+    "description": "小红书笔记 | 评论爬虫、抖音视频 | 评论爬虫、快手视频 | 评论爬虫、B 站视频 ｜ 评论爬虫、微博帖子 ｜ 评论爬虫、百度贴吧帖子 ｜ 百度贴吧评论回复爬虫  | 知乎问答文章｜评论爬虫",
+    "html_url": "https://github.com/NanmiCoder/MediaCrawler",
+    "offertime": "2026-03-17"
+  },
+  {
+    "id": "1176469774",
+    "full_name": "knowsuchagency/mcp2cli",
+    "growth": 167,
+    "stars": 1295,
+    "forks": 13,
+    "description": "Turn any MCP, OpenAPI, or GraphQL server into a CLI — at runtime, with zero codegen",
+    "html_url": "https://github.com/knowsuchagency/mcp2cli",
+    "offertime": "2026-03-17"
+  },
+  {
+    "id": "1140828898",
+    "full_name": "anthropics/knowledge-work-plugins",
+    "growth": 166,
+    "stars": 9829,
+    "forks": 23,
+    "description": "Open source repository of plugins primarily intended for knowledge workers to use in Claude Cowork",
+    "html_url": "https://github.com/anthropics/knowledge-work-plugins",
+    "offertime": "2026-03-17"
+  },
+  {
+    "id": "1014729376",
+    "full_name": "MemTensor/MemOS",
+    "growth": 164,
+    "stars": 7350,
+    "forks": 5,
+    "description": "AI memory OS for LLM and Agent systems(moltbot,clawdbot,openclaw), enabling persistent Skill memory for cross-task skill reuse and evolution.",
+    "html_url": "https://github.com/MemTensor/MemOS",
+    "offertime": "2026-03-17"
+  },
+  {
+    "id": "1103643573",
+    "full_name": "openai/skills",
+    "growth": 160,
+    "stars": 14471,
+    "forks": 12,
+    "description": "Skills Catalog for Codex",
+    "html_url": "https://github.com/openai/skills",
+    "offertime": "2026-03-17"
+  },
+  {
+    "id": "974186260",
+    "full_name": "sansan0/TrendRadar",
+    "growth": 159,
+    "stars": 47122,
+    "forks": 56,
+    "description": "⭐AI-driven public opinion & trend monitor with multi-platform aggregation, RSS, and smart alerts.🎯 告别信息过载，你的 AI 舆情监控助手与热点筛选工具！聚合多平台热点 +  RSS 订阅，支持关键词精准筛选。AI 翻译 +  AI 分析简报直推手机，也支持接入 MCP 架构，赋能 AI 自然语言对话分析、情感洞察与趋势预测等。支持 Docker ，数据本地/云端自持。集成微信/飞书/钉钉/Telegram/邮件/ntfy/bark/slack 等渠道智能推送。",
+    "html_url": "https://github.com/sansan0/TrendRadar",
+    "offertime": "2026-03-17"
+  },
+  {
+    "id": "1117639997",
+    "full_name": "agentskills/agentskills",
+    "growth": 154,
+    "stars": 13416,
+    "forks": 7,
+    "description": "Specification and documentation for Agent Skills",
+    "html_url": "https://github.com/agentskills/agentskills",
+    "offertime": "2026-03-17"
+  },
+  {
+    "id": "671269505",
+    "full_name": "BerriAI/litellm",
+    "growth": 149,
+    "stars": 36799,
+    "forks": 35,
+    "description": "Python SDK, Proxy Server (AI Gateway) to call 100+ LLM APIs in OpenAI (or native) format, with cost tracking, guardrails, loadbalancing and logging. [Bedrock, Azure, OpenAI, VertexAI, Cohere, Anthropic, Sagemaker, HuggingFace, VLLM, NVIDIA NIM]",
+    "html_url": "https://github.com/BerriAI/litellm",
+    "offertime": "2026-03-17"
+  },
+  {
+    "id": "1163834030",
+    "full_name": "CloakHQ/CloakBrowser",
+    "growth": 145,
+    "stars": 757,
+    "forks": 4,
+    "description": "Stealth Chromium that passes every bot detection test. Drop-in Playwright replacement with source-level fingerprint patches. 30/30 tests passed.",
+    "html_url": "https://github.com/CloakHQ/CloakBrowser",
+    "offertime": "2026-03-17"
+  },
+  {
+    "id": "909213664",
+    "full_name": "TauricResearch/TradingAgents",
+    "growth": 139,
+    "stars": 30590,
+    "forks": 30,
+    "description": "TradingAgents: Multi-Agents LLM Financial Trading Framework",
+    "html_url": "https://github.com/TauricResearch/TradingAgents",
+    "offertime": "2026-03-17"
+  },
+  {
+    "id": "710601088",
+    "full_name": "crewAIInc/crewAI",
+    "growth": 139,
+    "stars": 44545,
+    "forks": 17,
+    "description": "Framework for orchestrating role-playing, autonomous AI agents. By fostering collaborative intelligence, CrewAI empowers agents to work together seamlessly, tackling complex tasks.",
+    "html_url": "https://github.com/crewAIInc/crewAI",
+    "offertime": "2026-03-17"
+  },
+  {
+    "id": "1165056385",
+    "full_name": "anthropics/financial-services-plugins",
+    "growth": 133,
+    "stars": 6263,
+    "forks": 12,
+    "description": "",
+    "html_url": "https://github.com/anthropics/financial-services-plugins",
+    "offertime": "2026-03-17"
+  },
+  {
+    "id": "1118085970",
+    "full_name": "alibaba/OpenSandbox",
+    "growth": 133,
+    "stars": 8157,
+    "forks": 11,
+    "description": "OpenSandbox is a general-purpose sandbox platform for AI applications, offering multi-language SDKs, unified sandbox APIs, and Docker/Kubernetes runtimes for scenarios like Coding Agents, GUI Agents, Agent Evaluation, AI Code Execution, and RL Training.",
+    "html_url": "https://github.com/alibaba/OpenSandbox",
+    "offertime": "2026-03-17"
+  },
+  {
+    "id": "1155776799",
+    "full_name": "greyhaven-ai/autocontext",
+    "growth": 130,
+    "stars": 574,
+    "forks": 16,
+    "description": "a recursive self-improving harness designed to help your agents (and future iterations of those agents) succeed on any task",
+    "html_url": "https://github.com/greyhaven-ai/autocontext",
+    "offertime": "2026-03-17"
+  },
+  {
+    "id": "1135449996",
+    "full_name": "QuipNetwork/quip-protocol",
+    "growth": 127,
+    "stars": 5376,
+    "forks": 2,
+    "description": "experimental quip protocol network node",
+    "html_url": "https://github.com/QuipNetwork/quip-protocol",
+    "offertime": "2026-03-17"
+  },
+  {
+    "id": "357492304",
+    "full_name": "Free-TV/IPTV",
+    "growth": 126,
+    "stars": 15350,
+    "forks": 16,
+    "description": "M3U Playlist for free TV channels",
+    "html_url": "https://github.com/Free-TV/IPTV",
+    "offertime": "2026-03-17"
+  },
+  {
+    "id": "1132431999",
+    "full_name": "aden-hive/hive",
+    "growth": 124,
+    "stars": 9536,
+    "forks": 54,
+    "description": "Outcome driven agent development framework that evolves",
+    "html_url": "https://github.com/aden-hive/hive",
+    "offertime": "2026-03-17"
+  },
+  {
+    "id": "887684103",
+    "full_name": "camel-ai/oasis",
+    "growth": 124,
+    "stars": 3431,
+    "forks": 4,
+    "description": "🏝️ OASIS: Open Agent Social Interaction Simulations with One Million Agents. ",
+    "html_url": "https://github.com/camel-ai/oasis",
+    "offertime": "2026-03-17"
+  },
+  {
+    "id": "1151667698",
+    "full_name": "htdt/godogen",
+    "growth": 121,
+    "stars": 844,
+    "forks": 8,
+    "description": "Claude Code skills that build complete Godot 4 projects from a game description",
+    "html_url": "https://github.com/htdt/godogen",
+    "offertime": "2026-03-17"
+  },
+  {
+    "id": "1176760507",
+    "full_name": "Justi1980/Dawn-Validator-BOT",
+    "growth": 119,
+    "stars": 538,
+    "forks": 74,
+    "description": "Dawn Validator BOT — Automated node validation bot for Dawn Protocol testnet with multi-account support, proxy rotation, validator registration, keepalive pings, reward tracking, and Rich CLI interface for decentralized bandwidth network participation",
+    "html_url": "https://github.com/Justi1980/Dawn-Validator-BOT",
+    "offertime": "2026-03-17"
+  },
+  {
+    "id": "676672661",
+    "full_name": "langchain-ai/langgraph",
+    "growth": 119,
+    "stars": 26682,
+    "forks": 25,
+    "description": "Build resilient language agents as graphs.",
+    "html_url": "https://github.com/langchain-ai/langgraph",
+    "offertime": "2026-03-17"
+  },
+  {
+    "id": "834369920",
+    "full_name": "jingyaogong/minimind",
+    "growth": 119,
+    "stars": 39841,
+    "forks": 8,
+    "description": "🚀🚀 「大模型」2小时完全从0训练26M的小参数GPT！🌏 Train a 26M-parameter GPT from scratch in just 2h!",
+    "html_url": "https://github.com/jingyaogong/minimind",
+    "offertime": "2026-03-17"
+  },
+  {
+    "id": "1170326509",
+    "full_name": "LeoYeAI/openclaw-master-skills",
+    "growth": 117,
+    "stars": 1957,
+    "forks": 12,
+    "description": "🧠 Curated collection of 339+ best OpenClaw skills — weekly updated by MyClaw.ai from ClawHub, GitHub & community. AI, productivity, dev, marketing, finance & more.",
+    "html_url": "https://github.com/LeoYeAI/openclaw-master-skills",
+    "offertime": "2026-03-17"
+  },
+  {
+    "id": "1025856648",
+    "full_name": "wshobson/agents",
+    "growth": 111,
+    "stars": 31516,
+    "forks": 16,
+    "description": "Intelligent automation and multi-agent orchestration for Claude Code",
+    "html_url": "https://github.com/wshobson/agents",
+    "offertime": "2026-03-17"
+  },
+  {
+    "id": "1102903896",
+    "full_name": "huggingface/skills",
+    "growth": 109,
+    "stars": 9221,
+    "forks": 6,
+    "description": "",
+    "html_url": "https://github.com/huggingface/skills",
+    "offertime": "2026-03-17"
+  },
+  {
+    "id": "1127110039",
+    "full_name": "OthmanAdi/planning-with-files",
+    "growth": 105,
+    "stars": 16313,
+    "forks": 10,
+    "description": "Claude Code skill implementing Manus-style persistent markdown planning — the workflow pattern behind the $2B acquisition.",
+    "html_url": "https://github.com/OthmanAdi/planning-with-files",
+    "offertime": "2026-03-17"
+  },
+  {
+    "id": "1147992203",
+    "full_name": "zai-org/GLM-OCR",
+    "growth": 104,
+    "stars": 2571,
+    "forks": 8,
+    "description": "GLM-OCR: Accurate ×  Fast × Comprehensive",
+    "html_url": "https://github.com/zai-org/GLM-OCR",
+    "offertime": "2026-03-17"
+  },
+  {
+    "id": "740303686",
+    "full_name": "sgl-project/sglang",
+    "growth": 104,
+    "stars": 24638,
+    "forks": 21,
+    "description": "SGLang is a high-performance serving framework for large language models and multimodal models.",
+    "html_url": "https://github.com/sgl-project/sglang",
+    "offertime": "2026-03-17"
+  },
+  {
+    "id": "1175870738",
+    "full_name": "FreedomIntelligence/OpenClaw-Medical-Skills",
+    "growth": 103,
+    "stars": 1334,
+    "forks": 17,
+    "description": "The largest open-source medical AI skills library for OpenClaw🦞.",
+    "html_url": "https://github.com/FreedomIntelligence/OpenClaw-Medical-Skills",
+    "offertime": "2026-03-17"
+  },
+  {
+    "id": "1156170875",
+    "full_name": "Nasiko-Labs/nasiko",
+    "growth": 103,
+    "stars": 1313,
+    "forks": 0,
+    "description": "Developer Control Plane for your AI Agents",
+    "html_url": "https://github.com/Nasiko-Labs/nasiko",
+    "offertime": "2026-03-17"
+  },
+  {
+    "id": "1013480284",
+    "full_name": "davila7/claude-code-templates",
+    "growth": 99,
+    "stars": 23085,
+    "forks": 8,
+    "description": "CLI tool for configuring and monitoring Claude Code",
+    "html_url": "https://github.com/davila7/claude-code-templates",
+    "offertime": "2026-03-17"
+  },
+  {
+    "id": "1128712337",
+    "full_name": "openclaw/skills",
+    "growth": 98,
+    "stars": 3006,
+    "forks": 20,
+    "description": "All versions of all skills that are on clawhub.com archived",
+    "html_url": "https://github.com/openclaw/skills",
+    "offertime": "2026-03-17"
+  },
+  {
+    "id": "1176200341",
+    "full_name": "tophant-ai/ClawVault",
+    "growth": 98,
+    "stars": 600,
+    "forks": 2,
+    "description": "OpenClaw Security Vault — Atomic \"claw\" control: every AI reach, within your sight.",
+    "html_url": "https://github.com/tophant-ai/ClawVault",
+    "offertime": "2026-03-17"
+  },
+  {
+    "id": "1176774227",
+    "full_name": "Kaleighc793/freqtrade-bot",
+    "growth": 98,
+    "stars": 555,
+    "forks": 53,
+    "description": "Freqtrade — Configuration and management tool for the Freqtrade open-source crypto trading bot with strategy backtesting, live/dry-run modes, 10+ exchange support (Binance, Kraken, OKX), hyperparameter optimization, FreqUI dashboard, and Rich terminal menu interface",
+    "html_url": "https://github.com/Kaleighc793/freqtrade-bot",
+    "offertime": "2026-03-17"
+  },
+  {
+    "id": "1073538908",
+    "full_name": "chenyme/grok2api",
+    "growth": 94,
+    "stars": 3083,
+    "forks": 22,
+    "description": "基于 FastAPI 构建的 Grok2API，全面适配 OpenAI 兼容的调用格式，支持流式/非流式对话、图像生成、图像编辑、视频生成、工具调用、语音聊天、一键NSFW、号池并发与自动负载均衡一体化。",
+    "html_url": "https://github.com/chenyme/grok2api",
+    "offertime": "2026-03-17"
+  },
+  {
+    "id": "1135605666",
+    "full_name": "BIT-DataLab/Edit-Banana",
+    "growth": 91,
+    "stars": 4276,
+    "forks": 7,
+    "description": "Edit Banana: A framework for converting statistical formats into editable.",
+    "html_url": "https://github.com/BIT-DataLab/Edit-Banana",
+    "offertime": "2026-03-17"
+  },
+  {
+    "id": "1140586914",
+    "full_name": "tibbar213/team-manage",
+    "growth": 89,
+    "stars": 788,
+    "forks": 17,
+    "description": "gpt team管理和自动邀请",
+    "html_url": "https://github.com/tibbar213/team-manage",
+    "offertime": "2026-03-17"
+  },
+  {
+    "id": "1176809137",
+    "full_name": "lauraevz6y70/gnark-crypto",
+    "growth": 88,
+    "stars": 543,
+    "forks": 64,
+    "description": "gnark-crypto-cmd — Interactive CLI for Consensys gnark-crypto library featuring elliptic curve cryptography (BN254, BLS12-381, BLS24, BW6), zero-knowledge proof primitives, FFT/KZG/MiMC/EdDSA operations, Go code generation, benchmarks, and BibTeX citation export",
+    "html_url": "https://github.com/lauraevz6y70/gnark-crypto",
+    "offertime": "2026-03-17"
+  },
+  {
+    "id": "1078319457",
+    "full_name": "yusufkaraaslan/Skill_Seekers",
+    "growth": 87,
+    "stars": 10947,
+    "forks": 9,
+    "description": "Convert documentation websites, GitHub repositories, and PDFs into Claude AI skills with automatic conflict detection",
+    "html_url": "https://github.com/yusufkaraaslan/Skill_Seekers",
+    "offertime": "2026-03-17"
+  },
+  {
+    "id": "1142423471",
+    "full_name": "mindfold-ai/Trellis",
+    "growth": 86,
+    "stars": 3783,
+    "forks": 5,
+    "description": "All-in-one AI framework & toolkit",
+    "html_url": "https://github.com/mindfold-ai/Trellis",
+    "offertime": "2026-03-17"
+  },
+  {
+    "id": "1164459351",
+    "full_name": "amruth-sn/kong",
+    "growth": 84,
+    "stars": 451,
+    "forks": 11,
+    "description": "The world's first agentic reverse engineer.",
+    "html_url": "https://github.com/amruth-sn/kong",
+    "offertime": "2026-03-17"
+  },
+  {
+    "id": "1008857871",
+    "full_name": "hsliuping/TradingAgents-CN",
+    "growth": 81,
+    "stars": 18765,
+    "forks": 18,
+    "description": "基于多智能体LLM的中文金融交易框架 - TradingAgents中文增强版",
+    "html_url": "https://github.com/hsliuping/TradingAgents-CN",
+    "offertime": "2026-03-17"
+  },
+  {
+    "id": "1167865754",
+    "full_name": "suzuran0y/CCTV-Smartphone-AI-Monitoring",
+    "growth": 81,
+    "stars": 405,
+    "forks": 10,
+    "description": "LAN-based smartphone-powered AI monitoring framework with structured event output for data acquisition and analysis. （本地监控 + AI 部署）",
+    "html_url": "https://github.com/suzuran0y/CCTV-Smartphone-AI-Monitoring",
+    "offertime": "2026-03-17"
+  },
+  {
+    "id": "1140843380",
+    "full_name": "mvanhorn/last30days-skill",
+    "growth": 78,
+    "stars": 4306,
+    "forks": 10,
+    "description": "AI agent skill that researches any topic across Reddit, X, YouTube, HN, Polymarket, and the web - then synthesizes a grounded summary",
+    "html_url": "https://github.com/mvanhorn/last30days-skill",
+    "offertime": "2026-03-17"
+  },
+  {
+    "id": "1130381422",
+    "full_name": "originalankur/maptoposter",
+    "growth": 76,
+    "stars": 12198,
+    "forks": 9,
+    "description": "Transform your favorite cities into beautiful, minimalist designs. MapToPoster lets you create and export visually striking map posters with code.",
+    "html_url": "https://github.com/originalankur/maptoposter",
+    "offertime": "2026-03-17"
+  },
+  {
+    "id": "1171949255",
+    "full_name": "elder-plinius/OBLITERATUS",
+    "growth": 75,
+    "stars": 3071,
+    "forks": 16,
+    "description": "OBLITERATE THE CHAINS THAT BIND YOU",
+    "html_url": "https://github.com/elder-plinius/OBLITERATUS",
+    "offertime": "2026-03-17"
+  },
+  {
+    "id": "1033873680",
+    "full_name": "MiroMindAI/MiroThinker",
+    "growth": 73,
+    "stars": 6994,
+    "forks": 11,
+    "description": "MiroThinker is an open source deep research agent optimized for research and prediction. It achieves a 80.8% Avg@8 score on the challenging GAIA benchmark.",
+    "html_url": "https://github.com/MiroMindAI/MiroThinker",
+    "offertime": "2026-03-17"
+  },
+  {
+    "id": "1020672081",
+    "full_name": "Usagi-org/ai-goofish-monitor",
+    "growth": 72,
+    "stars": 9615,
+    "forks": 14,
+    "description": "别养小龙虾了，来试试养鱼吧！本项目基于 Playwright 和AI实现的闲鱼多任务实时/定时监控与智能分析系统，配备了功能完善的后台管理UI。帮助用户从闲鱼海量商品中，找到心仪产品。",
+    "html_url": "https://github.com/Usagi-org/ai-goofish-monitor",
+    "offertime": "2026-03-17"
+  },
+  {
+    "id": "1176497351",
+    "full_name": "psi-oss/get-physics-done",
+    "growth": 64,
+    "stars": 373,
+    "forks": 9,
+    "description": "The first open-source agentic AI physicist, by Physical Superintelligence PBC (PSI).",
+    "html_url": "https://github.com/psi-oss/get-physics-done",
+    "offertime": "2026-03-17"
+  },
+  {
+    "id": "996626040",
+    "full_name": "datawhalechina/all-in-rag",
+    "growth": 57,
+    "stars": 4857,
+    "forks": 37,
+    "description": "🔍大模型应用开发实战一：RAG 技术全栈指南，在线阅读地址：https://datawhalechina.github.io/all-in-rag/",
+    "html_url": "https://github.com/datawhalechina/all-in-rag",
+    "offertime": "2026-03-17"
+  },
+  {
+    "id": "1162528786",
+    "full_name": "BillionsNetwork/verified-agent-identity",
+    "growth": 38,
+    "stars": 424,
+    "forks": 471,
+    "description": "",
+    "html_url": "https://github.com/BillionsNetwork/verified-agent-identity",
+    "offertime": "2026-03-17"
+  },
+  {
+    "id": "1175927823",
+    "full_name": "nasscomAI/prompt-to-production",
+    "growth": 9,
+    "stars": 36,
+    "forks": 229,
+    "description": "nasscom scaffoldings for the vibe sessions",
+    "html_url": "https://github.com/nasscomAI/prompt-to-production",
+    "offertime": "2026-03-17"
+  }
+]
