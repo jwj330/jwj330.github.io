@@ -1,12 +1,12 @@
 ---
 title: "2026-06-27 GitHub增长趋势报告"
 description: "1.OpenMontage+85 2.codebase-memory-mcp+76 3.simplex-chat+63 4.Agent-Reach+55 5.ai-website-cloner-template+38"
-date: 2026-06-27T21:05:30+08:00
+date: 2026-06-27T12:00:00+08:00
 categories:
   - GitHub Trends
 ---
 
-**生成时间**: 2026-06-27 21:05:30
+**生成时间**: 2026-06-28 21:10:45
 
 本报告展示了 GitHub 上 Star 数增长最快的仓库。
 
