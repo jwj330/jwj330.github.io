@@ -1,12 +1,12 @@
 ---
 title: "2026-08-31 GitHub增长趋势报告"
 description: "1.OpenMAIC+31 2.archify+29 3.scientific-agent-skills+11 4.HeliosGen+9 5.awesome-gpt-image-2+9"
-date: 2026-08-31T23:39:47+08:00
+date: 2026-08-31T12:00:00+08:00
 categories:
   - GitHub Trends
 ---
 
-**生成时间**: 2026-08-31 23:39:47
+**生成时间**: 2026-09-01 22:26:27
 
 本报告展示了 GitHub 上 Star 数增长最快的仓库。
 
