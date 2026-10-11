@@ -9,7 +9,10 @@ on:
 jobs:
   update-top-repos:
     runs-on: ubuntu-latest
-    
+
+    permissions:
+      contents: write  # 允许提交并推送生成的快照与报告
+
     steps:
     - name: Checkout repository
       uses: actions/checkout@v4
@@ -31,11 +34,10 @@ jobs:
       env:
         GITHUBTOKEN: ${{ secrets.GITHUBTOKEN }}  # 使用您设置的Repository secret
       run: |
-        # python script/generate.py
-        echo "Running FetchGHArchiveData.py..."
-        python script/FetchGHArchiveData.py
-        echo "Running AnalyzeData2.py.."
-        python script/AnalyzeData2.py
+        echo "Running FetchTopRepos.py..."
+        python -u script/FetchTopRepos.py
+        echo "Running AnalyzeData2.py..."
+        python -u script/AnalyzeData2.py
 
     - name: Commit and push changes
       run: |
