@@ -1,12 +1,12 @@
 ---
 title: "2026-10-11 GitHub增长趋势报告"
 description: "增长数据积累中"
-date: 2026-10-12T02:53:19+08:00
+date: 2026-10-12T07:33:27+08:00
 categories:
   - GitHub Trends
 ---
 
-**生成时间**: 2026-10-12 02:53:19
+**生成时间**: 2026-10-12 07:33:27
 
 本报告展示了 GitHub 上 Star 数增长最快的仓库（基于每日 Top-5000 Star 快照差分计算）。
 
@@ -29,8 +29,8 @@ categories:
     // 数据源
     var dataMap = {
         'daily': {"categories": [], "data": []},
-        'weekly': {"categories": ["openai/math"], "data": [14006]},
-        'monthly': {"categories": ["cdyforever/how-to-live-better", "openai/math", "robbietilton/Compositor", "Niko1221/Strata", "browser-use/jev-ultrafast", "NandhaKishorM/laya", "storytold/photocraft"], "data": [11131, 14006, 15846, 21455, 22618, 32313, 46420]}
+        'weekly': {"categories": ["openai/math"], "data": [14061]},
+        'monthly': {"categories": ["cdyforever/how-to-live-better", "openai/math", "robbietilton/Compositor", "Niko1221/Strata", "browser-use/jev-ultrafast", "NandhaKishorM/laya", "storytold/photocraft"], "data": [11134, 14061, 15881, 21564, 22629, 32342, 47433]}
     };
 
     function getOption(type) {
@@ -114,17 +114,17 @@ _日增长数据积累中，明日开始自动展示。_
 
 | 排名 | 仓库 | 增长 | 总 Stars |
 |---|---|---|---|
-| 1 | [openai/math](https://github.com/openai/math) | +14006 | 14006 |
+| 1 | [openai/math](https://github.com/openai/math) | +14061 | 14061 |
 
 
 ### 🌙 本月 Top 300 详情
 
 | 排名 | 仓库 | 增长 | 总 Stars |
 |---|---|---|---|
-| 1 | [storytold/photocraft](https://github.com/storytold/photocraft) | +46420 | 46420 |
-| 2 | [NandhaKishorM/laya](https://github.com/NandhaKishorM/laya) | +32313 | 32313 |
-| 3 | [browser-use/jev-ultrafast](https://github.com/browser-use/jev-ultrafast) | +22618 | 22618 |
-| 4 | [Niko1221/Strata](https://github.com/Niko1221/Strata) | +21455 | 21455 |
-| 5 | [robbietilton/Compositor](https://github.com/robbietilton/Compositor) | +15846 | 15846 |
-| 6 | [openai/math](https://github.com/openai/math) | +14006 | 14006 |
-| 7 | [cdyforever/how-to-live-better](https://github.com/cdyforever/how-to-live-better) | +11131 | 11131 |
+| 1 | [storytold/photocraft](https://github.com/storytold/photocraft) | +47433 | 47433 |
+| 2 | [NandhaKishorM/laya](https://github.com/NandhaKishorM/laya) | +32342 | 32342 |
+| 3 | [browser-use/jev-ultrafast](https://github.com/browser-use/jev-ultrafast) | +22629 | 22629 |
+| 4 | [Niko1221/Strata](https://github.com/Niko1221/Strata) | +21564 | 21564 |
+| 5 | [robbietilton/Compositor](https://github.com/robbietilton/Compositor) | +15881 | 15881 |
+| 6 | [openai/math](https://github.com/openai/math) | +14061 | 14061 |
+| 7 | [cdyforever/how-to-live-better](https://github.com/cdyforever/how-to-live-better) | +11134 | 11134 |
