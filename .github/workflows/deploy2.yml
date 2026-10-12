@@ -1,8 +1,8 @@
 name: Deploy2
 
 on:
-    schedule:  # 每天UTC时间00:00运行（北京时间08:00）
-      - cron: '0 0 * * *'
+    schedule:  # 每天UTC时间22:00运行（北京时间06:00）
+      - cron: '0 22 * * *'
     
     push:
         branches: [main]
