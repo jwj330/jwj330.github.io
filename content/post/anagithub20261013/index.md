@@ -1,12 +1,12 @@
 ---
 title: "2026-10-13 GitHub增长趋势报告"
 description: "增长数据积累中"
-date: 2026-10-13T09:56:43+08:00
+date: 2026-10-14T07:42:30+08:00
 categories:
   - GitHub Trends
 ---
 
-**生成时间**: 2026-10-13 09:56:43
+**生成时间**: 2026-10-14 07:42:30
 
 本报告展示了 GitHub 上 Star 数增长最快的仓库（基于每日 Top-5000 Star 快照差分计算）。
 
@@ -29,8 +29,8 @@ categories:
     // 数据源
     var dataMap = {
         'daily': {"categories": [], "data": []},
-        'weekly': {"categories": ["openai/math"], "data": [14434]},
-        'monthly': {"categories": ["storytold/lightcraft", "storytold/pdfcraft", "cdyforever/how-to-live-better", "storytold/filmcraft", "Ebony-Vinyl/dsh-our-free-model", "openai/math", "robbietilton/Compositor", "browser-use/jev-ultrafast", "Niko1221/Strata", "NandhaKishorM/laya", "storytold/photocraft"], "data": [11256, 11424, 11427, 11552, 12062, 14434, 16411, 22750, 22769, 32581, 53681]}
+        'weekly': {"categories": ["storytold/wordcraft", "openai/math"], "data": [11046, 14671]},
+        'monthly': {"categories": ["storytold/wordcraft", "yetone/magpie", "cdyforever/how-to-live-better", "storytold/lightcraft", "storytold/filmcraft", "storytold/pdfcraft", "Ebony-Vinyl/dsh-our-free-model", "openai/math", "robbietilton/Compositor", "browser-use/jev-ultrafast", "Niko1221/Strata", "NandhaKishorM/laya", "storytold/photocraft"], "data": [11046, 11494, 11631, 11992, 12514, 12720, 14068, 14671, 16707, 22825, 23689, 32769, 57773]}
     };
 
     function getOption(type) {
@@ -114,21 +114,24 @@ _日增长数据积累中，明日开始自动展示。_
 
 | 排名 | 仓库 | 增长 | 总 Stars |
 |---|---|---|---|
-| 1 | [openai/math](https://github.com/openai/math) | +14434 | 14434 |
+| 1 | [openai/math](https://github.com/openai/math) | +14671 | 14671 |
+| 2 | [storytold/wordcraft](https://github.com/storytold/wordcraft) | +11046 | 11046 |
 
 
 ### 🌙 本月 Top 300 详情
 
 | 排名 | 仓库 | 增长 | 总 Stars |
 |---|---|---|---|
-| 1 | [storytold/photocraft](https://github.com/storytold/photocraft) | +53681 | 53681 |
-| 2 | [NandhaKishorM/laya](https://github.com/NandhaKishorM/laya) | +32581 | 32581 |
-| 3 | [Niko1221/Strata](https://github.com/Niko1221/Strata) | +22769 | 22769 |
-| 4 | [browser-use/jev-ultrafast](https://github.com/browser-use/jev-ultrafast) | +22750 | 22750 |
-| 5 | [robbietilton/Compositor](https://github.com/robbietilton/Compositor) | +16411 | 16411 |
-| 6 | [openai/math](https://github.com/openai/math) | +14434 | 14434 |
-| 7 | [Ebony-Vinyl/dsh-our-free-model](https://github.com/Ebony-Vinyl/dsh-our-free-model) | +12062 | 12062 |
-| 8 | [storytold/filmcraft](https://github.com/storytold/filmcraft) | +11552 | 11552 |
-| 9 | [cdyforever/how-to-live-better](https://github.com/cdyforever/how-to-live-better) | +11427 | 11427 |
-| 10 | [storytold/pdfcraft](https://github.com/storytold/pdfcraft) | +11424 | 11424 |
-| 11 | [storytold/lightcraft](https://github.com/storytold/lightcraft) | +11256 | 11256 |
+| 1 | [storytold/photocraft](https://github.com/storytold/photocraft) | +57773 | 57773 |
+| 2 | [NandhaKishorM/laya](https://github.com/NandhaKishorM/laya) | +32769 | 32769 |
+| 3 | [Niko1221/Strata](https://github.com/Niko1221/Strata) | +23689 | 23689 |
+| 4 | [browser-use/jev-ultrafast](https://github.com/browser-use/jev-ultrafast) | +22825 | 22825 |
+| 5 | [robbietilton/Compositor](https://github.com/robbietilton/Compositor) | +16707 | 16707 |
+| 6 | [openai/math](https://github.com/openai/math) | +14671 | 14671 |
+| 7 | [Ebony-Vinyl/dsh-our-free-model](https://github.com/Ebony-Vinyl/dsh-our-free-model) | +14068 | 14068 |
+| 8 | [storytold/pdfcraft](https://github.com/storytold/pdfcraft) | +12720 | 12720 |
+| 9 | [storytold/filmcraft](https://github.com/storytold/filmcraft) | +12514 | 12514 |
+| 10 | [storytold/lightcraft](https://github.com/storytold/lightcraft) | +11992 | 11992 |
+| 11 | [cdyforever/how-to-live-better](https://github.com/cdyforever/how-to-live-better) | +11631 | 11631 |
+| 12 | [yetone/magpie](https://github.com/yetone/magpie) | +11494 | 11494 |
+| 13 | [storytold/wordcraft](https://github.com/storytold/wordcraft) | +11046 | 11046 |
